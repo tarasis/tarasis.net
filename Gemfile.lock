@@ -132,6 +132,7 @@ DEPENDENCIES
   jekyll (~> 3.8.5)
   jekyll-archives
   jekyll-feed (~> 0.6)
+  jekyll-gist
   jekyll-include-cache
   minima (~> 2.0)
   minimal-mistakes-jekyll
