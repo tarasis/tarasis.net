@@ -14,16 +14,4 @@
 <url>
 <loc>http://0.0.0.0:4000/</loc>
 </url>
-<url>
-<loc>http://0.0.0.0:4000/tags/test/</loc>
-</url>
-<url>
-<loc>http://0.0.0.0:4000/tags/blargh/</loc>
-</url>
-<url>
-<loc>http://0.0.0.0:4000/categories/jekyll/</loc>
-</url>
-<url>
-<loc>http://0.0.0.0:4000/categories/update/</loc>
-</url>
 </urlset>

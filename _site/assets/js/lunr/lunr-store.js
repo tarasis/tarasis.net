@@ -5,7 +5,7 @@ var store = [{
         "url": "http://0.0.0.0:4000/jekyll/update/welcome-to-jekyll/",
         "teaser":null},{
         "title": "First Post",
-        "excerpt":"Just a test post. This is the first, of a new blog that is powered by Jekylly   ","categories": [],
+        "excerpt":"Just a test post. This is the first, of a new blog that is powered by Jekyll   hello world!  ","categories": [],
         "tags": [],
         "url": "http://0.0.0.0:4000/first-post/",
         "teaser":null},]
