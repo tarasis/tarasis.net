@@ -6,6 +6,7 @@ read_time: true
 share: true
 related: true
 date: '2019-02-22 00:54:00 +0100'
+tag: Site
 ---
 
 After many years of using [Wordpress](http://wordpress.org), I've switched to using [Jekyll](https://jekyllrb.com/) with the [Minimal-Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme.

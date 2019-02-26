@@ -15,6 +15,7 @@ gem "jekyll", "~> 3.8.5"
 
 # Web editor for the Jekyll site
 gem "jekyll-admin", group: :jekyll_plugins
+gem "liquid-c"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.

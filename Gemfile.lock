@@ -67,6 +67,8 @@ GEM
       jekyll (~> 3.0)
     kramdown (1.17.0)
     liquid (4.0.1)
+    liquid-c (4.0.0)
+      liquid (>= 3.0.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -153,6 +155,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-gist
   jekyll-include-cache
+  liquid-c
   minimal-mistakes-jekyll
   octopress (~> 3.0)
   tzinfo-data
