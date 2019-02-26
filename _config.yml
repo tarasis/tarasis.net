@@ -73,13 +73,13 @@ staticman:
   endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : false # true, false (default)
-search_full_content      : false # true, false (default)
-search_provider          : "algolia"
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : "lunr" # "algolia"
 algolia:
-  application_id         : "QB6HVGBSBA"
-  index_name             : "dev_minimal-mistakes"
-  search_only_api_key    : "9d5014e5bbc77372547bce778dfa5663"
+  application_id         : "F5FF4IDLYX"
+  index_name             : "tarasis-blog"
+  search_only_api_key    : "ed656902b5bdd356f885bf9d99635fc1"
   powered_by             : true
 
 # SEO Related
@@ -114,7 +114,7 @@ author:
   name             : "Robert McGovern"
   avatar           : "/assets/images/bio-photo.jpg"
   bio              : "Wannabe field researcher for the Hitchhikers Guide to the Galaxy"
-  location         : "Sector ZZ9 Plural Z Alpha"
+  location         : "Sector ZZ9 Plural Z\n Alpha"
   links:
     - label: "Your Website"
       icon: "fas fa-fw fa-link"
@@ -161,6 +161,7 @@ exclude:
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
+  - .jekyll-cache
   - .sass-cache
   - assets/js/plugins
   - assets/js/_main.js
@@ -216,7 +217,8 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+permalink: # default value
+# permalink: /:categories/:title/
 paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
