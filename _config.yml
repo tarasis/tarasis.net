@@ -35,7 +35,7 @@ description              : "Random Spews"
 url                      : "https://tarasis.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : ""
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : #"/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/apple-touch-icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : false # true, false (default)
@@ -114,24 +114,44 @@ author:
   name             : "Robert McGovern"
   avatar           : "/assets/images/bio-photo.jpg"
   bio              : "Wannabe field researcher for the Hitchhikers Guide to the Galaxy"
-  location         : "Sector ZZ9 Plural Z\n Alpha"
+  location         : "Sector ZZ9 Plural Z Alpha"
   links:
-    - label: "Your Website"
+    - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://tarasis.net"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/robertmcgovern/"
+    - label: "Github"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/tarasis"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/tarasis"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook"
       url: "https://www.facebook.com/tarasis"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/tarasis"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/tarasis"
-
+    - label: "Flickr"
+      icon: "fab fa-fw fa-flickr"
+      url: "https://www.flickr.com/photos/tarasis/"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/user/tarasis"
+    - label: "Soundcloud"
+      icon: "fab fa-fw fa-soundcloud"
+      url: "https://soundcloud.com/tarasis"
+    - label: "Last.FM"
+      icon: "fab fa-fw fa-lastfm"
+      url: "https://www.last.fm/user/tarasis"
+    - label: "Reddit"
+      icon: "fab fa-fw fa-reddit"
+      url: "https://www.reddit.com/user/tarasis"
+    - label: "Pinterest"
+      icon: "fab fa-fw fa-pinterest"
+      url: "https://www.pinterest.com/tarasis/"
 
 # Site Footer
 footer:
@@ -324,22 +344,14 @@ defaults:
       layout: single
       author_profile: true
       share: true
-  # _pets
-  - scope:
-      path: ""
-      type: pets
-    values:
-      layout: single
-      author_profile: true
-      share: true
   # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: false
-      share: true
+  #- scope:
+  #    path: ""
+  #    type: portfolio
+  #  values:
+  #    layout: single
+  #    author_profile: false
+  #    share: true
 
 # Octopress Configs
 # Default extension for new posts and pages
