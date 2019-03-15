@@ -121,6 +121,9 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://tarasis.net"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:rob@tarasis.net"
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/robertmcgovern/"
@@ -158,6 +161,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:rob@tarasis.net"    
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/tarasis"
