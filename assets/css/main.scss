@@ -12,8 +12,7 @@
 /* Colors */
 $text-color: #fff6fbb9 !default;
 $primary-color: #790b61 !default;
-$code-background-color: mix(#000, $background-color, 15%) !default;
-$code-background-color-dark: mix(#000, $background-color, 20%) !default;
+$link-color: $primary-color !default;
 $link-color-hover: mix(#fff, $link-color, 25%) !default;
 $link-color-visited: mix(#000, $link-color, 25%) !default;
 
