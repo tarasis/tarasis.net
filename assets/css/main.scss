@@ -1,0 +1,21 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+.author__urls.social-icons .svg-inline--fa,
+.page__footer-follow .social-icons .svg-inline--fa {
+    color: rgba(102, 235, 97, 0.829) !important;
+  }
+
+/* Colors */
+$text-color: #fff6fbb9 !default;
+$primary-color: #790b61 !default;
+$code-background-color: mix(#000, $background-color, 15%) !default;
+$code-background-color-dark: mix(#000, $background-color, 20%) !default;
+$link-color-hover: mix(#fff, $link-color, 25%) !default;
+$link-color-visited: mix(#000, $link-color, 25%) !default;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
