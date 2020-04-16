@@ -1,6 +1,10 @@
 ---
-title: 'An End of Sorts'
 layout: single
+author_profile: true
+read_time: true
+share: true
+related: true
+title: 'An End of Sorts'
 tag: [Life, Work]
 ---
 
