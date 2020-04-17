@@ -20,3 +20,12 @@ Easy to mock in data
 
 Buggy.
 Filled 3 bugs so far.
+
+{% highlight swift %}
+     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        currentTouchPosition = touches.first?.location(in: self)
+
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
+    }
+{% endhighlight %}
