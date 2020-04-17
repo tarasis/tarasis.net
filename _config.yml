@@ -223,7 +223,7 @@ liquid:
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: "<!--more-->"
 incremental: false
 
 
@@ -246,7 +246,7 @@ sass:
 
 
 # Outputting
-permalink: # default value
+permalink: /:year/:month/:day/:title # default value
 # permalink: /:categories/:title/
 paginate: 10 # amount of posts to show
 paginate_path: /page:num/
