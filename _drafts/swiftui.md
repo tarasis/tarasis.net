@@ -177,3 +177,16 @@ $(document).ready(function() {
   };
 }
 ```
+
+<p>notice</p>{: .notice} 
+<p>primary</p>{: .notice--primary}
+<p>info</p>{: .notice--info}
+<p>warning</p>{: .notice--warning}
+<p>success</p>{: .notice--success}
+<p>danger</p>{: .notice--danger}
+
+<div class="notice--success" markdown="1">
+  # Headline for the Notice
+  <br>
+  Text for the notice
+</div>
