@@ -82,6 +82,47 @@ $base0f: #926e5c;
   z-index: 1;
 }
 
+// Scroll to top
+#scroll-to-top {
+  background: black;
+ display:block;
+ position:fixed;
+ font-size:25px;
+ bottom:25px;
+ right:10%;
+ opacity:0;
+ z-index:99;
+ text-align:center;
+ transform:translateY(30%);
+ transition:transform 0.5s ease-in-out, opacity 0.5s ease-in-out
+}
+@media (max-width: 600px) {
+ #scroll-to-top {
+  font-size:20px
+ }
+}
+@media (max-width: 600px) {
+ #scroll-to-top {
+  right:5%;
+  bottom:15px
+ }
+}
+#scroll-to-top :last-child {
+ transition:transform 0.7s ease-in-out
+}
+#scroll-to-top :last-child:active,
+#scroll-to-top :last-child:hover {
+ transform:translateY(-10%)
+}
+#scroll-to-top span {
+ cursor:pointer;
+ color:#1a1d24
+}
+#scroll-to-top span:hover .up-arrow,
+#scroll-to-top span:active .up-arrow {
+ color:#00adb5
+}
+
 //@import "progress.css"; // for progress bar
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials

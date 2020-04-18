@@ -45,6 +45,7 @@ breadcrumb_separator  : ">"
 words_per_minute         : 200
 head_scripts: 
   - /assets/js/progress.js
+  - /assets/js/scroll-to-top.js
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "utterances", "custom"
   disqus:
