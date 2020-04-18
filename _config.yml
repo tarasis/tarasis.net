@@ -43,6 +43,8 @@ breadcrumbs              : false # true, false (default)
 breadcrumb_home_label : "Home"
 breadcrumb_separator  : ">"
 words_per_minute         : 200
+head_scripts: 
+  - /assets/js/progress.js
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "utterances", "custom"
   disqus:

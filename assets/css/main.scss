@@ -71,5 +71,17 @@ $base0f: #926e5c;
   color: $base0c !important;
 }
 
+// Progress Bar
+#progress-bar {
+  background: linear-gradient(to right, red, orange , yellow, green,   
+  blue, indigo, violet var(--scroll), transparent 0);
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 3px;
+  z-index: 1;
+}
+
+//@import "progress.css"; // for progress bar
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
