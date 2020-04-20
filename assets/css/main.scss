@@ -130,6 +130,14 @@ $base0f: #926e5c;
  color:#00adb5
 }
 
+tt,
+code,
+kbd,
+samp,
+pre {
+  color: #1bb6be !important
+}
+
 //@import "progress.css"; // for progress bar
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
