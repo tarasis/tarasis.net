@@ -28,17 +28,17 @@ minimal_mistakes_skin    : "neon" # "default" "air", "aqua", "contrast", "dark",
 
 # Site Settings
 locale                   : "en-US"
-title                    : "TDN: Rambles"
+title                    : "TDN: RMCG"
 title_separator          : "-"
 name                     : "Robert McGovern"
-description              : "Random Spews"
+description              : "Random Things"
 url                      : "https://tarasis.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : ""
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : #"/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/apple-touch-icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "" # overrides the website title displayed in the masthead, use " " for no title
-subtitle		 : "Rambles of a chaotic mind" #optional subtitle
+subtitle		             : "👨‍💻 🚶‍♂️ 💭 🤯" #"Rambles of a chaotic mind" #optional subtitle
 breadcrumbs              : false # true, false (default)
 breadcrumb_home_label : "Home"
 breadcrumb_separator  : ">"
