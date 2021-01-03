@@ -6,7 +6,7 @@ permalink: /about/
 
 # Me 
 
-Personal blog of Robert McGovern. Until 2020 I was principally a stay at home dad but I was also a Mac & iOS developer, embedded systems programmer, sys-admin, tech editor, book reviewer & writer. You can see more details about that on [LinkedIn](https://www.linkedin.com/in/robertmcgovern/).
+Personal blog of Robert McGovern. Until 2020 I was principally a stay at home dad, but I was also a Mac & iOS developer, embedded systems programmer, sys-admin, tech editor, book reviewer & writer. You can see more details about that on [LinkedIn](https://www.linkedin.com/in/robertmcgovern/).
 
 I can be found many places online, mostly with the username **tarasis**, but also **duemoko**. Links can be found in the sidebar, although they'll likely move here in the future :)
 
