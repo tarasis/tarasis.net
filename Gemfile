@@ -40,3 +40,5 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 # Theme to use
 gem "minimal-mistakes-jekyll"
+
+gem "webrick", "~> 1.7"
