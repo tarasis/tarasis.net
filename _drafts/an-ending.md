@@ -19,3 +19,5 @@ No more easy life of not working and old looking after the kids and badly lookin
 Ahead are a ton of decisions to be made like where to live, how to be there for the kids, how things will split, who gets the [Thermomix]() and so on.
 
 Why? Because I had grown too far from Bob. I ...
+
+unfinished
