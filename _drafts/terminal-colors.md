@@ -63,4 +63,3 @@ Last but not least 'delta'
 
 https://github.com/dandavison/delta
 
-BLAH BLAH BLAH
