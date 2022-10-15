@@ -20,7 +20,7 @@ The front page of the deployed site acts as a gateway to all of the challenges, 
 
 ![Screenshot of the newbie section of the my portfolio website](/assets/images/portfolio.png)
 
-Each section is generated from a json file I created, where I have the service name, location of an svg file, alt text for it, the difficulty level, then there is an array of challenges in that difficulty level.
+Each section is generated from a json file I created ([src/_data/webprojects.json](https://github.com/tarasis/tarasis.github.io/blob/main/src/_data/webprojects.json)), where I have the service name, location of an svg file, alt text for it, the difficulty level, then there is an array of challenges in that difficulty level.
 
 ```json
 "services": [
