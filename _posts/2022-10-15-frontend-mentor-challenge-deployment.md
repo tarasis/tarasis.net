@@ -8,7 +8,7 @@ I've been doing challenges from [Frontend Mentor](https://frontendmentor.io) as 
 
 Rather than just take the simple route of a Git repo per challenge, I put them all in a single repo that is pushed to two[^1] servers ([Github](https://github.com/tarasis/tarasis.github.io) and a [Gitea](https://git.tarasis.net/tarasis/tarasis.github.io) instance).
 
-The repo is actually a website built with [11ty](https://www.11ty.dev) and [Nunjucks](https://mozilla.github.io/nunjucks/) for templating. The challenges, and other pages I build are in the **projects** directory. They are simply copied over to **www* during the build.
+The repo is actually a website built with [11ty](https://www.11ty.dev) and [Nunjucks](https://mozilla.github.io/nunjucks/) for templating. The challenges, and other pages I build are in the **projects** directory. They are simply copied over to **www** during the build.
 
 When I do a `git push all`, on my server it runs a script that does the 11ty build. On Github I use a **Github Action**[^2] which builds the site and then a separate action that deploys the page. Vercel watches the main branch on Github for updates and does a similar build action and deployment.
 
@@ -154,7 +154,11 @@ Having a static site where I can quickly add a challenge to the front page witho
 
 [^1]: Because I like redundancy when I can, and I want control of my code.
 
-[^2]: The build action I use ...
+[^2]: The build action I use is just up above, because apparently I can't have anything below footnotes go figure 🤪 ...
+
+### Github build action
+
+My Github 11ty build action
 
 ```
 name: Build Eleventy
