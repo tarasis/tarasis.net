@@ -1,5 +1,5 @@
 ---
-title: What happens when I finish a Frontend Mentor Challenge (or how I build deploy an 11ty site)
+title: What happens when I finish a Frontend Mentor Challenge (or how I build and deploy an 11ty site)
 tags: [webdev, site, frontendmentor]
 category: [programming, webdev]
 ---
