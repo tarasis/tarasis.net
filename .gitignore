@@ -7,3 +7,5 @@ vendor
 _site
 .jekyll-cache
 .jekyll-metadata
+
+**/*/premdesigns

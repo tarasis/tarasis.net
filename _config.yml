@@ -8,8 +8,8 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-theme                    : "minimal-mistakes-jekyll"
-minimal_mistakes_skin    : "neon" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+theme: "minimal-mistakes-jekyll"
+minimal_mistakes_skin: "neon" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -27,200 +27,198 @@ minimal_mistakes_skin    : "neon" # "default" "air", "aqua", "contrast", "dark",
 #github_username:  tarasis
 
 # Site Settings
-locale                   : "en-US"
-title                    : "TDN: RMCG"
-title_separator          : "-"
-name                     : "Robert McGovern"
-description              : "Random Things"
-url                      : "https://tarasis.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : ""
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : #"/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/apple-touch-icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "" # overrides the website title displayed in the masthead, use " " for no title
-subtitle		             : "👨‍💻 🚶‍♂️ 💭 🤯" #"Rambles of a chaotic mind" #optional subtitle
-breadcrumbs              : false # true, false (default)
-breadcrumb_home_label : "Home"
-breadcrumb_separator  : ">"
-words_per_minute         : 200
-head_scripts: 
-  - /assets/js/progress.js
-  - /assets/js/scroll-to-top.js
+locale: "en-US"
+title: "TDN: RMCG"
+title_separator: "-"
+name: "Robert McGovern"
+description: "Random Things"
+url: "https://tarasis.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl: ""
+repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser: #"/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo: "/assets/images/apple-touch-icon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title: "" # overrides the website title displayed in the masthead, use " " for no title
+subtitle: "👨‍💻 🚶‍♂️ 💭 🤯" #"Rambles of a chaotic mind" #optional subtitle
+breadcrumbs: false # true, false (default)
+breadcrumb_home_label: "Home"
+breadcrumb_separator: ">"
+words_per_minute: 200
+head_scripts:
+    - /assets/js/progress.js
+    - /assets/js/scroll-to-top.js
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "utterances", "custom"
-  disqus:
-    shortname            : "tarasis" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-  utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
+    provider: "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "utterances", "custom"
+    disqus:
+        shortname: "tarasis" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    discourse:
+        server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+    facebook:
+        # https://developers.facebook.com/docs/plugins/comments
+        appid:
+        num_posts: # 5 (default)
+        colorscheme: # "light" (default), "dark"
+    utterances:
+        theme: # "github-light" (default), "github-dark"
+        issue_term: # "pathname" (default)
 staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : # "master", "gh-pages"
-  commitMessage          : "New comment by {fields.name}"
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
+    allowedFields: ["name", "email", "url", "message"]
+    branch: # "master", "gh-pages"
+    commitMessage: "New comment by {fields.name}"
+    filename: comment-{@timestamp}
+    format: "yml"
+    moderation: true
+    path: "_data/comments/{options.slug}"
+    requiredFields: ["name", "email", "message"]
+    transforms:
+        email: "md5"
+    generatedFields:
+        date:
+            type: "date"
+            options:
+                format: "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+    endpoint: # URL of your own deployment with trailing slash, will fallback to the public instance
 atom_feed:
-  path                   : # blank (default) uses feed.xml
-search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
-search_provider          : "lunr" # "algolia"
+    path: # blank (default) uses feed.xml
+search: true # true, false (default)
+search_full_content: true # true, false (default)
+search_provider: "lunr" # "algolia"
 algolia:
-  application_id         : "F5FF4IDLYX"
-  index_name             : "tarasis-blog"
-  search_only_api_key    : "ed656902b5bdd356f885bf9d99635fc1"
-  powered_by             : true
+    application_id: "F5FF4IDLYX"
+    index_name: "tarasis-blog"
+    search_only_api_key: "ed656902b5bdd356f885bf9d99635fc1"
+    powered_by: true
 
 # SEO Related
-google_site_verification :
-bing_site_verification   :
-yandex_site_verification :
+google_site_verification:
+bing_site_verification:
+yandex_site_verification:
 
 # Social Sharing
 twitter:
-  username               : "tarasis"
+    username: "tarasis"
 facebook:
-  username               : "tarasis"
-  app_id                 :
-  publisher              :
-og_image                 : "/assets/images/bio-photo.jpg"
+    username: "tarasis"
+    app_id:
+    publisher:
+og_image: "/assets/images/bio-photo.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+    type: # Person or Organization (defaults to Person)
+    name: # If the user or organization name differs from the site's name
+    links: # An array of links to social media profiles
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          :
-
+    provider: false # false (default), "google", "google-universal", "custom"
+    google:
+        tracking_id:
 
 # Site Author
 author:
-  name             : "Robert McGovern"
-  avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Wannabe field researcher for the Hitchhikers Guide to the Galaxy"
-  location         : "ZZ9 Plural Z Alpha"
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://tarasis.net"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:rob@tarasis.net"
-    - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/robertmcgovern/"
-    - label: "Github"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/tarasis"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/tarasis"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook"
-      url: "https://www.facebook.com/tarasis"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/tarasis"
-    - label: "Flickr"
-      icon: "fab fa-fw fa-flickr"
-      url: "https://www.flickr.com/photos/tarasis/"
-    - label: "Youtube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/user/tarasis"
-    - label: "Soundcloud"
-      icon: "fab fa-fw fa-soundcloud"
-      url: "https://soundcloud.com/tarasis"
-    - label: "Last.FM"
-      icon: "fab fa-fw fa-lastfm"
-      url: "https://www.last.fm/user/tarasis"
-    - label: "Reddit"
-      icon: "fab fa-fw fa-reddit"
-      url: "https://www.reddit.com/user/tarasis"
-    - label: "Pinterest"
-      icon: "fab fa-fw fa-pinterest"
-      url: "https://www.pinterest.com/tarasis/"
+    name: "Robert McGovern"
+    avatar: "/assets/images/bio-photo.jpg"
+    bio: "Wannabe field researcher for the Hitchhikers Guide to the Galaxy"
+    location: "ZZ9 Plural Z Alpha"
+    links:
+        - label: "Website"
+          icon: "fas fa-fw fa-link"
+          url: "https://tarasis.net"
+        - label: "Email"
+          icon: "fas fa-fw fa-envelope-square"
+          url: "mailto:rob@tarasis.net"
+        - label: "Linkedin"
+          icon: "fab fa-fw fa-linkedin"
+          url: "https://www.linkedin.com/in/robertmcgovern/"
+        - label: "Github"
+          icon: "fab fa-fw fa-github"
+          url: "https://github.com/tarasis"
+        - label: "Twitter"
+          icon: "fab fa-fw fa-twitter-square"
+          url: "https://twitter.com/tarasis"
+        - label: "Facebook"
+          icon: "fab fa-fw fa-facebook"
+          url: "https://www.facebook.com/tarasis"
+        - label: "Instagram"
+          icon: "fab fa-fw fa-instagram"
+          url: "https://instagram.com/tarasis"
+        - label: "Flickr"
+          icon: "fab fa-fw fa-flickr"
+          url: "https://www.flickr.com/photos/tarasis/"
+        - label: "Youtube"
+          icon: "fab fa-fw fa-youtube"
+          url: "https://www.youtube.com/user/tarasis"
+        - label: "Soundcloud"
+          icon: "fab fa-fw fa-soundcloud"
+          url: "https://soundcloud.com/tarasis"
+        - label: "Last.FM"
+          icon: "fab fa-fw fa-lastfm"
+          url: "https://www.last.fm/user/tarasis"
+        - label: "Reddit"
+          icon: "fab fa-fw fa-reddit"
+          url: "https://www.reddit.com/user/tarasis"
+        - label: "Pinterest"
+          icon: "fab fa-fw fa-pinterest"
+          url: "https://www.pinterest.com/tarasis/"
 
 # Site Footer
 footer:
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:rob@tarasis.net"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/tarasis"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook"
-      url: "https://www.facebook.com/tarasis"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/tarasis"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/tarasis"
-
+    links:
+        - label: "Email"
+          icon: "fas fa-fw fa-envelope-square"
+          url: "mailto:rob@tarasis.net"
+        - label: "Twitter"
+          icon: "fab fa-fw fa-twitter-square"
+          url: "https://twitter.com/tarasis"
+        - label: "Facebook"
+          icon: "fab fa-fw fa-facebook"
+          url: "https://www.facebook.com/tarasis"
+        - label: "GitHub"
+          icon: "fab fa-fw fa-github"
+          url: "https://github.com/tarasis"
+        - label: "Instagram"
+          icon: "fab fa-fw fa-instagram"
+          url: "https://instagram.com/tarasis"
 
 # Reading Files
 include:
-  - .htaccess
-  - _pages
+    - .htaccess
+    - _pages
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .jekyll-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - Rakefile
-  - README
-  - tmp
+    - "*.sublime-project"
+    - "*.sublime-workspace"
+    - vendor
+    - .asset-cache
+    - .bundle
+    - .jekyll-assets-cache
+    - .jekyll-cache
+    - .sass-cache
+    - assets/js/plugins
+    - assets/js/_main.js
+    - assets/js/vendor
+    - Capfile
+    - CHANGELOG
+    - config
+    - Gemfile
+    - Gruntfile.js
+    - gulpfile.js
+    - LICENSE
+    - log
+    - node_modules
+    - package.json
+    - Rakefile
+    - README
+    - tmp
 keep_files:
-  - .git
-  - .svn
+    - .git
+    - .svn
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Liquid
 strict_front_matter: true
 liquid:
-  error_mode: strict
+    error_mode: strict
 
 # Conversion
 markdown: kramdown
@@ -229,24 +227,21 @@ lsi: false
 excerpt_separator: "<!--more-->"
 incremental: false
 
-
 # Markdown Processing
 kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
+    input: GFM
+    hard_wrap: false
+    auto_ids: true
+    footnote_nr: 1
+    entity_output: as_char
+    toc_levels: 1..6
+    smart_quotes: lsquo,rsquo,ldquo,rdquo
+    enable_coderay: false
 
 # Sass/SCSS
 sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
+    sass_dir: _sass
+    style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 # Outputting
 permalink: /:year/:month/:day/:title/ # default value
@@ -255,29 +250,27 @@ paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-
 # Plugins (previously gems:)
 plugins:
-  - jekyll-archives
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-  - jekyll-gist
+    - jekyll-archives
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-gist
+    - jekyll-feed
+    - jemoji
+    - jekyll-include-cache
+    - jekyll-gist
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-archives
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-  - jekyll-gist
-
+    - jekyll-archives
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-gist
+    - jekyll-feed
+    - jemoji
+    - jekyll-include-cache
+    - jekyll-gist
 
 # Archives
 #  Type
@@ -290,11 +283,11 @@ whitelist:
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
-  path: /categories/
+    type: liquid
+    path: /categories/
 tag_archive:
-  type: liquid
-  path: /tags/
+    type: liquid
+    path: /tags/
 # https://github.com/jekyll/jekyll-archives
 #jekyll-archives:
 #   enabled:
@@ -307,65 +300,62 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-
 # HTML Compression
 # - http://jch.penibelst.de/
 compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
+    clippings: all
+    ignore:
+        envs: development
 
 # Collections
 collections:
-  recipes:
-    output: true
-    permalink: /:collection/:path/
-  pets:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-
+    recipes:
+        output: true
+        permalink: /:collection/:path/
+    pets:
+        output: true
+        permalink: /:collection/:path/
+    portfolio:
+        output: true
+        permalink: /:collection/:path/
 
 # Defaults
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      classes: wide
-      author_profile: true
-      read_time: true
-      share: true
-      related: true
-      comments: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  # _recipes
-  - scope:
-      path: ""
-      type: recipes
-    values:
-      layout: single
-      author_profile: true
-      share: true
-  # _portfolio
-  #- scope:
-  #    path: ""
-  #    type: portfolio
-  #  values:
-  #    layout: single
-  #    author_profile: false
-  #    share: true
+    # _posts
+    - scope:
+          path: ""
+          type: posts
+      values:
+          layout: single
+          classes: wide
+          author_profile: true
+          read_time: true
+          share: true
+          related: true
+          comments: true
+    # _pages
+    - scope:
+          path: "_pages"
+          type: pages
+      values:
+          layout: single
+          author_profile: true
+    # _recipes
+    - scope:
+          path: ""
+          type: recipes
+      values:
+          layout: single
+          author_profile: true
+          share: true
+    # _portfolio
+    #- scope:
+    #    path: ""
+    #    type: portfolio
+    #  values:
+    #    layout: single
+    #    author_profile: false
+    #    share: true
 
 # Octopress Configs
 # Default extension for new posts and pages

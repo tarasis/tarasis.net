@@ -141,4 +141,5 @@ pre {
 //@import "progress.css"; // for progress bar
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
-@import "assets/css/override-notices.scss"
+//@import "assets/css/override-notices.scss"
+@import "override-notices.scss"
