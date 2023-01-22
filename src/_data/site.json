@@ -1,0 +1,367 @@
+{
+  "theme": "minimal-mistakes-jekyll",
+  "minimal_mistakes_skin": "neon",
+  "locale": "en-US",
+  "title": "TDN: RMCG",
+  "title_separator": "-",
+  "name": "Robert McGovern",
+  "description": "Random Things",
+  "url": "https://tarasis.net",
+  "baseurl": "",
+  "repository": null,
+  "teaser": null,
+  "logo": "/assets/images/apple-touch-icon.png",
+  "masthead_title": "",
+  "subtitle": "👨‍💻 🚶‍♂️ 💭 🤯",
+  "breadcrumbs": false,
+  "breadcrumb_home_label": "Home",
+  "breadcrumb_separator": ">",
+  "words_per_minute": 200,
+  "head_scripts": [
+    "/assets/js/progress.js",
+    "/assets/js/scroll-to-top.js"
+  ],
+  "comments": {
+    "provider": "disqus",
+    "disqus": {
+      "shortname": "tarasis"
+    },
+    "discourse": {
+      "server": null
+    },
+    "facebook": {
+      "appid": null,
+      "num_posts": null,
+      "colorscheme": null
+    },
+    "utterances": {
+      "theme": null,
+      "issue_term": null
+    }
+  },
+  "staticman": {
+    "allowedFields": [
+      "name",
+      "email",
+      "url",
+      "message"
+    ],
+    "branch": null,
+    "commitMessage": "New comment by {fields.name}",
+    "filename": "comment-{@timestamp}",
+    "format": "yml",
+    "moderation": true,
+    "path": "_data/comments/{options.slug}",
+    "requiredFields": [
+      "name",
+      "email",
+      "message"
+    ],
+    "transforms": {
+      "email": "md5"
+    },
+    "generatedFields": {
+      "date": {
+        "type": "date",
+        "options": {
+          "format": "iso8601"
+        }
+      }
+    },
+    "endpoint": null
+  },
+  "atom_feed": {
+    "path": null
+  },
+  "search": true,
+  "search_full_content": true,
+  "search_provider": "lunr",
+  "algolia": {
+    "application_id": "F5FF4IDLYX",
+    "index_name": "tarasis-blog",
+    "search_only_api_key": "ed656902b5bdd356f885bf9d99635fc1",
+    "powered_by": true
+  },
+  "google_site_verification": null,
+  "bing_site_verification": null,
+  "yandex_site_verification": null,
+  "twitter": {
+    "username": "tarasis"
+  },
+  "facebook": {
+    "username": "tarasis",
+    "app_id": null,
+    "publisher": null
+  },
+  "og_image": "/assets/images/bio-photo.jpg",
+  "social": {
+    "type": null,
+    "name": null,
+    "links": null
+  },
+  "analytics": {
+    "provider": false,
+    "google": {
+      "tracking_id": null
+    }
+  },
+  "author": {
+    "name": "Robert McGovern",
+    "avatar": "/assets/images/bio-photo.jpg",
+    "bio": "Wannabe field researcher for the Hitchhikers Guide to the Galaxy",
+    "location": "ZZ9 Plural Z Alpha",
+    "links": [
+      {
+        "label": "Website",
+        "icon": "fas fa-fw fa-link",
+        "url": "https://tarasis.net"
+      },
+      {
+        "label": "Email",
+        "icon": "fas fa-fw fa-envelope-square",
+        "url": "mailto:rob@tarasis.net"
+      },
+      {
+        "label": "Linkedin",
+        "icon": "fab fa-fw fa-linkedin",
+        "url": "https://www.linkedin.com/in/robertmcgovern/"
+      },
+      {
+        "label": "Github",
+        "icon": "fab fa-fw fa-github",
+        "url": "https://github.com/tarasis"
+      },
+      {
+        "label": "Twitter",
+        "icon": "fab fa-fw fa-twitter-square",
+        "url": "https://twitter.com/tarasis"
+      },
+      {
+        "label": "Facebook",
+        "icon": "fab fa-fw fa-facebook",
+        "url": "https://www.facebook.com/tarasis"
+      },
+      {
+        "label": "Instagram",
+        "icon": "fab fa-fw fa-instagram",
+        "url": "https://instagram.com/tarasis"
+      },
+      {
+        "label": "Flickr",
+        "icon": "fab fa-fw fa-flickr",
+        "url": "https://www.flickr.com/photos/tarasis/"
+      },
+      {
+        "label": "Youtube",
+        "icon": "fab fa-fw fa-youtube",
+        "url": "https://www.youtube.com/user/tarasis"
+      },
+      {
+        "label": "Soundcloud",
+        "icon": "fab fa-fw fa-soundcloud",
+        "url": "https://soundcloud.com/tarasis"
+      },
+      {
+        "label": "Last.FM",
+        "icon": "fab fa-fw fa-lastfm",
+        "url": "https://www.last.fm/user/tarasis"
+      },
+      {
+        "label": "Reddit",
+        "icon": "fab fa-fw fa-reddit",
+        "url": "https://www.reddit.com/user/tarasis"
+      },
+      {
+        "label": "Pinterest",
+        "icon": "fab fa-fw fa-pinterest",
+        "url": "https://www.pinterest.com/tarasis/"
+      }
+    ]
+  },
+  "footer": {
+    "links": [
+      {
+        "label": "Email",
+        "icon": "fas fa-fw fa-envelope-square",
+        "url": "mailto:rob@tarasis.net"
+      },
+      {
+        "label": "Twitter",
+        "icon": "fab fa-fw fa-twitter-square",
+        "url": "https://twitter.com/tarasis"
+      },
+      {
+        "label": "Facebook",
+        "icon": "fab fa-fw fa-facebook",
+        "url": "https://www.facebook.com/tarasis"
+      },
+      {
+        "label": "GitHub",
+        "icon": "fab fa-fw fa-github",
+        "url": "https://github.com/tarasis"
+      },
+      {
+        "label": "Instagram",
+        "icon": "fab fa-fw fa-instagram",
+        "url": "https://instagram.com/tarasis"
+      }
+    ]
+  },
+  "include": [
+    ".htaccess",
+    "_pages"
+  ],
+  "exclude": [
+    "*.sublime-project",
+    "*.sublime-workspace",
+    "vendor",
+    ".asset-cache",
+    ".bundle",
+    ".jekyll-assets-cache",
+    ".jekyll-cache",
+    ".sass-cache",
+    "assets/js/plugins",
+    "assets/js/_main.js",
+    "assets/js/vendor",
+    "Capfile",
+    "CHANGELOG",
+    "config",
+    "Gemfile",
+    "Gruntfile.js",
+    "gulpfile.js",
+    "LICENSE",
+    "log",
+    "node_modules",
+    "package.json",
+    "Rakefile",
+    "README",
+    "tmp"
+  ],
+  "keep_files": [
+    ".git",
+    ".svn"
+  ],
+  "encoding": "utf-8",
+  "markdown_ext": "markdown,mkdown,mkdn,mkd,md",
+  "strict_front_matter": true,
+  "liquid": {
+    "error_mode": "strict"
+  },
+  "markdown": "kramdown",
+  "highlighter": "rouge",
+  "lsi": false,
+  "excerpt_separator": "<!--more-->",
+  "incremental": false,
+  "kramdown": {
+    "input": "GFM",
+    "hard_wrap": false,
+    "auto_ids": true,
+    "footnote_nr": 1,
+    "entity_output": "as_char",
+    "toc_levels": "1..6",
+    "smart_quotes": "lsquo,rsquo,ldquo,rdquo",
+    "enable_coderay": false
+  },
+  "sass": {
+    "sass_dir": "_sass",
+    "style": "compressed"
+  },
+  "permalink": "/:year/:month/:day/:title/",
+  "paginate": 10,
+  "paginate_path": "/page:num/",
+  "timezone": null,
+  "plugins": [
+    "jekyll-archives",
+    "jekyll-paginate",
+    "jekyll-sitemap",
+    "jekyll-gist",
+    "jekyll-feed",
+    "jemoji",
+    "jekyll-include-cache",
+    "jekyll-gist"
+  ],
+  "whitelist": [
+    "jekyll-archives",
+    "jekyll-paginate",
+    "jekyll-sitemap",
+    "jekyll-gist",
+    "jekyll-feed",
+    "jemoji",
+    "jekyll-include-cache",
+    "jekyll-gist"
+  ],
+  "category_archive": {
+    "type": "liquid",
+    "path": "/categories/"
+  },
+  "tag_archive": {
+    "type": "liquid",
+    "path": "/tags/"
+  },
+  "compress_html": {
+    "clippings": "all",
+    "ignore": {
+      "envs": "development"
+    }
+  },
+  "collections": {
+    "recipes": {
+      "output": true,
+      "permalink": "/:collection/:path/"
+    },
+    "pets": {
+      "output": true,
+      "permalink": "/:collection/:path/"
+    },
+    "portfolio": {
+      "output": true,
+      "permalink": "/:collection/:path/"
+    }
+  },
+  "defaults": [
+    {
+      "scope": {
+        "path": "",
+        "type": "posts"
+      },
+      "values": {
+        "layout": "single",
+        "classes": "wide",
+        "author_profile": true,
+        "read_time": true,
+        "share": true,
+        "related": true,
+        "comments": true
+      }
+    },
+    {
+      "scope": {
+        "path": "_pages",
+        "type": "pages"
+      },
+      "values": {
+        "layout": "single",
+        "author_profile": true
+      }
+    },
+    {
+      "scope": {
+        "path": "",
+        "type": "recipes"
+      },
+      "values": {
+        "layout": "single",
+        "author_profile": true,
+        "share": true
+      }
+    }
+  ],
+  "post_ext": "markdown",
+  "page_ext": "html",
+  "post_layout": "single",
+  "page_layout": "page",
+  "titlecase": true,
+  "post_template": "post",
+  "page_template": "page",
+  "draft_template": "draft"
+}
