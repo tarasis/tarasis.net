@@ -1,0 +1,21 @@
+{
+  "name": "tarasis.net",
+  "version": "2.0.0",
+  "description": "Second generation of site using 11ty for building but using Jekyll theme Minimal Mistakes (with mods to make it work)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "forgejo@git.tarasis.net:tarasis/tarasis.net.git"
+  },
+  "keywords": [
+    "website",
+    "blog",
+    "11ty",
+    "jekyll"
+  ],
+  "author": "Robert McGovern et all",
+  "license": "MIT"
+}
