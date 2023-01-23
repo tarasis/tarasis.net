@@ -21,7 +21,7 @@ gallery:
   image_path: https://roadmap.sh/roadmaps/devops.png
   alt: DevOps Roadmap
   title: DevOps Roadmap
-date: 2020-04-21 00:44 +0100
+date: 2020-04-21 00:44:00 +01:00
 ---
 I mentioned in the [goals post]({% post_url 2020-04-17-goals %}), one of the things I am aiming to do is to start learning web development.
 

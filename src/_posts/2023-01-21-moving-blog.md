@@ -2,6 +2,7 @@
 title: Moving site from Jekyll to ???
 tags: [webdev, site, personal]
 category: [site, webdev, personal]
+date: 2023-01-21
 ---
 
 Goal is that at some point in the not to distant future I will move the blog from [Jekyll](https://jekyllrb.com) & the [Minimal Mistakes Theme](https://mmistakes.github.io/minimal-mistakes/) to something built with [11ty](https://www.11ty.dev/).

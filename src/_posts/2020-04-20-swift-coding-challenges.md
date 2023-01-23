@@ -6,7 +6,7 @@ tags:
 - swift
 - coding-challenges
 category: coding-challenges
-date: 2020-04-20 13:36 +0100
+date: 2020-04-20 13:36:00 +01:00
 ---
 As an effort to improve and challenge myself I got a copy of Paul Hudson's [Swift Coding Challenges](https://www.hackingwithswift.com/store/swift-coding-challenges) book and I'm going to work through it and post my thoughts on it and about how I did. I (probably) won't post the answers because that might spoil it for some.
 

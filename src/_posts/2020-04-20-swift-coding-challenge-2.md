@@ -6,7 +6,7 @@ tags:
 - swift
 - coding-challenges
 category: coding-challenges
-date: 2020-04-20 15:28 +0100
+date: 2020-04-20 15:28:00 +01:00
 ---
 Second one within 13 hours, good lord, that would never do.
 

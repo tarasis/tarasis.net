@@ -2,6 +2,7 @@
 title: What happens when I finish a Frontend Mentor Challenge (or how I build and deploy an 11ty site)
 tags: [webdev, site, frontendmentor]
 category: [programming, webdev]
+date: 2022-10-15
 ---
 
 I've been doing challenges from [Frontend Mentor](https://frontendmentor.io) as a means to practice frontend web development. Specifically working with plain HTML, CSS and JavaScript.

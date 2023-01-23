@@ -360,8 +360,5 @@
   "page_ext": "html",
   "post_layout": "single",
   "page_layout": "page",
-  "titlecase": true,
-  "post_template": "post",
-  "page_template": "page",
-  "draft_template": "draft"
+  "titlecase": true
 }

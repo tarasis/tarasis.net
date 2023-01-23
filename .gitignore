@@ -9,3 +9,81 @@ _site
 .jekyll-metadata
 
 **/*/premdesigns
+
+# ---> Eleventy
+
+#_site
+
+#package-lock.json
+css/main.css.map
+
+# dependency directories
+node_modules/
+
+# config
+.env*
+
+# caches
+.cache
+.sass-cache/
+
+# eleventy gulp build
+/dist
+
+*.log
+npm-debug.*
+*.scssc
+*.swp
+Thumbs.db
+
+dist
+src/_includes/css
+
+# my chosen output directory.
+www
+
+#### From FrontEnd Mentor gitignore. Just to avoid accidentally uploading design files
+#
+# Avoid accidental upload of the Sketch and Figma design files
+#####################################################
+## Please do not remove lines 5 and 6 - thanks! 🙂 ##
+#####################################################
+*.sketch
+*.fig
+
+# Avoid accidental XD upload if you convert the design file
+###############################################
+## Please do not remove line 12 - thanks! 🙂 ##
+###############################################
+*.xd
+.prettierignore
+
+# ---> macOS
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+

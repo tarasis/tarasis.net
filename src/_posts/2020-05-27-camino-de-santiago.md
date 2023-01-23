@@ -9,7 +9,7 @@ tags:
 - caminodesantiago
 category: camino
 
-date: 2020-05-27 01:45 +0100
+date: 2020-05-27 01:45:00 +01:00
 ---
 
 A year ago tomorrow I began the most gruelling, yet immensely satisfying, journey of my life. I set off from my home in Buchholz in der Nordheide Germany, to fly to France to walk the Camino de Santiago.
