@@ -1,0 +1,742 @@
+0a1
+> 
+13d13
+< 
+19a20,21
+>   <meta property="article:author" content="Robert McGovern">
+>   
+22c24
+< <meta property="og:type" content="website">
+---
+> <meta property="og:type" content="article">
+26c28
+< <meta property="og:url" content="http://localhost:4000/">
+---
+> <meta property="og:url" content="index.html">
+33c35
+<   <meta property="og:image" content="http://localhost:4000/assets/images/bio-photo.jpg">
+---
+>   <meta property="og:image" content="index.html">
+40c42
+<   <meta name="twitter:url" content="http://localhost:4000/">
+---
+>   <meta name="twitter:url" content="index.html">
+43,46c45,46
+<     <meta name="twitter:card" content="summary">
+<     
+<       <meta name="twitter:image" content="http://localhost:4000/assets/images/bio-photo.jpg">
+<     
+---
+>     <meta name="twitter:card" content="summary_large_image">
+>     <meta name="twitter:image" content="index.html">
+52a53
+>   <meta property="article:published_time" content="2020-03-05T11:10:24+00:00">
+56a58
+> 
+62c64
+< <link rel="canonical" href="http://localhost:4000/">
+---
+> <link rel="canonical" href="index.html">
+66d67
+<   <link rel="next" href="http://localhost:4000/page2/">
+68d68
+< 
+75c75
+<       "url": "http://localhost:4000/"
+---
+>       "url": "index.html"
+90c90
+<   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="TDN: RMCG Feed">
+---
+>   <link href="feed.xml" type="application/atom+xml" rel="alternate" title="TDN: RMCG Feed">
+101c101
+< <link rel="stylesheet" href="/assets/css/main.css">
+---
+> <link rel="stylesheet" href="assets/css/main.css">
+107c107
+<     <script src="/assets/js/progress.js"></script>
+---
+>     <script src="assets/js/progress.js"></script>
+109c109
+<     <script src="/assets/js/scroll-to-top.js"></script>
+---
+>     <script src="assets/js/scroll-to-top.js"></script>
+118c118
+<   <body class="layout--home">
+---
+>   <body class="layout--">
+138c138
+<           <a class="site-logo" href="/"><img src="/assets/images/apple-touch-icon.png" alt="TDN: RMCG"></a>
+---
+>           <a class="site-logo" href="index.html"><img src="assets/images/apple-touch-icon.png" alt="TDN: RMCG"></a>
+140c140
+<         <a class="site-title" href="/">
+---
+>         <a class="site-title" href="index.html">
+144,152c144
+<         <ul class="visible-links"><li class="masthead__menu-item">
+<               <a href="/year-archive/">Posts</a>
+<             </li><li class="masthead__menu-item">
+<               <a href="/tags/">Tags</a>
+<             </li><li class="masthead__menu-item">
+<               <a href="/categories/">Categories</a>
+<             </li><li class="masthead__menu-item">
+<               <a href="/about/">About</a>
+<             </li></ul>
+---
+>         <ul class="visible-links"></ul>
+174a167
+> 
+177,178d169
+<   <div class="sidebar sticky">
+<   
+181,331d171
+< <div itemscope itemtype="https://schema.org/Person">
+< 
+<   
+<     <div class="author__avatar">
+<       
+<         <img src="/assets/images/bio-photo.jpg" alt="Robert McGovern" itemprop="image">
+<       
+<     </div>
+<   
+< 
+<   <div class="author__content">
+<     
+<       <h3 class="author__name" itemprop="name">Robert McGovern</h3>
+<     
+<     
+<       <div class="author__bio" itemprop="description">
+<         <p>Wannabe field researcher for the Hitchhikers Guide to the Galaxy</p>
+< 
+<       </div>
+<     
+<   </div>
+< 
+<   <div class="author__urls-wrapper">
+<     <button class="btn btn--inverse">Follow</button>
+<     <ul class="author__urls social-icons">
+<       
+<         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+<           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">ZZ9 Plural Z Alpha</span>
+<         </li>
+<       
+< 
+<       
+<         
+<           
+<             <li><a href="https://tarasis.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+<           
+<         
+<           
+<             <li><a href="mailto:rob@tarasis.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://www.linkedin.com/in/robertmcgovern/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://github.com/tarasis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">Github</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://twitter.com/tarasis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://www.facebook.com/tarasis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span class="label">Facebook</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://instagram.com/tarasis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://www.flickr.com/photos/tarasis/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-flickr" aria-hidden="true"></i><span class="label">Flickr</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://www.youtube.com/user/tarasis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">Youtube</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://soundcloud.com/tarasis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-soundcloud" aria-hidden="true"></i><span class="label">Soundcloud</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://www.last.fm/user/tarasis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-lastfm" aria-hidden="true"></i><span class="label">Last.FM</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://www.reddit.com/user/tarasis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span class="label">Reddit</span></a></li>
+<           
+<         
+<           
+<             <li><a href="https://www.pinterest.com/tarasis/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-pinterest" aria-hidden="true"></i><span class="label">Pinterest</span></a></li>
+<           
+<         
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       
+< 
+<       <!--
+<   <li>
+<     <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+<       <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+<     </a>
+<   </li>
+< -->
+<     </ul>
+<   </div>
+< </div>
+< 
+<   
+<   </div>
+< 
+< 
+< 
+338d177
+< <h3 class="archive__subtitle">Recent posts</h3>
+340a180
+> <h3 class="archive__subtitle">Recent Posts</h3>
+343d182
+< <div class="entries-list">
+345d183
+<     
+349,384c187
+< <div class="list__item">
+<   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<     
+<     <h2 class="archive__item-title no_toc" itemprop="headline">
+<       
+<         <a href="/2022/10/15/frontend-mentor-challenge-deployment/" rel="permalink">What happens when I finish a Frontend Mentor Challenge (or how I build and deploy an 11ty site)
+< </a>
+<       
+<     </h2>
+<     
+< 
+<   <p class="page__meta">
+<     
+< 
+<     
+< 
+<     
+<       
+<       
+< 
+<       <span class="page__meta-readtime">
+<         <i class="far fa-clock" aria-hidden="true"></i>
+<         
+<           4 minute read
+<         
+<       </span>
+<     
+<   </p>
+< 
+< 
+<     <p class="archive__item-excerpt" itemprop="description">I’ve been doing challenges from Frontend Mentor as a means to practice frontend web development. Specifically working with plain HTML, CSS and JavaScript.
+< 
+< R...</p>
+<   </article>
+< </div>
+< 
+---
+> <div class="entries-list">
+386,421d188
+<     
+< 
+< 
+< 
+< <div class="list__item">
+<   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<     
+<     <h2 class="archive__item-title no_toc" itemprop="headline">
+<       
+<         <a href="/2020/05/27/camino-de-santiago/" rel="permalink">A short look back on my Camino de Santiago journey
+< </a>
+<       
+<     </h2>
+<     
+< 
+<   <p class="page__meta">
+<     
+< 
+<     
+< 
+<     
+<       
+<       
+< 
+<       <span class="page__meta-readtime">
+<         <i class="far fa-clock" aria-hidden="true"></i>
+<         
+<           3 minute read
+<         
+<       </span>
+<     
+<   </p>
+< 
+< 
+<     <p class="archive__item-excerpt" itemprop="description">A year ago tomorrow I began the most gruelling, yet immensely satisfying, journey of my life. I set off from my home in Buchholz in der Nordheide Germany, to...</p>
+<   </article>
+424,425d190
+<   
+<     
+429,812d193
+< <div class="list__item">
+<   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<     
+<     <h2 class="archive__item-title no_toc" itemprop="headline">
+<       
+<         <a href="/2020/04/21/learning-web-development/" rel="permalink">Learning Web Development
+< </a>
+<       
+<     </h2>
+<     
+< 
+<   <p class="page__meta">
+<     
+< 
+<     
+< 
+<     
+<       
+<       
+< 
+<       <span class="page__meta-readtime">
+<         <i class="far fa-clock" aria-hidden="true"></i>
+<         
+<           2 minute read
+<         
+<       </span>
+<     
+<   </p>
+< 
+< 
+<     <p class="archive__item-excerpt" itemprop="description">I mentioned in the goals post, one of the things I am aiming to do is to start learning web development.
+< 
+< I was well aware that what falls under the banner o...</p>
+<   </article>
+< </div>
+< 
+<   
+<     
+< 
+< 
+< 
+< <div class="list__item">
+<   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<     
+<     <h2 class="archive__item-title no_toc" itemprop="headline">
+<       
+<         <a href="/2020/04/20/swift-coding-challenge-2/" rel="permalink">Swift Coding Challenges: Challenge 2
+< </a>
+<       
+<     </h2>
+<     
+< 
+<   <p class="page__meta">
+<     
+< 
+<     
+< 
+<     
+<       
+<       
+< 
+<       <span class="page__meta-readtime">
+<         <i class="far fa-clock" aria-hidden="true"></i>
+<         
+<           1 minute read
+<         
+<       </span>
+<     
+<   </p>
+< 
+< 
+<     <p class="archive__item-excerpt" itemprop="description">Second one within 13 hours, good lord, that would never do.
+< 
+< So this challenge was to test if a string matched against the reverse of itself. Basically a pal...</p>
+<   </article>
+< </div>
+< 
+<   
+<     
+< 
+< 
+< 
+< <div class="list__item">
+<   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<     
+<     <h2 class="archive__item-title no_toc" itemprop="headline">
+<       
+<         <a href="/2020/04/20/swift-coding-challenges/" rel="permalink">Swift Coding Challenges: Challenge 1
+< </a>
+<       
+<     </h2>
+<     
+< 
+<   <p class="page__meta">
+<     
+< 
+<     
+< 
+<     
+<       
+<       
+< 
+<       <span class="page__meta-readtime">
+<         <i class="far fa-clock" aria-hidden="true"></i>
+<         
+<           less than 1 minute read
+<         
+<       </span>
+<     
+<   </p>
+< 
+< 
+<     <p class="archive__item-excerpt" itemprop="description">As an effort to improve and challenge myself I got a copy of Paul Hudson’s Swift Coding Challenges book and I’m going to work through it and post my thoughts...</p>
+<   </article>
+< </div>
+< 
+<   
+<     
+< 
+< 
+< 
+< <div class="list__item">
+<   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<     
+<     <h2 class="archive__item-title no_toc" itemprop="headline">
+<       
+<         <a href="/2020/04/17/goals/" rel="permalink">Goals
+< </a>
+<       
+<     </h2>
+<     
+< 
+<   <p class="page__meta">
+<     
+< 
+<     
+< 
+<     
+<       
+<       
+< 
+<       <span class="page__meta-readtime">
+<         <i class="far fa-clock" aria-hidden="true"></i>
+<         
+<           6 minute read
+<         
+<       </span>
+<     
+<   </p>
+< 
+< 
+<     <p class="archive__item-excerpt" itemprop="description">Long time, no write.
+< 
+< A lot has changed in my life, not least of which is that I am no longer a stay at home dad or living in Germany. For now I am back home...</p>
+<   </article>
+< </div>
+< 
+<   
+<     
+< 
+< 
+< 
+< <div class="list__item">
+<   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<     
+<     <h2 class="archive__item-title no_toc" itemprop="headline">
+<       
+<         <a href="/2019/06/17/Day21/" rel="permalink">Day 21
+< </a>
+<       
+<     </h2>
+<     
+< 
+<   <p class="page__meta">
+<     
+< 
+<     
+< 
+<     
+<       
+<       
+< 
+<       <span class="page__meta-readtime">
+<         <i class="far fa-clock" aria-hidden="true"></i>
+<         
+<           2 minute read
+<         
+<       </span>
+<     
+<   </p>
+< 
+< 
+<     <p class="archive__item-excerpt" itemprop="description">Day 21 of trip
+< 
+< Day Frómista to Carrión de los Condes. 18.88km according to app. 19.18km with Phone GPS (minor detour). Was walking quickly. Which Fitbit doe...</p>
+<   </article>
+< </div>
+< 
+<   
+<     
+< 
+< 
+< 
+< <div class="list__item">
+<   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<     
+<     <h2 class="archive__item-title no_toc" itemprop="headline">
+<       
+<         <a href="/2019/06/15/Day19/" rel="permalink">Day 19
+< </a>
+<       
+<     </h2>
+<     
+< 
+<   <p class="page__meta">
+<     
+< 
+<     
+< 
+<     
+<       
+<       
+< 
+<       <span class="page__meta-readtime">
+<         <i class="far fa-clock" aria-hidden="true"></i>
+<         
+<           3 minute read
+<         
+<       </span>
+<     
+<   </p>
+< 
+< 
+<     <p class="archive__item-excerpt" itemprop="description">Day 19 of trip
+< 
+< Day 16 of walk.
+< 
+< Today was Hornillos del Camino to Castrojeriz (19.47km)
+< 
+< Weather: cool, grey and minimal sun (nice to walk in)
+< 
+< Terrain: lig...</p>
+<   </article>
+< </div>
+< 
+<   
+<     
+< 
+< 
+< 
+< <div class="list__item">
+<   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<     
+<     <h2 class="archive__item-title no_toc" itemprop="headline">
+<       
+<         <a href="/2019/06/14/Day-2018/" rel="permalink">Day 18 - drawn to stop
+< </a>
+<       
+<     </h2>
+<     
+< 
+<   <p class="page__meta">
+<     
+< 
+<     
+< 
+<     
+<       
+<       
+< 
+<       <span class="page__meta-readtime">
+<         <i class="far fa-clock" aria-hidden="true"></i>
+<         
+<           4 minute read
+<         
+<       </span>
+<     
+<   </p>
+< 
+< 
+<     <p class="archive__item-excerpt" itemprop="description">Day 18
+< 
+< Burgos to Hornillos del Camino ~22km
+< 
+< Weather was pleasant but cool
+< 
+< Terrain most flat, gravel &amp; roads
+< 
+< Woke up at 3am freezing and no blanket to...</p>
+<   </article>
+< </div>
+< 
+<   
+<     
+< 
+< 
+< 
+< <div class="list__item">
+<   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<     
+<     <h2 class="archive__item-title no_toc" itemprop="headline">
+<       
+<         <a href="/2019/06/13/Day-2017/" rel="permalink">Day 17
+< </a>
+<       
+<     </h2>
+<     
+< 
+<   <p class="page__meta">
+<     
+< 
+<     
+< 
+<     
+<       
+<       
+< 
+<       <span class="page__meta-readtime">
+<         <i class="far fa-clock" aria-hidden="true"></i>
+<         
+<           3 minute read
+<         
+<       </span>
+<     
+<   </p>
+< 
+< 
+<     <p class="archive__item-excerpt" itemprop="description">Day 17
+< 
+< So it’s day 17 of the trip and day 14 of the Camino (day 12 if you take out 2 rest days)
+< 
+< Woke at 6 pretty impressed that I didn’t hear the 2 women i...</p>
+<   </article>
+< </div>
+< 
+<   
+< </div>
+< 
+< 
+< <nav class="pagination">
+<   
+<   <ul>
+<     
+<     
+<     <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
+<     
+< 
+<     
+<     
+<       <li><a href="#" class="disabled current">1</a></li>
+<     
+< 
+<     
+<     
+< 
+<     
+<     
+<     
+< 
+<     
+<       
+<         
+<         
+<         
+<         <li><a href="/page2/">2</a></li>
+<       
+<     
+< 
+<     
+<     
+< 
+<     
+<       <li><a href="/page3/">3</a></li>
+<     
+< 
+<     
+<     
+<       <li><a href="/page2/">Next</a></li>
+<     
+<   </ul>
+< </nav>
+< 
+< 
+< 
+841,842d221
+<       <li><strong>Follow:</strong></li>
+<     
+869c248
+<       <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+---
+>       <li><a href="feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+874c253
+< <div class="page__footer-copyright">&copy; 2023 Robert McGovern. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+---
+> <div class="page__footer-copyright">&copy; %2023 Robert McGovern. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+880c259
+<   <script src="/assets/js/main.min.js"></script>
+---
+>   <script src="assets/js/main.min.js"></script>
+884a264
+>   
+886,889c266,268
+< <script src="/assets/js/lunr/lunr.min.js"></script>
+< <script src="/assets/js/lunr/lunr-store.js"></script>
+< <script src="/assets/js/lunr/lunr-en.js"></script>
+< 
+---
+> <script src="assets/js/lunr/lunr.min.js"></script>
+> <script src="assets/js/lunr/lunr-store.js"></script>
+> <script src="assets/js/lunr/lunr-en.js"></script>

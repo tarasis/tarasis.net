@@ -15,12 +15,16 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 const xmlFiltersPlugin = require("eleventy-xml-plugin");
 
+const inspect = require("node:util").inspect;
+
 // relativeURL
 const path = require("path");
 const urlFilter = require("@11ty/eleventy/src/Filters/Url");
 const indexify = (url) => url.replace(/(\/[^.]*)$/, "$1index.html");
 
 module.exports = function (eleventyConfig) {
+    let pathPrefix = "/";
+
     eleventyConfig.addPlugin(pluginRss);
     //Blog excerpts
     eleventyConfig.addPlugin(description);
@@ -67,7 +71,7 @@ module.exports = function (eleventyConfig) {
     );
 
     // eleventyConfig.addCollection("posts", function (collectionApi) {
-    //     return collectionApi.getFilteredByGlob("./src/posts/**/*.md");
+    //     return collectionApi.getFilteredByGlob("./src/_posts/**/*.md");
     // });
 
     eleventyConfig.addCollection("tags", (collection) => {
@@ -119,7 +123,7 @@ module.exports = function (eleventyConfig) {
         require("moment")(date).format(format)
     );
 
-    eleventyConfig.addFilter("relative_url", relativeURL);
+    // eleventyConfig.addFilter("absolute_url", relativeURL);
     eleventyConfig.addLiquidFilter("toUTCString", (date) => {
         const utc = date.toUTCString();
         return moment.utc(utc).format("MMMM Do YYYY");
@@ -137,6 +141,10 @@ module.exports = function (eleventyConfig) {
         // where_exp function
         return value.hidden != true;
     });
+
+    eleventyConfig.addFilter("inspect", function (obj = {}) {
+        return inspect(obj, {sorted: true});
+      });
 
     eleventyConfig.addLayoutAlias(
         "archive-taxonomy",
@@ -294,10 +302,13 @@ module.exports = function (eleventyConfig) {
     //     }
     // );
 
-    return {
-        templateFormats: ["html", "liquid", "md"],
+    eleventyConfig.addFilter("relative_url", relativeURLALT);
+    eleventyConfig.addFilter("absolute_url", relativeURLALT);
 
-        pathPrefix: "/",
+    return {
+        templateFormats: ["html", "liquid", "md", "njk"],
+
+        pathPrefix,
 
         passthroughFileCopy: true,
 
@@ -331,6 +342,56 @@ function relativeURL(url, pathPrefix = undefined) {
     //console.log(this); // rmcg
 
     // rmcg - removed ctx from this.ctx.page.url
+    const currentDir = this.page.url;
+    const filteredUrl = urlFilter(url, "/");
+
+    // Make sure the index.html is expressed.
+    const indexUrl = indexify(filteredUrl);
+
+    // Check that the url doesn't specify a protocol.
+    const u = new URL(indexUrl, "make-relative://");
+    if (u.protocol !== "make-relative:") {
+        // It has a protocol, so just return the filtered URL output.
+        return filteredUrl;
+    }
+
+    // Return the relative path, or `index.html` if it's the same as the current
+    // page's directory.
+    const relativePath = `${
+        path.relative(currentDir, u.pathname) || "index.html"
+    }`;
+    return relativePath;
+}
+
+/**
+ * Just `{{ '/something' | url }}` will return the relative path to
+ * `/something/index.html`.
+ *
+ * `{{ '/something.with.dots' | url }}` will return the relative path to
+ * `/something.with.dots`.
+ *
+ * @param {string} url the URL to transform
+ * @param {string} [pathPrefix] optional path prefix to force an absolute URL
+ * @returns {string} resulting URL
+ */
+function relativeURLALT(url, pathPrefix = undefined) {
+    pathPrefix = "/";
+    //      console.log(url);
+    //      console.log(pathPrefix);
+    //      console.log(this.page);
+    if (pathPrefix !== undefined) {
+        // Fall back on original url filter if pathPrefix is set.
+        return urlFilter(url, pathPrefix);
+    }
+
+    if (pathPrefix == undefined && this.page == undefined) {
+        //      console.log("dropping out");
+        return urlFilter(url, "");
+    }
+
+    // Look up the url of the current rendering page, which is accessible via
+    // `this`.
+    console.log(this);
     const currentDir = this.page.url;
     const filteredUrl = urlFilter(url, "/");
 

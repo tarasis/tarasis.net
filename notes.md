@@ -9,3 +9,9 @@ Removed from site.json
   "page_template": "page",
   "draft_template": "draft"
 ```
+
+hacked pathPrefix into relativeURLAlt function because for some reason it isn't being picked up from the above return.
+
+author_profile.html for adding mastodon
+
+invalid date format https://github.com/11ty/eleventy/issues/413

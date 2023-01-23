@@ -318,44 +318,34 @@
       "permalink": "/:collection/:path/"
     }
   },
-  "defaults": [
-    {
-      "scope": {
-        "path": "",
-        "type": "posts"
-      },
-      "values": {
+  "defaults": {
+    "posts": {
+        "path": "_posts",
+        "type": "posts",
         "layout": "single",
         "classes": "wide",
         "author_profile": true,
         "read_time": true,
         "share": true,
         "related": true,
-        "comments": true
-      }
+        "comments": true,
+        "sidebar":true,
+        "show_date": true
     },
-    {
-      "scope": {
+    "pages": {
         "path": "_pages",
-        "type": "pages"
-      },
-      "values": {
+        "type": "pages",
         "layout": "single",
         "author_profile": true
-      }
     },
-    {
-      "scope": {
+      "recipies": {
         "path": "",
-        "type": "recipes"
-      },
-      "values": {
+        "type": "recipes",
         "layout": "single",
         "author_profile": true,
         "share": true
-      }
     }
-  ],
+  },
   "post_ext": "markdown",
   "page_ext": "html",
   "post_layout": "single",
