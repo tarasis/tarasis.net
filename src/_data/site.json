@@ -73,7 +73,7 @@
   "atom_feed": {
     "path": null
   },
-  "search": true,
+  "search": false,
   "search_full_content": true,
   "search_provider": "lunr",
   "algolia": {
