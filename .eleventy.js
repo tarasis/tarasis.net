@@ -1,3 +1,5 @@
+const siteURL = "https://tarasis.net";
+
 const fs = require("fs-extra");
 const sass = require("sass");
 const { promisify } = require("util");
@@ -14,6 +16,9 @@ const description = require("eleventy-plugin-description");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 const xmlFiltersPlugin = require("eleventy-xml-plugin");
+const yaml = require("js-yaml");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 
 const inspect = require("node:util").inspect;
 
@@ -24,6 +29,9 @@ const indexify = (url) => url.replace(/(\/[^.]*)$/, "$1index.html");
 
 module.exports = function (eleventyConfig) {
     let pathPrefix = "/";
+
+    eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+    eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
 
     eleventyConfig.addPlugin(pluginRss);
     //Blog excerpts
@@ -39,7 +47,32 @@ module.exports = function (eleventyConfig) {
     });
     // TODO https://www.npmjs.com/package/eleventy-plugin-meta-generator
     // Eleventy Syntax Highlighting (https://www.11ty.dev/docs/plugins/syntaxhighlight/)
-    eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
+    // eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
+    eleventyConfig.addPlugin(syntaxHighlight, {
+
+        alwaysWrapLineHighlights: true,
+                // Change which Eleventy template formats use syntax highlighters
+        // templateFormats: ["*"], // default
+
+        // Use only a subset of template types (11ty.js added in v4.0.0)
+        // templateFormats: ["liquid", "njk", "md", "11ty.js"],
+
+        // init callback lets you customize Prism
+        // init: function({ Prism }) {
+        //   Prism.languages.myCustomLanguage = /* */;
+        // },
+
+        // Added in 3.1.1, add HTML attributes to the <pre> or <code> tags
+        preAttributes: {
+          tabindex: 0,
+
+          // Added in 4.1.0 you can use callback functions too
+          "data-language": function({ language, content, options }) {
+            return language;
+          }
+        },
+        codeAttributes: {},
+      });
 
     eleventyConfig.addPlugin(xmlFiltersPlugin);
 
@@ -74,18 +107,43 @@ module.exports = function (eleventyConfig) {
     //     return collectionApi.getFilteredByGlob("./src/_posts/**/*.md");
     // });
 
+    eleventyConfig.addCollection("drafts", (collection) =>
+    collection
+        .getFilteredByGlob("./src/_drafts/**/*")
+        .sort((a, b) => a.data.weight - b.data.weight)
+)   ;
+
+
     eleventyConfig.addCollection("tags", (collection) => {
         let tags = new Set();
 
         collection.getAll().forEach((item) => {
             if ("tags" in item.data) {
-                for (const tag of item.data.tags) {
-                    tags.add(tag);
+                if (item.data.tags != undefined) {
+                    for (const tag of item.data.tags) {
+                        tags.add(tag);
+                    }
                 }
             }
         });
 
         return [...tags];
+    });
+
+    eleventyConfig.addCollection("categories", (collection) => {
+        let categories = new Set();
+
+        collection.getAll().forEach((item) => {
+            if ("category" in item.data) {
+                if (item.data.category != undefined) {
+                     for (const category of item.data.category) {
+                        categories.add(category);
+                    }
+                }
+            }
+        });
+
+        return [...categories];
     });
 
     // Filters
@@ -123,15 +181,12 @@ module.exports = function (eleventyConfig) {
         require("moment")(date).format(format)
     );
 
-    // eleventyConfig.addFilter("absolute_url", relativeURL);
     eleventyConfig.addLiquidFilter("toUTCString", (date) => {
         const utc = date.toUTCString();
         return moment.utc(utc).format("MMMM Do YYYY");
     });
 
     eleventyConfig.addFilter("number_of_words", numberOfWords);
-
-    // eleventyConfig.addFilter("absolute_url", relativeUrl);
 
     // eleventyConfig.addShortcode("where_exp", function (item, exp) {
     //     console.log(exp);
@@ -145,6 +200,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("inspect", function (obj = {}) {
         return inspect(obj, {sorted: true});
       });
+
+    eleventyConfig.addFilter('group_by', groupBy)
 
     eleventyConfig.addLayoutAlias(
         "archive-taxonomy",
@@ -164,6 +221,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addLayoutAlias("tag", "layouts/tag.html");
     eleventyConfig.addLayoutAlias("tags", "layouts/tags.html");
     eleventyConfig.addLayoutAlias("gallery", "layouts/gallery");
+    eleventyConfig.addLayoutAlias("drafts", "layouts/drafts");
 
     // Passthrough copy
     // don't use .gitignore (allows compiling sass to css into a monitored folder WITHOUT committing it to repo)
@@ -303,13 +361,16 @@ module.exports = function (eleventyConfig) {
     // );
 
     eleventyConfig.addFilter("relative_url", relativeURLALT);
-    eleventyConfig.addFilter("absolute_url", relativeURLALT);
+    eleventyConfig.addFilter("absolute_url", absoluteUrl);
 
     return {
         templateFormats: ["html", "liquid", "md", "njk"],
 
         pathPrefix,
 
+        environment: "production",
+
+        // absolute_url: "https://tarasis.net/",
         passthroughFileCopy: true,
 
         dir: {
@@ -412,3 +473,32 @@ function relativeURLALT(url, pathPrefix = undefined) {
     }`;
     return relativePath;
 }
+
+function absoluteUrl(url) {
+    if (url !== undefined) {
+        return siteURL + url
+    } else {
+        return siteURL
+    }
+}
+
+function groupBy(array, key) {
+    const get = entry => key.split('.').reduce((acc, key) => acc[key], entry)
+
+    const map = array.reduce((acc, entry) => {
+      const value = get(entry)
+
+      if (typeof acc[value] === 'undefined') {
+        acc[value] = []
+      }
+
+      acc[value].push(entry)
+      return acc
+    }, {})
+
+    return Object.keys(map).reduce(
+      (acc, key) => [...acc, { name: key, items: map[key] }],
+      []
+    )
+  }
+

@@ -23,7 +23,7 @@ gallery:
   title: DevOps Roadmap
 date: 2020-04-21 00:44:00 +01:00
 ---
-I mentioned in the [goals post]({% post_url 2020-04-17-goals %}), one of the things I am aiming to do is to start learning web development.
+I mentioned in the [goals post]({% post_url collections.posts, "goals" %}), one of the things I am aiming to do is to start learning web development.
 
 I was well aware that what falls under the banner of web development is massive, I just hadn't realised quite how large it was.
 
@@ -37,13 +37,13 @@ What I find overwhelming is what to use for learning in terms of tutorials, vide
 
 At the moment my focus is split between the following multiple sources
 
-Text: 
+Text:
 
 - [FreeCodeCamp](https://www.freecodecamp.org)
 - [HTML Dog](https://htmldog.com/guides/)
 - and a couple of others (links are on my iPad, will update later)
 
-Video: 
+Video:
 - [The Complete 2020 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/) by Angela Yu
 - [CS50’s Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/) (via [edx](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript)) - (although this is kinda a mix of both video and text)
 - [Colt's Code Camp (Learn Coding From Scratch)](https://www.youtube.com/watch?v=SF_Xl5TOGlY&list=PLblA84xge2_xNtaFnZhefjFbnDrpySKD3) by Colt Steele
@@ -52,4 +52,4 @@ I'm trying to get a feel for what works best for me, what sits in my mind more a
 
 Right now I'm still vetting, I def like Angela's course, or at least her voice, style, and humour (even if I'm watching the videos at 1.5-2.0x speed). However it is the only thing I've linked to that requires payment.
 
-I really like FreeCodeCamp's site, and the mechanics of teaching in the browser. I seriously question the 300 hours it suggests per module. I'm virtually finished the first module within about 6 hours. I'm currently working on the first "assignment", and I could easily see spending a bunch of time doing those and making them look great. 
+I really like FreeCodeCamp's site, and the mechanics of teaching in the browser. I seriously question the 300 hours it suggests per module. I'm virtually finished the first module within about 6 hours. I'm currently working on the first "assignment", and I could easily see spending a bunch of time doing those and making them look great.

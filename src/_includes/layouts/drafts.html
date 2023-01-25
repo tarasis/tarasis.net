@@ -1,0 +1,11 @@
+---
+layout: archive
+---
+
+TEST
+
+{{collections.drafts.size}}
+
+{% for post in collections.drafts %}
+    {% include archive-single.html type=entries_layout, aPost=post %}
+{% endfor %}

@@ -5,19 +5,21 @@ layout: archive
 {{ content }}
 
 {% assign tags_max = 0 %}
-{% for tag in site.tags %}
-  {% if tag[1].size > tags_max %}
-    {% assign tags_max = tag[1].size %}
+{% for tag in collections.tags %}
+  {% if collections[tag].size > tags_max %}
+    {% assign tags_max = collections[tag].size %}
   {% endif %}
 {% endfor %}
 
+
+
 <ul class="taxonomy__index">
   {% for i in (1..tags_max) reversed %}
-    {% for tag in site.tags %}
-      {% if tag[1].size == i %}
+    {% for tag in collections.tags %}
+      {% if collections[tag].size == i %}
         <li>
-          <a href="#{{ tag[0] | slugify }}">
-            <strong>{{ tag[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
+          <a href="#{{ tag | slugify }}">
+            <strong>{{ tag }}</strong> <span class="taxonomy__count">{{ i }}</span>
           </a>
         </li>
       {% endif %}
@@ -27,16 +29,16 @@ layout: archive
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% for i in (1..tags_max) reversed %}
-  {% for tag in site.tags %}
-    {% if tag[1].size == i %}
-      <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle">{{ tag[0] }}</h2>
+  {% for tag in collections.tags %}
+    {% if collections[tag].size == i %}
+      <section id="{{ tag | slugify | downcase }}" class="taxonomy__section">
+        <h2 class="archive__subtitle">{{ tag }}</h2>
         <div class="entries-{{ entries_layout }}">
-          {% for post in tag.last %}
-            {% include archive-single.html type=entries_layout %}
+          {% for post in collections[tag] %}
+            {% include archive-single.html type=entries_layout, aPost=post %}
           {% endfor %}
         </div>
-        <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+        <a href="#page-title" class="back-to-top">{{ ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
       </section>
     {% endif %}
   {% endfor %}

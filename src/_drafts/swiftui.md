@@ -7,6 +7,7 @@ related: true
 title: SwiftUI
 tags: [swiftui,programming,ios, swift]
 category: Programming
+eleventyExcludeFromCollections: true
 ---
 
 Its been a long while since I sat and did programming, but between a life situation and the new technology from Apple for creating user interfaces (SwiftUI), I've been inspired to pickup again an idea I've been kicking around for 10 years.
@@ -42,7 +43,7 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 ```
 
-Bash: 
+Bash:
 ```bash
 
 #!/usr/bin/env bash
@@ -103,13 +104,13 @@ regexp = /[abc]/
 
 # This is a comment
 class Person
-  
+
   attr_accessor :name
-  
+
   def initialize(attributes = {})
     @name = attributes[:name]
   end
-  
+
   def self.greet
     "hello"
   end
@@ -178,7 +179,7 @@ $(document).ready(function() {
 }
 ```
 
-<p>notice</p>{: .notice} 
+<p>notice</p>{: .notice}
 <p>primary</p>{: .notice--primary}
 <p>info</p>{: .notice--info}
 <p>warning</p>{: .notice--warning}

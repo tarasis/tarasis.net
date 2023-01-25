@@ -6,6 +6,7 @@ tags:
 - swift
 - coding-challenges
 category: coding-challenges
+eleventyExcludeFromCollections: true
 ---
 
 # Challenge 3

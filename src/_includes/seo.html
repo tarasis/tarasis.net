@@ -6,8 +6,8 @@
 
 {% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
 
-{%- if page.title -%}
-  {%- assign seo_title = page.title | append: " " | append: title_separator | append: " " | append: site.title -%}
+{%- if title -%}
+  {%- assign seo_title = title | append: " " | append: title_separator | append: " " | append: site.title -%}
 {%- endif -%}
 
 {%- if seo_title -%}
@@ -20,34 +20,34 @@
   {%- assign canonical_url = page.url | replace: "index.html", "" | absolute_url %}
 {% endif %}
 
-{%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
+{%- assign seo_description = description | default: excerpt | default: site.description -%}
 {%- if seo_description -%}
   {%- assign seo_description = seo_description | markdownify | strip_html | newline_to_br | strip_newlines | replace: '<br />', ' ' | escape_once | strip -%}
 {%- endif -%}
 
-{%- assign author = page.author | default: page.authors[0] | default: site.author -%}
-{%- assign author = site.data.authors[author] | default: author -%}
+{%- assign author = author | default: authors[0] | default: site.author -%}
+{%- assign author = authors[author] | default: author -%}
 
 {%- if author.twitter -%}
   {%- assign author_twitter = author.twitter | replace: "@", "" -%}
 {%- endif -%}
 
-{%- assign page_large_image = page.header.og_image | default: page.header.overlay_image | default: page.header.image | absolute_url -%}
+{%- assign page_large_image = header.og_image | default: header.overlay_image | default: header.image | absolute_url -%}
 {%- assign page_large_image = page_large_image | escape -%}
 
-{%- assign page_teaser_image = page.header.teaser | default: site.og_image | absolute_url -%}
+{%- assign page_teaser_image = header.teaser | default: site.og_image | absolute_url -%}
 {%- assign page_teaser_image = page_teaser_image | escape -%}
 
 {%- assign site_og_image = site.og_image | absolute_url -%}
 {%- assign site_og_image = site_og_image | escape -%}
 
-{%- if page.date -%}
+{%- if date -%}
   {%- assign og_type = "article" -%}
 {%- else -%}
   {%- assign og_type = "website" -%}
 {%- endif -%}
 
-<title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
+<title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 <meta name="description" content="{{ seo_description }}">
 
 {% if author.name %}
@@ -60,7 +60,7 @@
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:locale" content="{{ site.locale | replace: "-", "_" | default: "en_US" }}">
 <meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+<meta property="og:title" content="{{ title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 <meta property="og:url" content="{{ canonical_url }}">
 
 {% if seo_description %}
@@ -75,7 +75,7 @@
 
 {% if site.twitter.username %}
   <meta name="twitter:site" content="@{{ site.twitter.username | replace: "@", "" }}">
-  <meta name="twitter:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+  <meta name="twitter:title" content="{{ title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
   <meta name="twitter:description" content="{{ seo_description }}">
   <meta name="twitter:url" content="{{ canonical_url }}">
 
@@ -94,12 +94,12 @@
   {% endif %}
 {% endif %}
 
-{% if page.date %}
-  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% if date %}
+  <meta property="article:published_time" content="{{ date | date_to_xmlschema }}">
 {% endif %}
 
 {% if og_type == "article" and page.last_modified_at %}
-  <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
+  <meta property="article:modified_time" content="{{ last_modified_at | date_to_xmlschema }}">
 {% endif %}
 
 {% if site.facebook %}

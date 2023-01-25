@@ -2,22 +2,20 @@
 layout: archive
 ---
 
-{{ content }}
-
 {% assign categories_max = 0 %}
-{% for category in site.categories %}
-  {% if category[1].size > categories_max %}
-    {% assign categories_max = category[1].size %}
+{% for category in collections.categories %}
+  {% if collections[category].size > categories_max %}
+    {% assign categories_max = collections[category].size %}
   {% endif %}
 {% endfor %}
 
 <ul class="taxonomy__index">
   {% for i in (1..categories_max) reversed %}
-    {% for category in site.categories %}
-      {% if category[1].size == i %}
+    {% for category in collections.categories %}
+      {% if collections[category].size == i %}
         <li>
-          <a href="#{{ category[0] | slugify }}">
-            <strong>{{ category[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
+          <a href="#{{ category | slugify }}">
+            <strong>{{ category }}</strong> <span class="taxonomy__count">{{ i }}</span>
           </a>
         </li>
       {% endif %}
@@ -25,18 +23,18 @@ layout: archive
   {% endfor %}
 </ul>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% assign entries_layout = entries_layout | default: 'list' %}
 {% for i in (1..categories_max) reversed %}
-  {% for category in site.categories %}
-    {% if category[1].size == i %}
-      <section id="{{ category[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle">{{ category[0] }}</h2>
+  {% for category in collections.categories %}
+    {% if collections[category].size == i %}
+      <section id="{{ category | slugify | downcase }}" class="taxonomy__section">
+        <h2 class="archive__subtitle">{{ category }}</h2>
         <div class="entries-{{ entries_layout }}">
-          {% for post in category.last %}
-            {% include archive-single.html type=entries_layout %}
+          {% for post in collections[category] %}
+            {% include archive-single.html type=entries_layout aPost=post%}
           {% endfor %}
         </div>
-        <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+        <a href="#page-title" class="back-to-top">{{ ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
       </section>
     {% endif %}
   {% endfor %}

@@ -4,12 +4,14 @@ title: terminal-colors
 tags:
 - programming
 category: programming
+eleventyExcludeFromCollections: true
+
 
 ---
 
 Color ... I have a problem ...
 
-Or Colour if you're from the UK and associated territories. 
+Or Colour if you're from the UK and associated territories.
 
 Seriously, I legitimately have a problem. I need color when I am working with source code, the terminal or when I am reading computer books (like images, or source code).
 

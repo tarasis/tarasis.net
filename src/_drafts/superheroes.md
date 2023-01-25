@@ -6,6 +6,7 @@ share: true
 related: true
 title: 'Superheroes'
 tag: [Movies, TV, Comics]
+eleventyExcludeFromCollections: true
 ---
 
 Test

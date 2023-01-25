@@ -2,6 +2,7 @@
 title: CSS Properties, or I have a problem.
 tags: [webdev, css]
 category: programming
+eleventyExcludeFromCollections: true
 ---
 
 

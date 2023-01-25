@@ -2,6 +2,8 @@
 title: Cash Register Challenge on freeCodeCamp
 tags: [webdev, javascript, freecodecamp]
 category: programming
+eleventyExcludeFromCollections: true
+layout: single
 ---
 
 I've been (slowly) working through the JavaScript module on [freeCodeCamp](https://freecodecamp.org) for a while now, and have recently been doing the certificate challenges. The last of which is the "Cash Register" challenge where you are to write a function that takes a price, a payment amount and an array that contains the cash in the drawer.
@@ -35,10 +37,10 @@ Example of the cash in drawer array:
 ]
 ```
 
-Sample input to function, 
+Sample input to function,
 
 ```javascript
-checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) 
+checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])
 ```
 
 and the expected return object

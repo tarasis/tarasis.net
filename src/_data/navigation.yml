@@ -1,9 +1,7 @@
 # main links
 main:
-#  - title: ""
-#    url: /docs/quick-start-guide/
-  - title: "Posts"
-    url: /year-archive/
+#  - title: "Posts"
+#    url: /year-archive/
   - title: "Tags"
     url: /tags/
   - title: "Categories"

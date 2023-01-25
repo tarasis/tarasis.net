@@ -1,0 +1,1316 @@
+{
+  authors: {
+    robert_mcgovern: {
+      name: 'Robert McGovern',
+      web: 'https://tarasis.net',
+      email: 'rob@tarasis.net',
+      bio: '',
+      avatar: 'bio-photo-2.jpg',
+      twitter: 'tarasis'
+    }
+  },
+  navigation: { main: [ [Object], [Object], [Object], [Object] ] },
+  site: {
+    theme: 'minimal-mistakes-jekyll',
+    minimal_mistakes_skin: 'neon',
+    locale: 'en-US',
+    title: 'TDN: RMCG',
+    title_separator: '-',
+    name: 'Robert McGovern',
+    description: 'Random Things',
+    url: 'https://tarasis.net',
+    baseurl: '',
+    repository: null,
+    teaser: null,
+    logo: '/assets/images/apple-touch-icon.png',
+    masthead_title: '',
+    subtitle: '👨‍💻 🚶‍♂️ 💭 🤯',
+    breadcrumbs: false,
+    breadcrumb_home_label: 'Home',
+    breadcrumb_separator: '>',
+    words_per_minute: 200,
+    head_scripts: [ '/assets/js/progress.js', '/assets/js/scroll-to-top.js' ],
+    comments: {
+      provider: 'disqus',
+      disqus: [Object],
+      discourse: [Object],
+      facebook: [Object],
+      utterances: [Object]
+    },
+    staticman: {
+      allowedFields: [Array],
+      branch: null,
+      commitMessage: 'New comment by {fields.name}',
+      filename: 'comment-{@timestamp}',
+      format: 'yml',
+      moderation: true,
+      path: '_data/comments/{options.slug}',
+      requiredFields: [Array],
+      transforms: [Object],
+      generatedFields: [Object],
+      endpoint: null
+    },
+    atom_feed: { path: null },
+    search: true,
+    search_full_content: true,
+    search_provider: 'lunr',
+    algolia: {
+      application_id: 'F5FF4IDLYX',
+      index_name: 'tarasis-blog',
+      search_only_api_key: 'ed656902b5bdd356f885bf9d99635fc1',
+      powered_by: true
+    },
+    google_site_verification: null,
+    bing_site_verification: null,
+    yandex_site_verification: null,
+    twitter: { username: 'tarasis' },
+    facebook: { username: 'tarasis', app_id: null, publisher: null },
+    og_image: '/assets/images/bio-photo.jpg',
+    social: { type: null, name: null, links: null },
+    analytics: { provider: false, google: [Object] },
+    author: {
+      name: 'Robert McGovern',
+      avatar: '/assets/images/bio-photo.jpg',
+      bio: 'Wannabe field researcher for the Hitchhikers Guide to the Galaxy',
+      location: 'ZZ9 Plural Z Alpha',
+      links: [Array]
+    },
+    footer: { links: [Array] },
+    include: [ '.htaccess', '_pages' ],
+    exclude: [
+      '*.sublime-project', '*.sublime-workspace',
+      'vendor',            '.asset-cache',
+      '.bundle',           '.jekyll-assets-cache',
+      '.jekyll-cache',     '.sass-cache',
+      'assets/js/plugins', 'assets/js/_main.js',
+      'assets/js/vendor',  'Capfile',
+      'CHANGELOG',         'config',
+      'Gemfile',           'Gruntfile.js',
+      'gulpfile.js',       'LICENSE',
+      'log',               'node_modules',
+      'package.json',      'Rakefile',
+      'README',            'tmp'
+    ],
+    keep_files: [ '.git', '.svn' ],
+    encoding: 'utf-8',
+    markdown_ext: 'markdown,mkdown,mkdn,mkd,md',
+    strict_front_matter: true,
+    liquid: { error_mode: 'strict' },
+    markdown: 'kramdown',
+    highlighter: 'rouge',
+    lsi: false,
+    excerpt_separator: '<!--more-->',
+    incremental: false,
+    kramdown: {
+      input: 'GFM',
+      hard_wrap: false,
+      auto_ids: true,
+      footnote_nr: 1,
+      entity_output: 'as_char',
+      toc_levels: '1..6',
+      smart_quotes: 'lsquo,rsquo,ldquo,rdquo',
+      enable_coderay: false
+    },
+    sass: { sass_dir: '_sass', style: 'compressed' },
+    permalink: '/:year/:month/:day/:title/',
+    paginate: 10,
+    paginate_path: '/page:num/',
+    timezone: null,
+    plugins: [
+      'jekyll-archives',
+      'jekyll-paginate',
+      'jekyll-sitemap',
+      'jekyll-gist',
+      'jekyll-feed',
+      'jemoji',
+      'jekyll-include-cache',
+      'jekyll-gist'
+    ],
+    whitelist: [
+      'jekyll-archives',
+      'jekyll-paginate',
+      'jekyll-sitemap',
+      'jekyll-gist',
+      'jekyll-feed',
+      'jemoji',
+      'jekyll-include-cache',
+      'jekyll-gist'
+    ],
+    category_archive: { type: 'liquid', path: '/categories/' },
+    tag_archive: { type: 'liquid', path: '/tags/' },
+    compress_html: { clippings: 'all', ignore: [Object] },
+    collections: { recipes: [Object], pets: [Object], portfolio: [Object] },
+    defaults: { posts: [Object], pages: [Object], recipies: [Object] },
+    post_ext: 'markdown',
+    page_ext: 'html',
+    post_layout: 'single',
+    page_layout: 'page',
+    titlecase: true
+  },
+  eleventy: {
+    version: '2.0.0',
+    generator: 'Eleventy v2.0.0',
+    env: {
+      source: 'cli',
+      config: '/Users/tarasis/Programming/Websites/tarasis.net/.eleventy.js',
+      root: '/Users/tarasis/Programming/Websites/tarasis.net',
+      isServerless: false
+    }
+  },
+  pkg: {
+    name: 'tarasis.net',
+    version: '2.0.0',
+    description: 'Second generation of site using 11ty for building but using Jekyll theme Minimal Mistakes (with mods to make it work)',
+    main: 'index.js',
+    scripts: {
+      'watch:sass': 'sass --watch src/_sass/**/*.scss dist/assets/styles/minimal-mistakes.css',
+      'build:sass': 'sass --style=compressed src/_sass/minimal-mistakes.scss dist/assets/styles/minimal-mistakes.css',
+      'build:mysass': 'sass  --style=compressed src/assets/css/main.scss dist/assets/css/main.css',
+      'watch:eleventy': 'eleventy --serve',
+      'build:eleventy': 'eleventy',
+      start: 'npm-run-all build:sass --parallel watch:*',
+      build: 'npm-run-all build:*',
+      debug: 'DEBUG=Eleventy:* eleventy'
+    },
+    repository: {
+      type: 'git',
+      url: 'forgejo@git.tarasis.net:tarasis/tarasis.net.git'
+    },
+    keywords: [ 'website', 'blog', '11ty', 'jekyll' ],
+    author: 'Robert McGovern et all',
+    license: 'MIT',
+    devDependencies: { '@11ty/eleventy': '^2.0.0-beta.1' },
+    dependencies: {
+      '@11ty/eleventy-navigation': '^0.3.5',
+      '@11ty/eleventy-plugin-rss': '^1.2.0',
+      '@11ty/eleventy-plugin-syntaxhighlight': '^4.2.0',
+      '@11ty/eleventy-upgrade-help': '^2.0.5',
+      autoprefixer: '^10.4.13',
+      const: '^1.0.0',
+      'eleventy-load': '^0.3.1',
+      'eleventy-load-css': '^0.3.0',
+      'eleventy-load-file': '^0.1.0',
+      'eleventy-load-html': '^0.1.1',
+      'eleventy-load-sass': '^0.1.2',
+      'eleventy-plugin-description': '^0.1.5',
+      'eleventy-plugin-toc': '^1.1.5',
+      'eleventy-xml-plugin': '^0.1.0',
+      'fs-extra': '^11.1.0',
+      'js-yaml': '^4.1.0',
+      'markdown-it': '^13.0.1',
+      'markdown-it-anchor': '^8.6.6',
+      'markdown-it-attrs': '^4.1.6',
+      'markdown-it-container': '^3.0.0',
+      'markdown-it-fontawesome': '^0.3.0',
+      'markdown-it-footnote': '^3.0.3',
+      markdownify: '^0.1.0',
+      moment: '^2.29.4',
+      'npm-run-all': '^4.1.5',
+      postcss: '^8.4.21',
+      sass: '^1.57.1',
+      slugify: '^1.6.5'
+    }
+  },
+  layout: 'single',
+  permalink: "/{{ page.date | date: 'Y/M/D' }}/{{ page.fileSlug }}/",
+  author_profile: true,
+  read_time: true,
+  share: true,
+  related: true,
+  title: 'Day 7 - Taking a break',
+  date: 2019-06-03T20:20:16.000Z,
+  category: null,
+  tags: [ 'camino', 'caminodesantiago', 'jakobsweg' ],
+  page: {
+    date: 2019-06-03T20:20:16.000Z,
+    inputPath: './src/_posts/2019-06-03-Day7.md',
+    fileSlug: 'Day7',
+    filePathStem: '/_posts/Day7',
+    outputFileExtension: 'html',
+    templateSyntax: 'liquid,md',
+    url: '/2019/6/3/Day7/',
+    outputPath: 'dist/2019/6/3/Day7/index.html'
+  },
+  collections: {
+    all: [
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object],
+      [Object], [Object], [Object], [Object]
+    ],
+    life: [ [Object], [Object], [Object], [Object] ],
+    camino: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object]
+    ],
+    caminodesantiago: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object]
+    ],
+    webdev: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    javascript: [ [Object], [Object] ],
+    freecodecamp: [ [Object] ],
+    css: [ [Object], [Object] ],
+    site: [ [Object], [Object], [Object], [Object] ],
+    frontendmentor: [ [Object], [Object] ],
+    programming: [ [Object], [Object], [Object], [Object], [Object] ],
+    ios: [ [Object], [Object], [Object], [Object] ],
+    swift: [ [Object], [Object], [Object], [Object] ],
+    'coding-challenges': [ [Object], [Object], [Object] ],
+    jakobsweg: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ],
+    caminofrances: [ [Object] ],
+    personal: [ [Object], [Object] ],
+    webdevelopment: [ [Object] ],
+    learning: [ [Object] ],
+    html: [ [Object] ],
+    swiftui: [ [Object] ],
+    pages: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    posts: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object]
+    ],
+    projects: [],
+    tags: [
+      'life',              'camino',
+      'caminodesantiago',  'webdev',
+      'javascript',        'freecodecamp',
+      'css',               'site',
+      'frontendmentor',    'programming',
+      'ios',               'swift',
+      'coding-challenges', 'jakobsweg',
+      'caminofrances',     'personal',
+      'webdevelopment',    'learning',
+      'html',              'swiftui'
+    ]
+  },
+  siblings: {
+    next: {
+      template: [Template],
+      data: [Object],
+      page: [Object],
+      inputPath: './src/_posts/2019-06-04-Day%208.md',
+      fileSlug: 'Day%208',
+      filePathStem: '/_posts/Day%208',
+      date: 2019-06-04T19:30:37.000Z,
+      outputPath: 'dist/2019/6/4/Day%208/index.html',
+      url: '/2019/6/4/Day%208/',
+      templateContent: [Getter/Setter],
+      content: [Getter]
+    },
+    prev: {
+      template: [Template],
+      data: [Object],
+      page: [Object],
+      inputPath: './src/_posts/2019-06-02-day6.md',
+      fileSlug: 'day6',
+      filePathStem: '/_posts/day6',
+      date: 2019-06-02T16:49:22.000Z,
+      outputPath: 'dist/2019/6/2/day6/index.html',
+      url: '/2019/6/2/day6/',
+      templateContent: [Getter/Setter],
+      content: [Getter]
+    }
+  }
+
+----
+
+{
+  template: Template {
+    _config: TemplateConfig {
+      userConfig: [UserConfig],
+      overrides: {},
+      projectConfigPaths: [Array],
+      customRootConfig: null,
+      rootConfig: [Object],
+      hasConfigMerged: true,
+      logger: [ConsoleLogger],
+      _usesGraph: [GlobalDependencyMap],
+      config: [Object],
+      verbose: true
+    },
+    inputPath: './src/_drafts/swiftui.md',
+    inputDir: 'src',
+    parsed: {
+      root: '',
+      dir: './src/_drafts',
+      base: 'swiftui.md',
+      ext: '.md',
+      name: 'swiftui'
+    },
+    extraOutputSubdirectory: '',
+    outputDir: 'dist',
+    _extensionMap: EleventyExtensionMap {
+      eleventyConfig: [TemplateConfig],
+      _config: [Object],
+      formatKeys: [Array],
+      unfilteredFormatKeys: [Array],
+      _extensionToKeyMap: [Object],
+      validTemplateLanguageKeys: [Array],
+      passthroughCopyKeys: [],
+      _spiderJsDepsCache: {},
+      _engineManager: [TemplateEngineManager]
+    },
+    linters: [],
+    transforms: [],
+    templateData: TemplateData {
+      eleventyConfig: [TemplateConfig],
+      config: [Object],
+      benchmarks: [Object],
+      inputDirNeedsCheck: false,
+      inputDir: 'src',
+      dataDir: 'src/_data',
+      rawImports: [Object],
+      globalData: [Promise],
+      templateDirectoryData: [Object],
+      _fsExistsCache: [FSExistsCache],
+      initialGlobalData: [TemplateDataInitialGlobalData],
+      _extensionMap: [EleventyExtensionMap],
+      _env: [Object],
+      fileSystemSearch: [FileSystemSearch],
+      configApiGlobalData: [Promise],
+      pathCache: [Array]
+    },
+    isVerbose: true,
+    isDryRun: false,
+    writeCount: 0,
+    fileSlug: TemplateFileSlug {
+      inputPath: '_drafts/swiftui.md',
+      cleanInputPath: '_drafts/swiftui.md',
+      dirs: [Array],
+      parsed: [Object],
+      filenameNoExt: 'swiftui'
+    },
+    fileSlugStr: 'swiftui',
+    filePathStem: '/_drafts/swiftui',
+    outputFormat: 'fs',
+    behavior: TemplateBehavior {
+      render: true,
+      write: true,
+      outputFormat: 'fs',
+      config: [Object]
+    },
+    serverlessUrls: null,
+    _logger: ConsoleLogger { _isVerbose: true, outputStream: [Readable] },
+    _templateRender: TemplateRender {
+      _config: [Object],
+      engineNameOrPath: './src/_drafts/swiftui.md',
+      inputDir: 'src',
+      includesDir: 'src/_includes',
+      parseMarkdownWith: 'liquid',
+      parseHtmlWith: 'liquid',
+      _extensionMap: [EleventyExtensionMap],
+      _engineName: 'md',
+      _engine: [Markdown],
+      useMarkdown: true
+    },
+    inputContent: Promise {
+      '---\n' +
+        'layout: single\n' +
+        'author_profile: true\n' +
+        'read_time: true\n' +
+        'share: true\n' +
+        'related: true\n' +
+        'title: SwiftUI\n' +
+        'tags: [swiftui,programming,ios, swift]\n' +
+        'category: Programming\n' +
+        '---\n' +
+        '\n' +
+        "Its been a long while since I sat and did programming, but between a life situation and the new technology from Apple for creating user interfaces (SwiftUI), I've been inspired to pickup again an idea I've been kicking around for 10 years.\n" +
+        '\n' +
+        '<!--more-->\n' +
+        '\n' +
+        'SwiftUI simplifies designing interfaces\n' +
+        'Provides a fast means of iterating design\n' +
+        'Able to quickly see results\n' +
+        'Easy to mock in data\n' +
+        '\n' +
+        'Buggy.\n' +
+        'Filled 3 bugs so far.\n' +
+        '\n' +
+        'Swift:\n' +
+        '\n' +
+        '{% highlight swift %}\n' +
+        '     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {\n' +
+        '        super.touchesBegan(touches, with: event)\n' +
+        '        currentTouchPosition = touches.first?.location(in: self)\n' +
+        '\n' +
+        '        NSObject.cancelPreviousPerformRequests(withTarget: self)\n' +
+        '    }\n' +
+        '{% endhighlight %}\n' +
+        '\n' +
+        'Swift:\n' +
+        '\n' +
+        '```swift\n' +
+        'def print_hi(name)\n' +
+        '  puts "Hi, #{name}"\n' +
+        'end\n' +
+        "print_hi('Tom')\n" +
+        "#=> prints 'Hi, Tom' to STDOUT.\n" +
+        '```\n' +
+        '\n' +
+        'Bash: \n' +
+        '```bash\n' +
+        '\n' +
+        '#!/usr/bin/env bash\n' +
+        'set -e # halt script on error\n' +
+        '\n' +
+        'echo\n' +
+        'echo "------------------------------------------------------------------------------------------------------------------------"\n' +
+        'if [ "$TRAVIS_PULL_REQUEST" != "false" -a "$TRAVIS_BRANCH" == "comments" ]; then\n' +
+        '\n' +
+        '    echo\n' +
+        '    echo "Building site for pull request for $TRAVIS_BRANCH..."\n' +
+        '    bundle exec jekyll build --config _config.yml --source . --destination ./docs\n' +
+        '    echo "Site built into /docs"\n' +
+        '\n' +
+        '    echo\n' +
+        '    echo "Proofing links"\n' +
+        '    bundle exec htmlproofer ./docs --disable-external --allow_hash_href\n' +
+        '    echo "Proofing links complete"\n' +
+        '    echo\n' +
+        '    echo "------------------------------------------------------------------------------------------------------------------------"\n' +
+        '\n' +
+        '    exit 0\n' +
+        '\n' +
+        'elif [ "$TRAVIS_BRANCH" == "master" ]; then\n' +
+        '\n' +
+        '    echo\n' +
+        '    echo "Building site for $TRAVIS_BRANCH..."\n' +
+        '    bundle exec jekyll build --config _config.yml --source . --destination ./docs\n' +
+        '    echo "Site built into /docs"\n' +
+        '\n' +
+        '    echo\n' +
+        '    echo "Proofing links"\n' +
+        '    bundle exec htmlproofer ./docs --disable-external --allow_hash_href\n' +
+        '    echo "Proofing links complete"\n' +
+        '    echo\n' +
+        '    echo "------------------------------------------------------------------------------------------------------------------------"\n' +
+        '\n' +
+        '    exit 0\n' +
+        '\n' +
+        'else\n' +
+        '\n' +
+        '    echo\n' +
+        '    echo "Build not triggered internally"\n' +
+        '    echo\n' +
+        '    echo "------------------------------------------------------------------------------------------------------------------------"\n' +
+        '    exit 0\n' +
+        '\n' +
+        'fi\n' +
+        '```\n' +
+        '\n' +
+        'Ruby:\n' +
+        '\n' +
+        '{% highlight ruby %}\n' +
+        'require "gem"\n' +
+        '\n' +
+        'number = 0\n' +
+        'regexp = /[abc]/\n' +
+        '\n' +
+        '# This is a comment\n' +
+        'class Person\n' +
+        '  \n' +
+        '  attr_accessor :name\n' +
+        '  \n' +
+        '  def initialize(attributes = {})\n' +
+        '    @name = attributes[:name]\n' +
+        '  end\n' +
+        '  \n' +
+        '  def self.greet\n' +
+        '    "hello"\n' +
+        '  end\n' +
+        'end\n' +
+        '\n' +
+        'person1 = Person.new(:name => "Chris")\n' +
+        'puts "#{Person::greet} #{person1.name}\\n"\n' +
+        '{% endhighlight %}\n' +
+        '\n' +
+        'html:\n' +
+        '\n' +
+        '```html\n' +
+        '<!DOCTYPE html>\n' +
+        '<html>\n' +
+        '\n' +
+        '    <head>\n' +
+        '        <title>Title</title>\n' +
+        '    </head>\n' +
+        '\n' +
+        '    <body>\n' +
+        '        <h1 id="heading">Heading</h1>\n' +
+        '        <p class="class">This is an example paragraph.</p>\n' +
+        '    </body>\n' +
+        '\n' +
+        '</html>\n' +
+        '```\n' +
+        '\n' +
+        'css:\n' +
+        '```css\n' +
+        '.highlight pre {\n' +
+        '  width: 100%;\n' +
+        '}\n' +
+        '\n' +
+        '.highlight .hll {\n' +
+        '  background-color: $base06;\n' +
+        '}\n' +
+        '.highlight {\n' +
+        '  .c {\n' +
+        '    /* Comment */\n' +
+        '    color: $base04;\n' +
+        '  }\n' +
+        '}\n' +
+        '```\n' +
+        '\n' +
+        'Javascript:\n' +
+        '\n' +
+        '```javascript\n' +
+        '$(document).ready(function() {\n' +
+        '  // FitVids init\n' +
+        '  $("#main").fitVids();\n' +
+        '\n' +
+        '  // Sticky sidebar\n' +
+        '  var stickySideBar = function() {\n' +
+        '    var show =\n' +
+        '      $(".author__urls-wrapper button").length === 0\n' +
+        '        ? $(window).width() > 1024 // width should match $large Sass variable\n' +
+        '        : !$(".author__urls-wrapper button").is(":visible");\n' +
+        '    if (show) {\n' +
+        '      // fix\n' +
+        '      $(".sidebar").addClass("sticky");\n' +
+        '    } else {\n' +
+        '      // unfix\n' +
+        '      $(".sidebar").removeClass("sticky");\n' +
+        '    }\n' +
+        '  };\n' +
+        '}\n' +
+        '```\n' +
+        '\n' +
+        '<p>notice</p>{: .notice} \n' +
+        '<p>primary</p>{: .notice--primary}\n' +
+        '<p>info</p>{: .notice--info}\n' +
+        '<p>warning</p>{: .notice--warning}\n' +
+        '<p>success</p>{: .notice--success}\n' +
+        '<p>danger</p>{: .notice--danger}\n' +
+        '\n' +
+        '<div class="notice--success" markdown="1">\n' +
+        '  # Headline for the Notice\n' +
+        '  <br>\n' +
+        '  Text for the notice\n' +
+        '</div>'
+    },
+    readingPromise: Promise { [Object] },
+    _frontMatterDataCache: Promise { [Object] },
+    _frontMatter: {
+      content: '\n' +
+        "Its been a long while since I sat and did programming, but between a life situation and the new technology from Apple for creating user interfaces (SwiftUI), I've been inspired to pickup again an idea I've been kicking around for 10 years.\n" +
+        '\n' +
+        '<!--more-->\n' +
+        '\n' +
+        'SwiftUI simplifies designing interfaces\n' +
+        'Provides a fast means of iterating design\n' +
+        'Able to quickly see results\n' +
+        'Easy to mock in data\n' +
+        '\n' +
+        'Buggy.\n' +
+        'Filled 3 bugs so far.\n' +
+        '\n' +
+        'Swift:\n' +
+        '\n' +
+        '{% highlight swift %}\n' +
+        '     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {\n' +
+        '        super.touchesBegan(touches, with: event)\n' +
+        '        currentTouchPosition = touches.first?.location(in: self)\n' +
+        '\n' +
+        '        NSObject.cancelPreviousPerformRequests(withTarget: self)\n' +
+        '    }\n' +
+        '{% endhighlight %}\n' +
+        '\n' +
+        'Swift:\n' +
+        '\n' +
+        '```swift\n' +
+        'def print_hi(name)\n' +
+        '  puts "Hi, #{name}"\n' +
+        'end\n' +
+        "print_hi('Tom')\n" +
+        "#=> prints 'Hi, Tom' to STDOUT.\n" +
+        '```\n' +
+        '\n' +
+        'Bash: \n' +
+        '```bash\n' +
+        '\n' +
+        '#!/usr/bin/env bash\n' +
+        'set -e # halt script on error\n' +
+        '\n' +
+        'echo\n' +
+        'echo "---------------------------------------------------------------------------------------------------------------------"\n' +
+        'if [ "$TRAVIS_PULL_REQUEST" != "false" -a "$TRAVIS_BRANCH" == "comments" ]; then\n' +
+        '\n' +
+        '    echo\n' +
+        '    echo "Building site for pull request for $TRAVIS_BRANCH..."\n' +
+        '    bundle exec jekyll build --config _config.yml --source . --destination ./docs\n' +
+        '    echo "Site built into /docs"\n' +
+        '\n' +
+        '    echo\n' +
+        '    echo "Proofing links"\n' +
+        '    bundle exec htmlproofer ./docs --disable-external --allow_hash_href\n' +
+        '    echo "Proofing links complete"\n' +
+        '    echo\n' +
+        '    echo "------------------------------------------------------------------------------------------------------------------------"\n' +
+        '\n' +
+        '    exit 0\n' +
+        '\n' +
+        'elif [ "$TRAVIS_BRANCH" == "master" ]; then\n' +
+        '\n' +
+        '    echo\n' +
+        '    echo "Building site for $TRAVIS_BRANCH..."\n' +
+        '    bundle exec jekyll build --config _config.yml --source . --destination ./docs\n' +
+        '    echo "Site built into /docs"\n' +
+        '\n' +
+        '    echo\n' +
+        '    echo "Proofing links"\n' +
+        '    bundle exec htmlproofer ./docs --disable-external --allow_hash_href\n' +
+        '    echo "Proofing links complete"\n' +
+        '    echo\n' +
+        '    echo "------------------------------------------------------------------------------------------------------------------------"\n' +
+        '\n' +
+        '    exit 0\n' +
+        '\n' +
+        'else\n' +
+        '\n' +
+        '    echo\n' +
+        '    echo "Build not triggered internally"\n' +
+        '    echo\n' +
+        '    echo "------------------------------------------------------------------------------------------------------------------------"\n' +
+        '    exit 0\n' +
+        '\n' +
+        'fi\n' +
+        '```\n' +
+        '\n' +
+        'Ruby:\n' +
+        '\n' +
+        '{% highlight ruby %}\n' +
+        'require "gem"\n' +
+        '\n' +
+        'number = 0\n' +
+        'regexp = /[abc]/\n' +
+        '\n' +
+        '# This is a comment\n' +
+        'class Person\n' +
+        '  \n' +
+        '  attr_accessor :name\n' +
+        '  \n' +
+        '  def initialize(attributes = {})\n' +
+        '    @name = attributes[:name]\n' +
+        '  end\n' +
+        '  \n' +
+        '  def self.greet\n' +
+        '    "hello"\n' +
+        '  end\n' +
+        'end\n' +
+        '\n' +
+        'person1 = Person.new(:name => "Chris")\n' +
+        'puts "#{Person::greet} #{person1.name}\\n"\n' +
+        '{% endhighlight %}\n' +
+        '\n' +
+        'html:\n' +
+        '\n' +
+        '```html\n' +
+        '<!DOCTYPE html>\n' +
+        '<html>\n' +
+        '\n' +
+        '    <head>\n' +
+        '        <title>Title</title>\n' +
+        '    </head>\n' +
+        '\n' +
+        '    <body>\n' +
+        '        <h1 id="heading">Heading</h1>\n' +
+        '        <p class="class">This is an example paragraph.</p>\n' +
+        '    </body>\n' +
+        '\n' +
+        '</html>\n' +
+        '```\n' +
+        '\n' +
+        'css:\n' +
+        '```css\n' +
+        '.highlight pre {\n' +
+        '  width: 100%;\n' +
+        '}\n' +
+        '\n' +
+        '.highlight .hll {\n' +
+        '  background-color: $base06;\n' +
+        '}\n' +
+        '.highlight {\n' +
+        '  .c {\n' +
+        '    /* Comment */\n' +
+        '    color: $base04;\n' +
+        '  }\n' +
+        '}\n' +
+        '```\n' +
+        '\n' +
+        'Javascript:\n' +
+        '\n' +
+        '```javascript\n' +
+        '$(document).ready(function() {\n' +
+        '  // FitVids init\n' +
+        '  $("#main").fitVids();\n' +
+        '\n' +
+        '  // Sticky sidebar\n' +
+        '  var stickySideBar = function() {\n' +
+        '    var show =\n' +
+        '      $(".author__urls-wrapper button").length === 0\n' +
+        '        ? $(window).width() > 1024 // width should match $large Sass variable\n' +
+        '        : !$(".author__urls-wrapper button").is(":visible");\n' +
+        '    if (show) {\n' +
+        '      // fix\n' +
+        '      $(".sidebar").addClass("sticky");\n' +
+        '    } else {\n' +
+        '      // unfix\n' +
+        '      $(".sidebar").removeClass("sticky");\n' +
+        '    }\n' +
+        '  };\n' +
+        '}\n' +
+        '```\n' +
+        '\n' +
+        '<p>notice</p>{: .notice} \n' +
+        '<p>primary</p>{: .notice--primary}\n' +
+        '<p>info</p>{: .notice--info}\n' +
+        '<p>warning</p>{: .notice--warning}\n' +
+        '<p>success</p>{: .notice--success}\n' +
+        '<p>danger</p>{: .notice--danger}\n' +
+        '\n' +
+        '<div class="notice--success" markdown="1">\n' +
+        '  # Headline for the Notice\n' +
+        '  <br>\n' +
+        '  Text for the notice\n' +
+        '</div>',
+      data: [Object],
+      isEmpty: false,
+      excerpt: '\n' +
+        "Its been a long while since I sat and did programming, but between a life situation and the new technology from Apple for creating user interfaces (SwiftUI), I've been inspired to pickup again an idea I've been kicking around for 10 years.\n" +
+        '\n' +
+        '<!--more-->\n' +
+        '\n' +
+        'SwiftUI simplifies designing interfaces\n' +
+        'Provides a fast means of iterating design\n' +
+        'Able to quickly see results\n' +
+        'Easy to mock in data\n' +
+        '\n' +
+        'Buggy.\n' +
+        'Filled 3 bugs so far.\n' +
+        '\n' +
+        'Swift:\n' +
+        '\n' +
+        '{% highlight swift %}\n' +
+        '     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {\n' +
+        '        super.touchesBegan(touches, with: event)\n' +
+        '        currentTouchPosition = touches.first?.location(in: self)\n' +
+        '\n' +
+        '        NSObject.cancelPreviousPerformRequests(withTarget: self)\n' +
+        '    }\n' +
+        '{% endhighlight %}\n' +
+        '\n' +
+        'Swift:\n' +
+        '\n' +
+        '```swift\n' +
+        'def print_hi(name)\n' +
+        '  puts "Hi, #{name}"\n' +
+        'end\n' +
+        "print_hi('Tom')\n" +
+        "#=> prints 'Hi, Tom' to STDOUT.\n" +
+        '```\n' +
+        '\n' +
+        'Bash: \n' +
+        '```bash\n' +
+        '\n' +
+        '#!/usr/bin/env bash\n' +
+        'set -e # halt script on error\n' +
+        '\n' +
+        'echo\n' +
+        'echo "'
+    },
+    _stats: Promise { [Stats] },
+    _dataCache: {
+      authors: [Object],
+      navigation: [Object],
+      'ui-text': [Object],
+      site: [Object],
+      eleventy: [Object],
+      pkg: [Object],
+      layout: 'single',
+      author_profile: true,
+      read_time: true,
+      share: true,
+      related: true,
+      title: 'SwiftUI',
+      tags: [Array],
+      category: 'Programming',
+      page: [Object],
+      collections: [Object]
+    },
+    _usePermalinkRoot: undefined
+  },
+  data: {
+    authors: { robert_mcgovern: [Object] },
+    navigation: { main: [Array] },
+    'ui-text': {
+      en: [Object],
+      'en-US': [Object],
+      'en-CA': [Object],
+      'en-GB': [Object],
+      'en-AU': [Object],
+      es: [Object],
+      'es-ES': [Object],
+      'es-CO': [Object],
+      fr: [Object],
+      'fr-FR': [Object],
+      'fr-BE': [Object],
+      'fr-CH': [Object],
+      tr: [Object],
+      'tr-TR': [Object],
+      pt: [Object],
+      'pt-PT': [Object],
+      'pt-BR': [Object],
+      it: [Object],
+      'it-IT': [Object],
+      zh: [Object],
+      'zh-CN': [Object],
+      'zh-SG': [Object],
+      'zh-TW': [Object],
+      'zh-HK': [Object],
+      de: [Object],
+      'de-DE': [Object],
+      'de-AT': [Object],
+      'de-CH': [Object],
+      'de-BE': [Object],
+      'de-LI': [Object],
+      'de-LU': [Object],
+      ne: [Object],
+      'ne-NP': [Object],
+      ko: [Object],
+      'ko-KR': [Object],
+      ru: [Object],
+      'ru-RU': [Object],
+      lt: [Object],
+      'lt-LT': [Object],
+      gr: [Object],
+      'gr-GR': [Object],
+      sv: [Object],
+      'sv-SE': [Object],
+      'sv-FI': [Object],
+      nl: [Object],
+      'nl-BE': [Object],
+      'nl-NL': [Object],
+      id: [Object],
+      'id-ID': [Object],
+      vi: [Object],
+      'vi-VN': [Object],
+      da: [Object],
+      'da-DK': [Object],
+      pl: [Object],
+      'pl-PL': [Object],
+      ja: [Object],
+      'ja-JP': [Object],
+      sk: [Object],
+      'sk-SK': [Object],
+      hu: [Object],
+      'hu-HU': [Object],
+      ro: [Object],
+      'ro-RO': [Object],
+      pa: [Object],
+      'pa-IN': [Object],
+      fa: [Object],
+      'fa-IR': [Object],
+      ml: [Object],
+      'ml-IN': [Object],
+      th: [Object],
+      'th-TH': [Object],
+      hi: [Object],
+      'hi-IN': [Object],
+      ca: [Object],
+      'ca-ES': [Object],
+      ga: [Object],
+      'ga-IE': [Object],
+      fi: [Object],
+      my: [Object],
+      'my-MM': [Object],
+      no: [Object],
+      'no-NB': [Object],
+      'no-NN': [Object],
+      he: [Object],
+      'he-IL': [Object],
+      ar: [Object],
+      'ar-SD': [Object],
+      'ar-SA': [Object],
+      'ar-AE': [Object],
+      'ar-EG': [Object]
+    },
+    site: {
+      theme: 'minimal-mistakes-jekyll',
+      minimal_mistakes_skin: 'neon',
+      locale: 'en-US',
+      title: 'TDN: RMCG',
+      title_separator: '-',
+      name: 'Robert McGovern',
+      description: 'Random Things',
+      url: 'https://tarasis.net',
+      baseurl: '',
+      repository: null,
+      teaser: null,
+      logo: '/assets/images/apple-touch-icon.png',
+      masthead_title: '',
+      subtitle: '👨‍💻 🚶‍♂️ 💭 🤯',
+      breadcrumbs: false,
+      breadcrumb_home_label: 'Home',
+      breadcrumb_separator: '>',
+      words_per_minute: 200,
+      head_scripts: [Array],
+      comments: [Object],
+      staticman: [Object],
+      atom_feed: [Object],
+      search: true,
+      search_full_content: true,
+      search_provider: 'lunr',
+      algolia: [Object],
+      google_site_verification: null,
+      bing_site_verification: null,
+      yandex_site_verification: null,
+      twitter: [Object],
+      facebook: [Object],
+      og_image: '/assets/images/bio-photo.jpg',
+      social: [Object],
+      analytics: [Object],
+      author: [Object],
+      footer: [Object],
+      include: [Array],
+      exclude: [Array],
+      keep_files: [Array],
+      encoding: 'utf-8',
+      markdown_ext: 'markdown,mkdown,mkdn,mkd,md',
+      strict_front_matter: true,
+      liquid: [Object],
+      markdown: 'kramdown',
+      highlighter: 'rouge',
+      lsi: false,
+      excerpt_separator: '<!--more-->',
+      incremental: false,
+      kramdown: [Object],
+      sass: [Object],
+      permalink: '/:year/:month/:day/:title/',
+      paginate: 10,
+      paginate_path: '/page:num/',
+      timezone: null,
+      plugins: [Array],
+      whitelist: [Array],
+      category_archive: [Object],
+      tag_archive: [Object],
+      compress_html: [Object],
+      collections: [Object],
+      defaults: [Object],
+      post_ext: 'markdown',
+      page_ext: 'html',
+      post_layout: 'single',
+      page_layout: 'page',
+      titlecase: true
+    },
+    eleventy: { version: '2.0.0', generator: 'Eleventy v2.0.0', env: [Object] },
+    pkg: {
+      name: 'tarasis.net',
+      version: '2.0.0',
+      description: 'Second generation of site using 11ty for building but using Jekyll theme Minimal Mistakes (with mods to make it work)',
+      main: 'index.js',
+      scripts: [Object],
+      repository: [Object],
+      keywords: [Array],
+      author: 'Robert McGovern et all',
+      license: 'MIT',
+      devDependencies: [Object],
+      dependencies: [Object]
+    },
+    layout: 'single',
+    author_profile: true,
+    read_time: true,
+    share: true,
+    related: true,
+    title: 'SwiftUI',
+    tags: [ 'swiftui', 'programming', 'ios', 'swift' ],
+    category: 'Programming',
+    page: {
+      excerpt: '\n' +
+        "Its been a long while since I sat and did programming, but between a life situation and the new technology from Apple for creating user interfaces (SwiftUI), I've been inspired to pickup again an idea I've been kicking around for 10 years.\n" +
+        '\n' +
+        '<!--more-->\n' +
+        '\n' +
+        'SwiftUI simplifies designing interfaces\n' +
+        'Provides a fast means of iterating design\n' +
+        'Able to quickly see results\n' +
+        'Easy to mock in data\n' +
+        '\n' +
+        'Buggy.\n' +
+        'Filled 3 bugs so far.\n' +
+        '\n' +
+        'Swift:\n' +
+        '\n' +
+        '{% highlight swift %}\n' +
+        '     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {\n' +
+        '        super.touchesBegan(touches, with: event)\n' +
+        '        currentTouchPosition = touches.first?.location(in: self)\n' +
+        '\n' +
+        '        NSObject.cancelPreviousPerformRequests(withTarget: self)\n' +
+        '    }\n' +
+        '{% endhighlight %}\n' +
+        '\n' +
+        'Swift:\n' +
+        '\n' +
+        '```swift\n' +
+        'def print_hi(name)\n' +
+        '  puts "Hi, #{name}"\n' +
+        'end\n' +
+        "print_hi('Tom')\n" +
+        "#=> prints 'Hi, Tom' to STDOUT.\n" +
+        '```\n' +
+        '\n' +
+        'Bash: \n' +
+        '```bash\n' +
+        '\n' +
+        '#!/usr/bin/env bash\n' +
+        'set -e # halt script on error\n' +
+        '\n' +
+        'echo\n' +
+        'echo "',
+      date: 2020-03-05T11:10:48.355Z,
+      inputPath: './src/_drafts/swiftui.md',
+      fileSlug: 'swiftui',
+      filePathStem: '/_drafts/swiftui',
+      outputFileExtension: 'html',
+      templateSyntax: 'liquid,md',
+      url: '/_drafts/swiftui/',
+      outputPath: 'dist/_drafts/swiftui/index.html'
+    },
+    collections: {
+      all: [Array],
+      life: [Array],
+      camino: [Array],
+      caminodesantiago: [Array],
+      webdev: [Array],
+      site: [Array],
+      frontendmentor: [Array],
+      javascript: [Array],
+      freecodecamp: [Array],
+      programming: [Array],
+      ios: [Array],
+      swift: [Array],
+      'coding-challenges': [Array],
+      jakobsweg: [Array],
+      css: [Array],
+      caminofrances: [Array],
+      personal: [Array],
+      webdevelopment: [Array],
+      learning: [Array],
+      html: [Array],
+      swiftui: [Array],
+      pages: [Array],
+      posts: [Array],
+      projects: [],
+      tags: [Array]
+    }
+  },
+  page: {
+    excerpt: '\n' +
+      "Its been a long while since I sat and did programming, but between a life situation and the new technology from Apple for creating user interfaces (SwiftUI), I've been inspired to pickup again an idea I've been kicking around for 10 years.\n" +
+      '\n' +
+      '<!--more-->\n' +
+      '\n' +
+      'SwiftUI simplifies designing interfaces\n' +
+      'Provides a fast means of iterating design\n' +
+      'Able to quickly see results\n' +
+      'Easy to mock in data\n' +
+      '\n' +
+      'Buggy.\n' +
+      'Filled 3 bugs so far.\n' +
+      '\n' +
+      'Swift:\n' +
+      '\n' +
+      '{% highlight swift %}\n' +
+      '     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {\n' +
+      '        super.touchesBegan(touches, with: event)\n' +
+      '        currentTouchPosition = touches.first?.location(in: self)\n' +
+      '\n' +
+      '        NSObject.cancelPreviousPerformRequests(withTarget: self)\n' +
+      '    }\n' +
+      '{% endhighlight %}\n' +
+      '\n' +
+      'Swift:\n' +
+      '\n' +
+      '```swift\n' +
+      'def print_hi(name)\n' +
+      '  puts "Hi, #{name}"\n' +
+      'end\n' +
+      "print_hi('Tom')\n" +
+      "#=> prints 'Hi, Tom' to STDOUT.\n" +
+      '```\n' +
+      '\n' +
+      'Bash: \n' +
+      '```bash\n' +
+      '\n' +
+      '#!/usr/bin/env bash\n' +
+      'set -e # halt script on error\n' +
+      '\n' +
+      'echo\n' +
+      'echo "',
+    date: 2020-03-05T11:10:48.355Z,
+    inputPath: './src/_drafts/swiftui.md',
+    fileSlug: 'swiftui',
+    filePathStem: '/_drafts/swiftui',
+    outputFileExtension: 'html',
+    templateSyntax: 'liquid,md',
+    url: '/_drafts/swiftui/',
+    outputPath: 'dist/_drafts/swiftui/index.html'
+  },
+  inputPath: './src/_drafts/swiftui.md',
+  fileSlug: 'swiftui',
+  filePathStem: '/_drafts/swiftui',
+  date: 2020-03-05T11:10:48.355Z,
+  outputPath: 'dist/_drafts/swiftui/index.html',
+  url: '/_drafts/swiftui/',
+  templateContent: [Getter/Setter],
+  content: [Getter]
+}
+
+---
+
+content of object in collections.all
+
+{
+    content: [Getter],
+    data: {
+      'ui-text': [Object],
+      authors: [Object],
+      category: 'coding-challenges',
+      collections: [Object],
+      eleventy: [Object],
+      navigation: [Object],
+      page: [Object],
+      pkg: [Object],
+      site: [Object],
+      tags: [Array],
+      title: 'Swift Coding Challenge 3 and 4'
+    },
+    date: 2020-04-22T22:50:03.539Z,
+    filePathStem: '/_drafts/swift-coding-challenge-3-and-4',
+    fileSlug: 'swift-coding-challenge-3-and-4',
+    inputPath: './src/_drafts/swift-coding-challenge-3-and-4.md',
+    outputPath: 'dist/_drafts/swift-coding-challenge-3-and-4/index.html',
+    page: {
+      date: 2020-04-22T22:50:03.539Z,
+      filePathStem: '/_drafts/swift-coding-challenge-3-and-4',
+      fileSlug: 'swift-coding-challenge-3-and-4',
+      inputPath: './src/_drafts/swift-coding-challenge-3-and-4.md',
+      outputFileExtension: 'html',
+      outputPath: 'dist/_drafts/swift-coding-challenge-3-and-4/index.html',
+      templateSyntax: 'liquid,md',
+      url: '/_drafts/swift-coding-challenge-3-and-4/'
+    },
+    template: Template {
+      _cacheFinalContent: '
+Challenge 3
+
+\n' +
+        '
+Take two strings, random order of letters and compare if they contain the same letters
+
+\n' +
+        '
+This was very quickly done. I remembered about sorted
+
+\n' +
+        '
+Challenge 4
+
+\n',
+      _cacheRenderedContent: '
+Challenge 3
+
+\n' +
+        '
+Take two strings, random order of letters and compare if they contain the same letters
+
+\n' +
+        '
+This was very quickly done. I remembered about sorted
+
+\n' +
+        '
+Challenge 4
+
+\n',
+      _config: [TemplateConfig],
+      _dataCache: [Object],
+      _extensionMap: [EleventyExtensionMap],
+      _frontMatter: [Object],
+      _frontMatterDataCache: [Promise],
+      _logger: [ConsoleLogger],
+      _stats: [Promise],
+      _templateRender: [TemplateRender],
+      _usePermalinkRoot: undefined,
+      behavior: [TemplateBehavior],
+      extraOutputSubdirectory: '',
+      filePathStem: '/_drafts/swift-coding-challenge-3-and-4',
+      fileSlug: [TemplateFileSlug],
+      fileSlugStr: 'swift-coding-challenge-3-and-4',
+      inputContent: [Promise],
+      inputDir: 'src',
+      inputPath: './src/_drafts/swift-coding-challenge-3-and-4.md',
+      isDryRun: false,
+      isVerbose: true,
+      linters: [],
+      outputDir: 'dist',
+      outputFormat: 'fs',
+      parsed: [Object],
+      readingPromise: [Promise],
+      serverlessUrls: null,
+      templateData: [TemplateData],
+      transforms: [],
+      writeCount: 0
+    },
+    templateContent: [Getter/Setter],
+    url: '/_drafts/swift-coding-challenge-3-and-4/'
+  },

@@ -1,5 +1,6 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# made a liquid file so theme is correctly compiled into import below
+permalink: /assets/css/tocompile.scss
 ---
 
 @charset "utf-8";
@@ -26,6 +27,7 @@ $warning-color: #d67f05 !default;
 $danger-color: #ff0000 !default;
 $info-color: #3b9cba !default;
 
+// section not needed under 11ty
 /* neon syntax highlighting (base16) */
 $base00: #1a191a;
 $base01: #e0e0e0;
@@ -55,6 +57,7 @@ $base0f: #926e5c;
  // base16-classic-dark
  // base16-brewer
 
+ // section not needed under 11ty
  // Hacking the syntax highlighting
  .nb {
   /* Name.Builtin */
@@ -80,7 +83,7 @@ $base0f: #926e5c;
 
 // Progress Bar
 #progress-bar {
-  background: linear-gradient(to right, red, orange , yellow, green,   
+  background: linear-gradient(to right, red, orange , yellow, green,
   blue, indigo, violet var(--scroll), transparent 0);
   position: fixed;
   overflow: hidden;
@@ -91,7 +94,7 @@ $base0f: #926e5c;
 
 // Scroll to top
 #scroll-to-top {
-  background: black;
+  background: rgb(215, 210, 210);
  display:block;
  position:fixed;
  font-size:25px;
@@ -123,7 +126,7 @@ $base0f: #926e5c;
 }
 #scroll-to-top span {
  cursor:pointer;
- color:#1a1d24
+ color:#dee3ee
 }
 #scroll-to-top span:hover .up-arrow,
 #scroll-to-top span:active .up-arrow {
@@ -138,8 +141,12 @@ pre {
   color: #1bb6be !important
 }
 
+$github-color: #fff !default;
+
 //@import "progress.css"; // for progress bar
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+//@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes/skins/_{{ site.minimal_mistakes_skin | default: 'default' }}.scss"; // skin
 @import "minimal-mistakes"; // main partials
 //@import "assets/css/override-notices.scss"
-@import "override-notices.scss"
+@import "override-notices.scss";
+

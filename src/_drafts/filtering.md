@@ -2,9 +2,11 @@
 title: Filtering
 tags: [webdev, javascript]
 category: programming
+eleventyExcludeFromCollections: true
+
 ---
 
-I was watching the video [How To Create A Search Bar In JavaScript](https://www.youtube.com/watch?v=TlP5WIxVirU) by [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) to learn how to do a search bar in JavaScript. 
+I was watching the video [How To Create A Search Bar In JavaScript](https://www.youtube.com/watch?v=TlP5WIxVirU) by [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) to learn how to do a search bar in JavaScript.
 
 What I realised as I was coding along, was that the video was reallymore about filtering data than what I might think of as a search bar. Which is fine, and totally not wrong, but I do find some of Kyle's choices suspect / curious.
 

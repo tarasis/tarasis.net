@@ -44,8 +44,15 @@ $base0f: #cc6633 !default;
 .author__urls.social-icons .svg-inline--fa,
 .page__footer-follow .social-icons i,
 .page__footer-follow .social-icons .svg-inline--fa  {
-  color: inherit;
+  /* comment the following out to get coloured icons in the sidebar and footer
+     but you will also need to override github as its then hard to see
+
+     haven't found way to override this rule in main.scss so disabling here
+     RMCG
+   */
+  /* color: inherit;*/ 
 }
+
 
 /* next/previous buttons */
 .pagination--pager {

@@ -1,13 +1,13 @@
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% if include.aPost.data.title.header.teaser %}
+  {% capture teaser %}{{ include.aPost.data.title.header.teaser }}{% endcapture %}
 {% else %}
   {% assign teaser = site.teaser %}
 {% endif %}
 
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% if include.aPost.data.id %}
+  {% assign title = include.aPost.data.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
-  {% assign title = post.title %}
+  {% assign title = include.aPost.data.title %}
 {% endif %}
 
 <div class="{{ include.type | default: 'list' }}__item">
@@ -18,13 +18,22 @@
       </div>
     {% endif %}
     <h2 class="archive__item-title no_toc" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% if include.aPost.data.link %}
+        <a href="{{ include.aPost.data.link }}">{{ title }}</a> <a href="{{ include.aPost.data.page.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
-        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+        <a href="{{ include.aPost.data.page.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    {% include page__meta.html type=include.type %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+    <!-- RMCG consider removing truncate from first 2 where we've explicitly provided a excerpt -->
+    {% include page__meta.html type=include.type content=include.aPost.data.content %}
+    {% if include.aPost.data.page.excerpt %}
+      <p class="archive__item-excerpt" itemprop="description">{{ include.aPost.data.page.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+    {% elsif include.aPost.data.excerpt %}
+      <p class="archive__item-excerpt" itemprop="description">{{ include.aPost.data.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+    {% else %}
+    <!-- RMCG - Result of this isn't perfect but it works, so now all posts show an excerpt of sorts -->
+      <p class="archive__item-excerpt" itemprop="description">{{ include.aPost.template._frontMatter.content strip_html | markdownify | truncate: 160 }}</p>
+    {% endif %}
+
   </article>
 </div>

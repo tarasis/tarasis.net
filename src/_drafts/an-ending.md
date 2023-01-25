@@ -6,6 +6,7 @@ share: true
 related: true
 title: 'An End of Sorts'
 tag: [Life, Work]
+eleventyExcludeFromCollections: true
 ---
 
 Lets be clear up front: ITS MY **FAULT**.
