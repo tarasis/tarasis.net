@@ -19,7 +19,8 @@
   "words_per_minute": 200,
   "head_scripts": [
     "/assets/js/progress.js",
-    "/assets/js/scroll-to-top.js"
+    "/assets/js/scroll-to-top.js",
+    "/assets/js/copy-code-button.js"
   ],
   "comments": {
     "provider": "disqus",

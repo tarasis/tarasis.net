@@ -143,6 +143,63 @@ pre {
 
 $github-color: #fff !default;
 
+div.highlight {
+	position: relative;
+}
+
+.codeblock {
+  outline: 4px #7e1c1c solid;
+  border-radius: 5px;
+}
+
+// === for copy-code-to-clipboard
+
+// h/t https://simplernerd.com/hugo-add-copy-to-clipboard-button/
+
+.clipboard-button {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	padding: 6px 8px 4px 8px;
+	margin: 5px;
+//	color: gray-500;
+//	border-color: gray-500;
+//	background-color: gray-100;
+	border: 1px solid;
+	border-radius: 6px;
+	font-size: 0.8em;
+	z-index: 1;
+	opacity: 0;
+	transition: 0.1s;
+}
+.clipboard-button > svg {
+//	fill: gray-500;
+}
+.clipboard-button:hover {
+	cursor: pointer;
+	border-color: #01b139;
+	background-color: #87d09e;
+	opacity: 1;
+}
+.clipboard-button:hover > svg {
+	fill: #1900ff;
+}
+.clipboard-button:focus {
+	outline: 0;
+}
+// .highlight {
+//   position: relative;
+// }
+.highlight:hover > .clipboard-button {
+	opacity: 1;
+	transition: 0.2s;
+}
+
+.highlight {
+	line-height: 1.5;
+}
+
+
 //@import "progress.css"; // for progress bar
 //@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes/skins/_{{ site.minimal_mistakes_skin | default: 'default' }}.scss"; // skin
