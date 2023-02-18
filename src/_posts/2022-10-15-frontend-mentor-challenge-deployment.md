@@ -55,7 +55,7 @@ Each section is generated from a json file I created ([src/_data/webprojects.jso
 When the 11ty build occurs, it takes two nunjucks snippets then first takes the service section and fills out the details:
 
 {% raw %}
-```liquid
+```njk
 {% for service in webprojects.services %}
     <div class="projectsDiv {{service.cssClass}}">
         <div class="alignedHeader">
@@ -161,7 +161,7 @@ Having a static site where I can quickly add a challenge to the front page witho
 
 My Github 11ty build action
 
-```
+```yaml
 name: Build Eleventy
 
 on:
