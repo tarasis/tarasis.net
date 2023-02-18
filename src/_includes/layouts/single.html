@@ -40,7 +40,20 @@ layout: default
             </nav>
           </aside>
         {% endif %}
-        {{ content }}
+
+        {% assign Content = content %}
+        {% assign withoutDivStart = '<pre ' %}
+        {% assign withDivStart = '<div class="highlight codeblock"><pre ' %}
+        {% assign withoutDivEnd = '</code></pre>' %}
+        {% assign withDivEnd = '</code></pre></div>' %}
+
+        {% if content contains withoutDivStart %}
+          {% assign Content = content | replace: withoutDivStart, withDivStart %}
+          {% assign Content = Content | replace: withoutDivEnd, withDivEnd %}
+        {% endif %}
+    
+        {{ Content }}
+
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
