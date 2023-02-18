@@ -17,21 +17,24 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 const xmlFiltersPlugin = require("eleventy-xml-plugin");
 const yaml = require("js-yaml");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-
+//const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const syntaxHighlight = require("eleventy-plugin-syntaxhighlight-chroma");
+const highlight = require("chroma-highlight");
+const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
 
 const inspect = require("node:util").inspect;
 
 // relativeURL
 const path = require("path");
 const urlFilter = require("@11ty/eleventy/src/Filters/Url");
+const { assert } = require("console");
 const indexify = (url) => url.replace(/(\/[^.]*)$/, "$1index.html");
 
 module.exports = function (eleventyConfig) {
     let pathPrefix = "/";
 
-    eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
-    eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
+    eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
+    eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
 
     eleventyConfig.addPlugin(pluginRss);
     //Blog excerpts
@@ -48,33 +51,54 @@ module.exports = function (eleventyConfig) {
     // TODO https://www.npmjs.com/package/eleventy-plugin-meta-generator
     // Eleventy Syntax Highlighting (https://www.11ty.dev/docs/plugins/syntaxhighlight/)
     // eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
+
     eleventyConfig.addPlugin(syntaxHighlight, {
+        theme: "base16-snazzy",
 
-        alwaysWrapLineHighlights: true,
-                // Change which Eleventy template formats use syntax highlighters
-        // templateFormats: ["*"], // default
-
-        // Use only a subset of template types (11ty.js added in v4.0.0)
-        // templateFormats: ["liquid", "njk", "md", "11ty.js"],
-
-        // init callback lets you customize Prism
-        // init: function({ Prism }) {
-        //   Prism.languages.myCustomLanguage = /* */;
-        // },
-
-        // Added in 3.1.1, add HTML attributes to the <pre> or <code> tags
-        preAttributes: {
-          tabindex: 0,
-
-          // Added in 4.1.0 you can use callback functions too
-          "data-language": function({ language, content, options }) {
-            return language;
-          }
+        lexerOverrides: {
+            njk: "vue",
+            liquid: "vue",
         },
-        codeAttributes: {},
-      });
+    });
+
+    // eleventyConfig.addPlugin(syntaxHighlight, {
+
+    //     alwaysWrapLineHighlights: true,
+    //             // Change which Eleventy template formats use syntax highlighters
+    //     // templateFormats: ["*"], // default
+
+    //     // Use only a subset of template types (11ty.js added in v4.0.0)
+    //     // templateFormats: ["liquid", "njk", "md", "11ty.js"],
+
+    //     // init callback lets you customize Prism
+    //     // init: function({ Prism }) {
+    //     //   Prism.languages.myCustomLanguage = /* */;
+    //     // },
+
+    //     // Added in 3.1.1, add HTML attributes to the <pre> or <code> tags
+    //     preAttributes: {
+    //       tabindex: 0,
+
+    //       // Added in 4.1.0 you can use callback functions too
+    //       "data-language": function({ language, content, options }) {
+    //         return language;
+    //       }
+    //     },
+    //     codeAttributes: {},
+    //   });
+
+    // assert(typeof highlight === "function");
+    // eleventyConfig.addPlugin(highlight);
+
+    // eleventyConfig.addMarkdownHighlighter(
+    //     highlight(
+    //         `--formatter html --html-only --html-inline-styles --lexer typescript --style base16-snazzy`
+    //     )
+    // );
 
     eleventyConfig.addPlugin(xmlFiltersPlugin);
+
+    // eleventyConfig.addPlugin(eleventySass);
 
     // Custom Collections
     eleventyConfig.addCollection("pages", (collection) =>
@@ -108,11 +132,10 @@ module.exports = function (eleventyConfig) {
     // });
 
     eleventyConfig.addCollection("drafts", (collection) =>
-    collection
-        .getFilteredByGlob("./src/_drafts/**/*")
-        .sort((a, b) => a.data.weight - b.data.weight)
-)   ;
-
+        collection
+            .getFilteredByGlob("./src/_drafts/**/*")
+            .sort((a, b) => a.data.weight - b.data.weight)
+    );
 
     eleventyConfig.addCollection("tags", (collection) => {
         let tags = new Set();
@@ -136,7 +159,7 @@ module.exports = function (eleventyConfig) {
         collection.getAll().forEach((item) => {
             if ("category" in item.data) {
                 if (item.data.category != undefined) {
-                     for (const category of item.data.category) {
+                    for (const category of item.data.category) {
                         categories.add(category);
                     }
                 }
@@ -198,10 +221,10 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter("inspect", function (obj = {}) {
-        return inspect(obj, {sorted: true});
-      });
+        return inspect(obj, { sorted: true });
+    });
 
-    eleventyConfig.addFilter('group_by', groupBy)
+    eleventyConfig.addFilter("group_by", groupBy);
 
     eleventyConfig.addLayoutAlias(
         "archive-taxonomy",
@@ -265,23 +288,31 @@ module.exports = function (eleventyConfig) {
     // Set section
 
     // Configure BrowserSync to serve the 404 page for missing files
-    eleventyConfig.setBrowserSyncConfig({
-        callbacks: {
-            ready: (_err, browserSync) => {
-                const content_404 = fs.readFileSync("dist/404.html");
+    // eleventyConfig.setBrowserSyncConfig({
+    //     callbacks: {
+    //         ready: (_err, browserSync) => {
+    //             const content_404 = fs.readFileSync("dist/404.html");
 
-                browserSync.addMiddleware("*", (_req, res) => {
-                    // render the 404 content instead of redirecting
-                    res.write(content_404);
-                    res.end();
-                });
-            },
-        },
+    //             browserSync.addMiddleware("*", (_req, res) => {
+    //                 // render the 404 content instead of redirecting
+    //                 res.write(content_404);
+    //                 res.end();
+    //             });
+    //         },
+    //     },
+    // });
+
+    eleventyConfig.setServerOptions({
+        // Default values are shown:
+
+        // Whether the live reload snippet is used
+        liveReload: true,
+        watch: ["dist/assets/css/main.css"],
     });
 
-    eleventyConfig.setBrowserSyncConfig({
-        files: "./dist/assets/styles/**/*.css",
-    });
+    // eleventyConfig.setBrowserSyncConfig({
+    //     files: "./dist/assets/css/*.css",
+    // });
 
     // Merge Data (https://www.11ty.dev/docs/data-deep-merge/)
     eleventyConfig.setDataDeepMerge(true);
@@ -359,6 +390,8 @@ module.exports = function (eleventyConfig) {
     //         return content;
     //     }
     // );
+
+    // eleventyConfig.addWatchTarget("dist/assets/css/*.css");
 
     eleventyConfig.addFilter("relative_url", relativeURLALT);
     eleventyConfig.addFilter("absolute_url", absoluteUrl);
@@ -476,29 +509,28 @@ function relativeURLALT(url, pathPrefix = undefined) {
 
 function absoluteUrl(url) {
     if (url !== undefined) {
-        return siteURL + url
+        return siteURL + url;
     } else {
-        return siteURL
+        return siteURL;
     }
 }
 
 function groupBy(array, key) {
-    const get = entry => key.split('.').reduce((acc, key) => acc[key], entry)
+    const get = (entry) => key.split(".").reduce((acc, key) => acc[key], entry);
 
     const map = array.reduce((acc, entry) => {
-      const value = get(entry)
+        const value = get(entry);
 
-      if (typeof acc[value] === 'undefined') {
-        acc[value] = []
-      }
+        if (typeof acc[value] === "undefined") {
+            acc[value] = [];
+        }
 
-      acc[value].push(entry)
-      return acc
-    }, {})
+        acc[value].push(entry);
+        return acc;
+    }, {});
 
     return Object.keys(map).reduce(
-      (acc, key) => [...acc, { name: key, items: map[key] }],
-      []
-    )
-  }
-
+        (acc, key) => [...acc, { name: key, items: map[key] }],
+        []
+    );
+}

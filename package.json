@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build:sass": "sass --load-path=src/_sass --style=compressed dist/assets/css/tocompile.scss dist/assets/css/main.css",
-    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "npm run build:sass -- --watch",
+    "watch:eleventy": "eleventy --serve --ignore-initial --incremental",
     "build:eleventy": "eleventy",
     "clean": "rm -rf dist",
     "postbuild": "",
@@ -26,14 +27,16 @@
   "author": "Robert McGovern et all",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.1"
+    "@11ty/eleventy": "^2.0.0"
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "@11ty/eleventy-upgrade-help": "^2.0.5",
+    "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.0",
     "autoprefixer": "^10.4.13",
+    "chroma-highlight": "^2.4.2",
     "const": "^1.0.0",
     "eleventy-load": "^0.3.1",
     "eleventy-load-css": "^0.3.0",
@@ -41,6 +44,7 @@
     "eleventy-load-html": "^0.1.1",
     "eleventy-load-sass": "^0.1.2",
     "eleventy-plugin-description": "^0.1.5",
+    "eleventy-plugin-syntaxhighlight-chroma": "^0.0.1",
     "eleventy-plugin-toc": "^1.1.5",
     "eleventy-xml-plugin": "^0.1.0",
     "fs-extra": "^11.1.0",
