@@ -1,7 +1,6 @@
 {% if site.comments.provider and comments or site.defaults.posts.comments %}
 {% case site.comments.provider %}
   {% when "disqus" %}
-  bing
     {% include comments-providers/disqus.html %}
   {% when "discourse" %}
     {% include comments-providers/discourse.html %}
