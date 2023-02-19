@@ -147,9 +147,43 @@ div.highlight {
 	position: relative;
 }
 
-.codeblock {
-  outline: 4px #7e1c1c solid;
-  border-radius: 5px;
+div pre {
+  border: 4px #7e1c1c solid;
+  border-radius: 20px;
+}
+
+code {
+  outline: 1px #7e1c1c solid;
+}
+
+code > span {
+  padding-left: 10px;
+}
+
+// messes up table code blocks
+//code > span:first-child {
+//  padding-top: 5px;
+//}
+
+//code > span:last-child {
+//  padding-bottom: 5px;
+//}
+
+// hack to remove outline that above sets
+td > div > pre {
+  border: unset;
+}
+
+pre > code > div {
+  display: flex;
+}
+
+td {
+  display: inline-flex;
+  // below is hack so Firefox looks the same as Safari / Chrome.
+  // Both will ignore the assignment because they don't know about "ruby-base"
+  // https://caniuse.com/mdn-css_properties_display_ruby_values
+  display: ruby-base;
 }
 
 // === for copy-code-to-clipboard
@@ -187,9 +221,7 @@ div.highlight {
 .clipboard-button:focus {
 	outline: 0;
 }
-// .highlight {
-//   position: relative;
-// }
+
 .highlight:hover > .clipboard-button {
 	opacity: 1;
 	transition: 0.2s;
@@ -199,7 +231,6 @@ div.highlight {
 	line-height: 1.5;
 }
 
-
 //@import "progress.css"; // for progress bar
 //@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes/skins/_{{ site.minimal_mistakes_skin | default: 'default' }}.scss"; // skin
@@ -207,3 +238,6 @@ div.highlight {
 //@import "assets/css/override-notices.scss"
 @import "override-notices.scss";
 
+.footnotes ol, .footnotes li {
+  font-size: 1em;
+}
