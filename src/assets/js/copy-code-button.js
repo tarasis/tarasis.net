@@ -39,7 +39,6 @@ const addCopyButtons = (clipboard) => {
 };
 
 function addCopyButtonsAfterLoad() {
-    console.log("Loaded");
     if (navigator && navigator.clipboard) {
         addCopyButtons(navigator.clipboard);
     } else {
