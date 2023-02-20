@@ -7,9 +7,9 @@ pagination:
 ---
 
 {%- for post in pagination.items -%}
-<h2><a href="{% post_url collections.posts, post.fileSlug %}">{{ post.data.title }}</a></h2>
+<h2><a href="{% post_url post.fileSlug %}">{{ post.data.title }}</a></h2>
 <em>{{ post.data.date | toUTCString}}</em>
-<p>{{ post.templateContent | description }} <a href="{% post_url collections.posts, post.fileSlug %}"><em>read more</em></a></p>
+<p>{{ post.templateContent | description }} <a href="{% post_url post.fileSlug %}"><em>read more</em></a></p>
 {%- endfor -%}
 
 

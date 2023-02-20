@@ -23,7 +23,7 @@ gallery:
   title: DevOps Roadmap
 date: 2020-04-21 00:44:00 +01:00
 ---
-I mentioned in the [goals post]({% post_url collections.posts, "goals" %}), one of the things I am aiming to do is to start learning web development.
+I mentioned in the [goals post]({% post_url "goals" %}), one of the things I am aiming to do is to start learning web development.
 
 I was well aware that what falls under the banner of web development is massive, I just hadn't realised quite how large it was.
 

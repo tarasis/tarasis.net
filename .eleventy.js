@@ -105,8 +105,8 @@ module.exports = function (eleventyConfig) {
         collection.getFilteredByGlob("./src/_pages/**/*")
     );
 
-    eleventyConfig.addCollection("posts", (collection) =>
-        collection
+    eleventyConfig.addCollection("posts", (collection) => {
+        availablePages = collection
             .getFilteredByGlob("./src/_posts/**/*")
             .filter(
                 (item) => item.data.draft !== true && item.date <= new Date()
@@ -118,8 +118,10 @@ module.exports = function (eleventyConfig) {
                     prev: all[i + 1],
                 };
                 return cur;
-            })
-    );
+            });
+
+        return availablePages;
+    });
 
     eleventyConfig.addCollection("projects", (collection) =>
         collection
@@ -259,7 +261,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets");
     // eleventyConfig.addPassthroughCopy({ "src/_sass": "assets/css" });
 
-    eleventyConfig.addShortcode("post_url", (collection, slug) => {
+    let availablePages = [];
+
+    eleventyConfig.addShortcode("post_url", (slug) => {
+        let collection = availablePages;
+
         try {
             if (collection.length < 1) {
                 throw "Collection appears to be empty";
@@ -279,7 +285,7 @@ module.exports = function (eleventyConfig) {
             }
         } catch (e) {
             console.error(
-                `RMCG:An error occured while searching for the url to ${slug}. Details:`,
+                `RMCG:An error occurred while searching for the url to ${slug}. Details:`,
                 e
             );
         }
