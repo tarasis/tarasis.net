@@ -11,7 +11,7 @@ After numerous hours / days of hacking (much more than I care to admit), I have 
 TIP: Unless you are wed to the theme, don't try porting it. Really. Headaches await. 🤯
 {: .notice--warning}
 
-There was a surprising amount of hacking needed to get the `liquid` calls to work properly. The main issue is that main of the required variables don't contain the data expected by `Minimal Mistakes`. So this mean debugging to find what is where. For instance the `post` variable doesn't contain a posts `title`, that is usually a global variable. (Same with many others) HOWEVER, there are instances where the `title` might actually be in a passed in varaible at `include.aPost.data.title`, or `post.data.title` for the RSS feed file.
+There was a surprising amount of hacking needed to get the `liquid` calls to work properly. The main issue is that main of the required variables don't contain the data expected by `Minimal Mistakes`. So this mean debugging to find what is where. For instance the `post` variable doesn't contain a posts `title`, that is usually a global variable. (Same with many others) HOWEVER, there are instances where the `title` might actually be in a passed in variable at `include.aPost.data.title`, or `post.data.title` for the RSS feed file.
 
 Not everything is in place; specifically site search is currently disabled as is the archive of posts by year, and finally comments aren't working though in theory they should (they had also stopped working on the Jekyll version of the site). All will be returned at some point.
 
@@ -21,7 +21,7 @@ Also todo: add mappings from old urls to new. Most are the same, but a handful h
 
 Before I finish I should give some thanks / hat tips so various blog posts / git hub repos for bits I've cribbed.
 
-First and foremost is a blog / repo by [Quinn Dombrowski](https://quinndombrowski.com/blog/2022/02/10/eleventy-and-me/). Her post was what led me to realise that I could actually get `Minimal Mistakes theme` running on 11ty. I spent a little time with her blog [repo](https://github.com/quinnanya/quinnanya.github.io), initally mostly going through the steps to get it to build with 11ty 1.0.x or 2.0.0beta1.
+First and foremost is a blog / repo by [Quinn Dombrowski](https://quinndombrowski.com/blog/2022/02/10/eleventy-and-me/). Her post was what led me to realise that I could actually get `Minimal Mistakes theme` running on 11ty. I spent a little time with her blog [repo](https://github.com/quinnanya/quinnanya.github.io), initially mostly going through the steps to get it to build with 11ty 1.0.x or 2.0.0beta1.
 
 Once I got it building, I started trying to port `Minimal Mistakes` myself, only cribbing bits out of `.eleventy.js`. I figured the best way to understand how it was to work with `11ty` was to do the changes to the templates myself. Although in the end I did wholesale rip Quinn's code for pagination on the front page because I couldn't get the original `paginatior` code to work.
 
