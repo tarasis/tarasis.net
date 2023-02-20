@@ -179,15 +179,33 @@ $(document).ready(function() {
 }
 ```
 
-<p>notice</p>{: .notice}
-<p>primary</p>{: .notice--primary}
-<p>info</p>{: .notice--info}
-<p>warning</p>{: .notice--warning}
-<p>success</p>{: .notice--success}
-<p>danger</p>{: .notice--danger}
+notice
+{: .notice}
+
+primary
+{: .notice--primary}
+
+info
+{: .notice--info}
+
+warning
+{: .notice--warning}
+
+success
+{: .notice--success}
+
+danger
+{: .notice--danger}
+
+TIP: Unless you are wed to the theme, don't try porting it. Really. Headaches await. 🤯
+{: .notice--warning}
+
+**success**
+{: .notice--success}
+
 
 <div class="notice--success" markdown="1">
-  # Headline for the Notice
+  <h3> Headline for the Notice</h3>
   <br>
   Text for the notice
 </div>
