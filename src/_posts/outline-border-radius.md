@@ -20,3 +20,26 @@ So I dutifully tried it out, and yes it did work.
 But then I noticed that it was also working in Safari Technology Preview Release 163! Unfortunately Safari 16.3 (Desktop) doesn't support it.
 
 One possible bug I noticed while experimenting was that Safari TP would ignore the outline style `dashed` if  `border-radius` was set. Safari TP would instead make the outline solid.
+
+Codepen with example:
+
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="bGxpBdz" data-user="tarasis" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/tarasis/pen/bGxpBdz">
+  Untitled</a> by Robert McGovern (<a href="https://codepen.io/tarasis">@tarasis</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+The results, as you can see below, are rather different between Safari TP v163, Chrome 110.0.5481.100, and Firefox Developer Edition 111.0b3 (64-bit)
+
+**Safari TP v163**
+
+![](/assets/images/posts/safaritp-codepen.png)
+
+**Chrome 110.0.5481**
+
+![](/assets/images/posts/chrome-codepen.png)
+
+**Firefox Developer Edition 111.0b3**
+
+![](/assets/images/posts/firefox-codepen.png)
