@@ -3,6 +3,7 @@ title: What happens when I finish a Frontend Mentor Challenge (or how I build an
 tags: [webdev, site, frontendmentor, dev]
 category: [programming, webdev]
 date: 2022-10-15
+last_modified: 2023-02-22
 ---
 
 I've been doing challenges from [Frontend Mentor](https://frontendmentor.io) as a means to practice frontend web development. Specifically working with plain HTML, CSS and JavaScript.
@@ -11,7 +12,7 @@ Rather than just take the simple route of a Git repo per challenge, I put them a
 
 The repo is actually a website built with [11ty](https://www.11ty.dev) and [Nunjucks](https://mozilla.github.io/nunjucks/) for templating. The challenges, and other pages I build are in the **projects** directory. They are simply copied over to **www** during the build.
 
-When I do a `git push all`, on my server it runs a script that does the 11ty build. On Github I use a **Github Action**[^2] which builds the site and then a separate action that deploys the page. Vercel watches the main branch on Github for updates and does a similar build action and deployment.
+When I do a `git push all`, on my server it runs a `post-receive` script that does the 11ty build. (script below) On Github I use a **Github Action**[^2] which builds the site and then a separate action that deploys the page. Vercel watches the main branch on Github for updates and does a similar build action and deployment.
 
 That is then deployed to three different places: [Github Pages](https://tarasis.github.io), [Vercel](https://tarasis.vercel.app), and my own site at [rmcg.dev](https://rmcg.dev).
 
@@ -139,11 +140,88 @@ Basically I pass in the challenge to the snippet below, and use the contents to 
 ```
 {% endraw %}
 
+When my Git server receives a push, a `post-receive` hook is called. It checks that the submission is on the `main` branch, and if it is then it installs any needed npm packages, runs `npm run build` and then rsyncs the files over to the web server. The script
+
+```shell
+#!/bin/bash
+
+HOME=/srv/gitea
+source /srv/gitea/.profile
+
+echo $PATH
+
+# add test so that if bundle isn't found end script
+
+#export PATH="$HOME/.rvm/bin:$PATH"
+#eval "$(rbenv init -)"
+
+##############################
+########## Settings ##########
+##############################
+
+# Useful environment variables (gitea):
+#   GITEA_REPO_NAME         Repository name
+#   GITEA_REPO_USER_NAME    Repo owner username
+#   GITEA_PUSHER_NAME       The username that pushed the commits
+#   GITEA_AUTHOR            Same as above
+#   GIT_WORKING_TREE        location to checkout the current tree
+
+#   GIT_HOST                Domain name the repo is hosted on. Default: git.starbeamrainbowlabs.com
+
+if [ "${GIT_HOST}" == "" ]; then
+    GIT_HOST="git.tarasis.net";
+fi
+
+# The url of the repository in question. SSH is recommended, as then you can use a deploy key.
+# SSH:
+GIT_REPO_URL="git@${GIT_HOST}:${GITEA_REPO_USER_NAME}/${GITEA_REPO_NAME}.git";
+# HTTPS:
+# git_repo_url="https://git.starbeamrainbowlabs.com/${GITEA_REPO_USER_NAME}/${GITEA_REPO_NAME}.git";
+
+# The user that pushed the commits
+GIT_AUTHOR="${GITEA_PUSHER_NAME}";
+
+# The working tree folder
+GIT_WORKING_TREE="/srv/deploy/${GITEA_REPO_NAME}"
+
+##############################
+
+###### Internal Settings ######
+
+while read oldref newref ref
+do
+    if [[ $ref =~ .*/main$ ]];
+    then
+        echo "Main ref received.  Deploying main branch to production..."
+        echo "Creating ${GIT_WORKING_TREE} if needed"
+        mkdir -p ${GIT_WORKING_TREE}
+        echo "Checking out repo to working tree folder"
+        git --work-tree=${GIT_WORKING_TREE} --git-dir="/srv/gitea/data/gitea-repositories/${GIT_AUTHOR}/${GITEA_REPO_NAME}.git" checkout -f
+        echo "cd to ${GIT_WORKING_TREE}"
+        cd ${GIT_WORKING_TREE}
+        echo "install npm modules"
+        npm install
+        echo "clean old build files"
+        rm -rf www
+        echo "build files"
+        npm run build
+        echo "rsyncing files to webserver"
+        rsync -azv ${GIT_WORKING_TREE}/www/ <REMOVED>@ams.tarasis.net:/srv/http/rmcg.dev --delete-after
+        echo "Completed"
+    else
+        echo "Ref $ref successfully received.  Doing nothing: only the main branch may be deployed on this server."
+    fi
+done
+
+```
+
 The finished build is then copied and published.
 
 ## Improvements ...
 
-There are improvements I will make at some point, specifically adding optimisation of the images I use. There is little point is downloading a 1440x800px image for the challenge preview when only a small portion of it is shown. I am aware that during the build process you can have 11ty generate more web friendly images at differing sizes.
+~~There are improvements I will make at some point, specifically adding optimisation of the images I use. There is little point is downloading a 1440x800px image for the challenge preview when only a small portion of it is shown. I am aware that during the build process you can have 11ty generate more web friendly images at differing sizes.~~
+
+I now do this, but haven't pushed it live yet. I'm waiting till I have completed another Junior level project.
 
 ## Final thoughts
 
