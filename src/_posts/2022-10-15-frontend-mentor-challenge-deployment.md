@@ -1,6 +1,6 @@
 ---
 title: What happens when I finish a Frontend Mentor Challenge (or how I build and deploy an 11ty site)
-tags: [webdev, site, frontendmentor]
+tags: [webdev, site, frontendmentor, dev]
 category: [programming, webdev]
 date: 2022-10-15
 ---

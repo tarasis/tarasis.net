@@ -1,6 +1,6 @@
 ---
 title: Border Radius on an Outline in CSS
-tags: [webdev, css]
+tags: [webdev, css, dev]
 category: [css, webdev]
 date: 2023-02-20
 excerpt: A little note about using border-radius with an outline.

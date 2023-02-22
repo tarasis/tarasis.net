@@ -1,6 +1,6 @@
 ---
 title: Copy Code Blocks
-tags: [webdev, site]
+tags: [webdev, site, dev]
 category: [site, webdev]
 date: 2023-02-19
 ---

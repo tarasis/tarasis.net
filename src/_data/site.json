@@ -187,34 +187,14 @@
   "footer": {
     "links": [
       {
+        "label": "RSS for Dev Posts",
+        "icon": "fas fa-fw fa-rss-square",
+        "url": "/feed-dev.xml"
+      },
+      {
         "label": "Email",
         "icon": "fas fa-fw fa-envelope-square",
         "url": "mailto:rob@tarasis.net"
-      },
-      {
-        "label": "Twitter",
-        "icon": "fab fa-fw fa-twitter-square",
-        "url": "https://twitter.com/tarasis"
-      },
-      {
-        "label": "Mastodon",
-        "icon": "fab fa-fw fa-mastodon",
-        "url": "https://social.tarasis.net/@tarasis"
-      },
-      {
-        "label": "Facebook",
-        "icon": "fab fa-fw fa-facebook",
-        "url": "https://www.facebook.com/tarasis"
-      },
-      {
-        "label": "GitHub",
-        "icon": "fab fa-fw fa-github",
-        "url": "https://github.com/tarasis"
-      },
-      {
-        "label": "Instagram",
-        "icon": "fab fa-fw fa-instagram",
-        "url": "https://instagram.com/tarasis"
       }
     ]
   },
@@ -331,30 +311,30 @@
   },
   "defaults": {
     "posts": {
-        "path": "_posts",
-        "type": "posts",
-        "layout": "single",
-        "classes": "wide",
-        "author_profile": true,
-        "read_time": true,
-        "share": true,
-        "related": true,
-        "comments": true,
-        "sidebar":true,
-        "show_date": true
+      "path": "_posts",
+      "type": "posts",
+      "layout": "single",
+      "classes": "wide",
+      "author_profile": true,
+      "read_time": true,
+      "share": true,
+      "related": true,
+      "comments": true,
+      "sidebar": true,
+      "show_date": true
     },
     "pages": {
-        "path": "_pages",
-        "type": "pages",
-        "layout": "single",
-        "author_profile": true
+      "path": "_pages",
+      "type": "pages",
+      "layout": "single",
+      "author_profile": true
     },
-      "recipies": {
-        "path": "",
-        "type": "recipes",
-        "layout": "single",
-        "author_profile": true,
-        "share": true
+    "recipies": {
+      "path": "",
+      "type": "recipes",
+      "layout": "single",
+      "author_profile": true,
+      "share": true
     }
   },
   "post_ext": "markdown",
