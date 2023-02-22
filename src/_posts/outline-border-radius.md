@@ -34,12 +34,12 @@ The results, as you can see below, are rather different between Safari TP v163, 
 
 **Safari TP v163**
 
-![](/assets/images/posts/safaritp-codepen.png)
+![Image of codepen output in Safari. Of note the second line of text is supposed to be Outlined with border radius, however only the top left and bottom right have curves. The line below should be the same but with dashed line around the text, however the line is solid.](/assets/images/posts/safaritp-codepen.png)
 
 **Chrome 110.0.5481**
 
-![](/assets/images/posts/chrome-codepen.png)
+![Image of codepen output in Chrome. Of note the second line is properly curved. The line below is correctly dashed.](/assets/images/posts/chrome-codepen.png)
 
 **Firefox Developer Edition 111.0b3**
 
-![](/assets/images/posts/firefox-codepen.png)
+![Image of codepen output in Firefox. Of note the second line is outlined with the correct border radius at the beginning and end, however the wrapped text onto the second line has a solid border to its left.](/assets/images/posts/firefox-codepen.png)
