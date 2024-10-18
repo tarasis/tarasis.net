@@ -1,5 +1,5 @@
 {% assign document = post | default: page %}
-{% assign document = document.data.page %}
+<!-- {% assign document = document.data.page %} -->
 
 {% if document.read_time or document.show_date or site.defaults.posts.show_date %}
 
@@ -20,7 +20,18 @@
       {% assign con = include.content | default: content %}
       {% assign words = con | strip_html | number_of_words %}
 
-      <!-- There is a minute difference between the time to read on the list pages, and on the article itself. So 5 minutes to read in the list, 4 minutes to read on article itself -->
+      <!-- RMCG Hack to be able to have the time to read the article on both the index page, and the article itself. However there can be minor disparaties -->
+      {% if words == 1 %}
+        {% assign con = document.rawInput %}
+
+        {% if con %}
+          {% assign con = con | markdownify | strip_html %}    
+        {% endif %}     
+
+        {% assign words = con | strip_html | number_of_words %}
+      {% endif %}
+
+  <!-- There is a minute difference between the time to read on the list pages, and on the article itself. So 4 minutes to read in the list, 5 minutes to read on article itself -->
 
       <span class="page__meta-readtime">
         <i class="far {% if include.type == 'grid' and document.read_time and document.show_date %}fa-fw {% endif %}fa-clock" aria-hidden="true"></i>

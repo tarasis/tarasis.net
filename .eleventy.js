@@ -9,7 +9,6 @@ const autoprefixer = require("autoprefixer");
 const markdownIt = require("markdown-it");
 const markdownItRenderer = new markdownIt();
 const markdownItAnchor = require("markdown-it-anchor");
-// const relativeUrl = require("eleventy-filter-relative-url");
 const pluginTOC = require("eleventy-plugin-toc");
 const moment = require("moment");
 const description = require("eleventy-plugin-description");
@@ -17,24 +16,28 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 const xmlFiltersPlugin = require("eleventy-xml-plugin");
 const yaml = require("js-yaml");
-//const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const syntaxHighlight = require("eleventy-plugin-syntaxhighlight-chroma");
 const highlight = require("chroma-highlight");
 const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
 
 const inspect = require("node:util").inspect;
 
-// relativeURL
 const path = require("path");
-const urlFilter = require("@11ty/eleventy/src/Filters/Url");
-const { assert } = require("console");
-const indexify = (url) => url.replace(/(\/[^.]*)$/, "$1index.html");
 
-module.exports = function (eleventyConfig) {
+module.exports.config = {
+    pathPrefix: "/",
+};
+
+module.exports = async function (eleventyConfig) {
+    // const urlFilter = await import("@11ty/eleventy/src/Filters/Url");
+    const indexify = (url) => url.replace(/(\/[^.]*)$/, "$1index.html");
+
     let pathPrefix = "/";
 
     eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
     eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
+
+    // eleventyConfig.addPlugin(UpgradeHelper);
 
     eleventyConfig.addPlugin(pluginRss);
     //Blog excerpts
@@ -226,6 +229,11 @@ module.exports = function (eleventyConfig) {
         return inspect(obj, { sorted: true });
     });
 
+    eleventyConfig.addFilter("debugger", (...args) => {
+        console.log(...args);
+        debugger;
+    });
+
     eleventyConfig.addFilter("group_by", groupBy);
 
     eleventyConfig.addLayoutAlias(
@@ -399,7 +407,12 @@ module.exports = function (eleventyConfig) {
 
     // eleventyConfig.addWatchTarget("dist/assets/css/*.css");
 
-    eleventyConfig.addFilter("relative_url", relativeURLALT);
+    const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
+
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
+    eleventyConfig.addFilter("relative_url", relativeURLALT2);
+
     eleventyConfig.addFilter("absolute_url", absoluteUrl);
 
     return {
@@ -427,90 +440,12 @@ function numberOfWords(content) {
     return content.split(/\s+/g).length;
 }
 
-function relativeURL(url, pathPrefix = undefined) {
-    if (pathPrefix !== undefined) {
-        // Fall back on original url filter if pathPrefix is set.
-        return urlFilter(url, pathPrefix);
+// Cheat till I can go through
+function relativeURLALT2(url) {
+    if (!url.startsWith("/")) {
+        throw new Error("URL is already relative");
     }
-
-    if (pathPrefix == undefined && this.page == undefined) {
-        return urlFilter(url, "");
-    }
-
-    // Look up the url of the current rendering page, which is accessible via
-    // `this`.
-    //console.log(this); // rmcg
-
-    // rmcg - removed ctx from this.ctx.page.url
-    const currentDir = this.page.url;
-    const filteredUrl = urlFilter(url, "/");
-
-    // Make sure the index.html is expressed.
-    const indexUrl = indexify(filteredUrl);
-
-    // Check that the url doesn't specify a protocol.
-    const u = new URL(indexUrl, "make-relative://");
-    if (u.protocol !== "make-relative:") {
-        // It has a protocol, so just return the filtered URL output.
-        return filteredUrl;
-    }
-
-    // Return the relative path, or `index.html` if it's the same as the current
-    // page's directory.
-    const relativePath = `${
-        path.relative(currentDir, u.pathname) || "index.html"
-    }`;
-    return relativePath;
-}
-
-/**
- * Just `{{ '/something' | url }}` will return the relative path to
- * `/something/index.html`.
- *
- * `{{ '/something.with.dots' | url }}` will return the relative path to
- * `/something.with.dots`.
- *
- * @param {string} url the URL to transform
- * @param {string} [pathPrefix] optional path prefix to force an absolute URL
- * @returns {string} resulting URL
- */
-function relativeURLALT(url, pathPrefix = undefined) {
-    pathPrefix = "/";
-    //      console.log(url);
-    //      console.log(pathPrefix);
-    //      console.log(this.page);
-    if (pathPrefix !== undefined) {
-        // Fall back on original url filter if pathPrefix is set.
-        return urlFilter(url, pathPrefix);
-    }
-
-    if (pathPrefix == undefined && this.page == undefined) {
-        //      console.log("dropping out");
-        return urlFilter(url, "");
-    }
-
-    // Look up the url of the current rendering page, which is accessible via
-    // `this`.
-    console.log(this);
-    const currentDir = this.page.url;
-    const filteredUrl = urlFilter(url, "/");
-
-    // Make sure the index.html is expressed.
-    const indexUrl = indexify(filteredUrl);
-
-    // Check that the url doesn't specify a protocol.
-    const u = new URL(indexUrl, "make-relative://");
-    if (u.protocol !== "make-relative:") {
-        // It has a protocol, so just return the filtered URL output.
-        return filteredUrl;
-    }
-
-    // Return the relative path, or `index.html` if it's the same as the current
-    // page's directory.
-    const relativePath = `${
-        path.relative(currentDir, u.pathname) || "index.html"
-    }`;
-    return relativePath;
+    return url;
 }
 
 function absoluteUrl(url) {

@@ -32,7 +32,8 @@
       <p class="archive__item-excerpt" itemprop="description">{{ include.aPost.data.excerpt | markdownify | strip_html | truncate: 160 }}</p>
     {% else %}
     <!-- RMCG - Result of this isn't perfect but it works, so now all posts show an excerpt of sorts -->
-      <p class="archive__item-excerpt" itemprop="description">{{ include.aPost.template._frontMatter.content strip_html | markdownify | truncate: 160 }}</p>
+    <p class="archive__item-excerpt" itemprop="description">{{ include.aPost.template._cacheRenderedPromise |
+      markdownify | strip_html | truncate: 160 }}</p>
     {% endif %}
 
   </article>
