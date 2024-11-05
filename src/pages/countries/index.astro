@@ -4,7 +4,6 @@ import Header from '../../components/Header.astro'
 import Footer from '../../components/Footer.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts'
 
-import type { GetStaticPaths } from 'astro'
 import { getCollection } from 'astro:content'
 
 const countries = await getCollection('countries')
