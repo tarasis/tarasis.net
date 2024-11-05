@@ -74,6 +74,7 @@ layout: default
     {% endcomment %}
     {% if site.comments.provider and comments or site.defaults.posts.comments %}
       {% include comments.html %}
+      {% include comments-providers/scripts.html %}
     {% endif %}
   </article>
 
