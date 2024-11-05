@@ -1,66 +1,20 @@
 {
-  "name": "tarasis.net",
-  "version": "2.0.0",
-  "description": "Second generation of site using 11ty for building but using Jekyll theme Minimal Mistakes (with mods to make it work)",
-  "main": "index.js",
+  "name": "v5.tarasis.net",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build:sass": "sass --load-path=src/_sass --style=compressed dist/assets/css/tocompile.scss dist/assets/css/main.css",
-    "watch:sass": "npm run build:sass -- --watch",
-    "watch:eleventy": "eleventy --serve --ignore-initial --incremental",
-    "build:eleventy": "eleventy",
-    "clean": "rm -rf dist",
-    "postbuild": "",
-    "start": "npm-run-all clean build:eleventy build:sass --parallel watch:*",
-    "build": "npm-run-all clean build:eleventy build:sass",
-    "debug": "DEBUG=Eleventy:* eleventy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "forgejo@git.tarasis.net:tarasis/tarasis.net.git"
-  },
-  "keywords": [
-    "website",
-    "blog",
-    "11ty",
-    "jekyll"
-  ],
-  "author": "Robert McGovern et all",
-  "license": "MIT",
-  "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "@11ty/eleventy-upgrade-help": "^3.0.1",
-    "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.0",
-    "autoprefixer": "^10.4.13",
-    "chroma-highlight": "^2.4.2",
-    "const": "^1.0.0",
-    "eleventy-load": "^0.3.1",
-    "eleventy-load-css": "^0.3.0",
-    "eleventy-load-file": "^0.1.0",
-    "eleventy-load-html": "^0.1.1",
-    "eleventy-load-sass": "^0.1.2",
-    "eleventy-plugin-description": "^0.1.5",
-    "eleventy-plugin-syntaxhighlight-chroma": "^0.0.1",
-    "eleventy-plugin-toc": "^1.1.5",
-    "eleventy-xml-plugin": "^0.1.0",
-    "fs-extra": "^11.1.0",
-    "js-yaml": "^4.1.0",
-    "lightningcss-cli": "^1.18.0",
-    "markdown-it": "^13.0.1",
-    "markdown-it-anchor": "^8.6.6",
-    "markdown-it-attrs": "^4.1.6",
-    "markdown-it-container": "^3.0.0",
-    "markdown-it-fontawesome": "^0.3.0",
-    "markdown-it-footnote": "^3.0.3",
-    "markdownify": "^0.1.0",
-    "moment": "^2.29.4",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.21",
-    "sass": "^1.57.1",
-    "slugify": "^1.6.5"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.0-beta.3",
+    "@astrojs/rss": "^4.0.9",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.0.0-beta.6",
+    "typescript": "^5.6.2"
   }
 }

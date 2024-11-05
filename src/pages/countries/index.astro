@@ -1,0 +1,37 @@
+---
+import BaseHead from '../../components/BaseHead.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts'
+
+import type { GetStaticPaths } from 'astro'
+import { getCollection } from 'astro:content'
+
+const countries = await getCollection('countries')
+console.log('🚀 ~ countries:', countries)
+---
+
+<!doctype html>
+<html lang='en'>
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			Some Countries ...
+
+			<ul>
+				{
+					countries.map((country) => (
+						<li>
+							{country.data.flag} - {country.data.name.common} &{' '}
+							{country.data.tld}
+						</li>
+					))
+				}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>

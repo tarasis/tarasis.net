@@ -1,4 +1,0 @@
-{
-  "layout": "single",
-  "permalink": "/{{ page.date | date: 'Y/M/D' }}/{{ page.fileSlug }}/"
-}

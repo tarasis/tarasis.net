@@ -1,0 +1,27 @@
+---
+// src/pages/countries/[id].astro
+import type { GetStaticPaths } from 'astro'
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+	const collection = await getCollection('countries')
+	console.log(
+		'🚀 ~ constgetStaticPaths:GetStaticPaths= ~ collection:',
+		collection
+	)
+	if (!collection) return []
+	return collection.map((country) => ({
+		params: {
+			id: country.id
+		},
+		props: {
+			country
+		}
+	}))
+}
+
+const { country } = Astro.props
+---
+
+<h1>{country.data.name}</h1>
+<p>Capital: {country.data.id}</p>
