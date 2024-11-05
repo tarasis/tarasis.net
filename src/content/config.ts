@@ -18,7 +18,6 @@ const countries = defineCollection({
 	loader: async () => {
 		const response = await fetch('https://restcountries.com/v3.1/all')
 		const data = await response.json()
-		console.log('🚀 ~ loader: ~ data:', data)
 
 		// Must return an array of entries with an id property, or an object with IDs as keys and entries as values
 		return data.map((country: any) => ({
@@ -125,4 +124,4 @@ const countries = defineCollection({
 })
 
 // export const collections = { countries, blog }
-export const collections = { blog }
+export const collections = { blog, countries }

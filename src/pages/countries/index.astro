@@ -8,7 +8,6 @@ import type { GetStaticPaths } from 'astro'
 import { getCollection } from 'astro:content'
 
 const countries = await getCollection('countries')
-console.log('🚀 ~ countries:', countries)
 ---
 
 <!doctype html>
