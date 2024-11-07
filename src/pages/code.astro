@@ -1,0 +1,18 @@
+---
+import { render } from 'astro:content'
+import Layout from '../layouts/BlogPost.astro'
+import * as greatPost from '../pages/code-test.md'
+
+const { Content } = await render(greatPost)
+---
+
+<!-- <p>{greatPost.frontmatter.title}</p><p>
+	Written by: {greatPost.frontmatter.author}
+</p> --><!-- <Fragment set:html={greatPost.compiledContent()} /> -->
+<Layout
+	title={greatPost.frontmatter.title}
+	description='Lorem ipsum dolor sit amet'
+	pubDate={new Date()}
+>
+	<Fragment set:html={greatPost.compiledContent()} />
+</Layout>
