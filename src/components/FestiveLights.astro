@@ -1,0 +1,169 @@
+<!-- Todo
+
+1) Tweak animations
+2) Find cleaner solution to multiple basically duplicate selectors
+3) tidy code
+
+-->
+<ul class='lights'>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+<style>
+	.lights {
+		/* R-W-G-O-Teal */
+		/* --color-1: 255, 249, 82; */
+		/* --color-2: 0, 234, 255; */
+		/* --color-3: 247, 0, 148; */
+		--color-1: 255, 0, 0;
+		--color-2: 255, 255, 255;
+		--color-3: 0, 128, 0;
+		--color-4: 255, 165, 0;
+		--color-5: 75, 32, 247;
+
+		display: flex;
+		justify-content: center;
+		/* flex-flow: wrap; */
+		gap: 30px 40px;
+		padding: 30px 0;
+		overflow: hidden;
+		pointer-events: none;
+		/* background: white; */
+	}
+
+	.lights li {
+		flex: none;
+		position: relative;
+		list-style: none;
+		width: 15px;
+		height: 30px;
+		border-radius: 50%;
+
+		animation-delay: 1.25s;
+	}
+
+	.lights li:before {
+		position: absolute;
+		content: '';
+		top: -5px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 10px;
+		height: 10px;
+		background-color: #0d5723;
+		border-radius: 100% 100% 0 0;
+		z-index: 1;
+	}
+
+	.lights li:after {
+		/* position: absolute;
+		content: '';
+		z-index: -1;
+		top: -2px;
+		left: 50%;
+		width: 54px;
+		height: 5px;
+		border-bottom: 1px solid #12b643;
+		border-radius: 100%; */
+		content: '';
+		z-index: 0;
+		top: -14px;
+		left: 9px;
+		position: absolute;
+		width: 52px;
+		height: 18.6666666667px;
+		border-bottom: solid #222 2px;
+		border-radius: 50%;
+	}
+
+	.lights li:last-child:after {
+		display: none;
+	}
+
+	.lights li:nth-child(5n + 1) {
+		background-color: rgba(var(--color-1), 1);
+		box-shadow: 0 5px 24px 3px rgba(var(--color-1), 1);
+		animation: lighting-1 1.25s infinite linear;
+	}
+
+	@keyframes lighting-1 {
+		50% {
+			background-color: rgba(var(--color-1), 0.25);
+			box-shadow: 0 5px 24px 3px rgba(var(--color-1), 0.25);
+		}
+	}
+
+	.lights li:nth-child(5n + 2) {
+		/* 1, 3, 5, ... */
+		background-color: rgba(var(--color-2), 1);
+		box-shadow: 0 5px 24px 3px rgba(var(--color-2), 0.8);
+		animation: lighting-2 1.5s infinite linear;
+	}
+
+	@keyframes lighting-2 {
+		50% {
+			background-color: rgba(var(--color-2), 0.4);
+			box-shadow: 0 5px 24px 3px rgba(var(--color-2), 0.3);
+		}
+	}
+
+	.lights li:nth-child(5n + 3) {
+		/* 2, 6, 10, 14, ... */
+		background-color: rgba(var(--color-3), 1);
+		box-shadow: 0 5px 24px 3px rgba(var(--color-3), 1);
+		animation: lighting-3 1.5s infinite linear;
+		animation-delay: 1.25s;
+	}
+
+	@keyframes lighting-3 {
+		50% {
+			background-color: rgba(var(--color-3), 0.25);
+			box-shadow: 0 5px 24px 3px rgba(var(--color-3), 0.25);
+		}
+	}
+
+	.lights li:nth-child(5n + 4) {
+		/* 4, 9 ... */
+		background-color: rgba(var(--color-4), 1);
+		box-shadow: 0 5px 24px 3px rgba(var(--color-4), 1);
+		animation: lighting-4 1.5s infinite linear;
+		animation-delay: 1.25s;
+	}
+
+	@keyframes lighting-4 {
+		50% {
+			background-color: rgba(var(--color-4), 0.25);
+			box-shadow: 0 5px 24px 3px rgba(var(--color-4), 0.25);
+		}
+	}
+
+	.lights li:nth-child(5n + 5) {
+		/* 5, 10 ... */
+		background-color: rgba(var(--color-5), 1);
+		box-shadow: 0 5px 24px 3px rgba(var(--color-5), 1);
+		animation: lighting-5 1.5s infinite linear;
+		animation-delay: 1.25s;
+	}
+
+	@keyframes lighting-5 {
+		50% {
+			background-color: rgba(var(--color-5), 0.25);
+			box-shadow: 0 5px 24px 3px rgba(var(--color-5), 0.25);
+		}
+	}
+</style>
