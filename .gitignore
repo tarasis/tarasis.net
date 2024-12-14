@@ -112,4 +112,4 @@ pnpm-debug.log*
 .idea/
 
 #
-.astro
+.astro/
