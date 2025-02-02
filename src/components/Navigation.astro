@@ -1,0 +1,19 @@
+---
+import HeaderLink from './HeaderLink.astro'
+
+const pages = ['blog', 'writing', 'pictures', 'music', 'about']
+
+function capitalizeFirstLetter(str: string): string {
+	if (!str) return str
+	return str[0].toUpperCase() + str.slice(1)
+}
+---
+
+<div class='internal-links'>
+	<HeaderLink href='/'>Home</HeaderLink>
+	{
+		pages.map((page) => (
+			<HeaderLink href={page}>{capitalizeFirstLetter(page)}</HeaderLink>
+		))
+	}
+</div>
