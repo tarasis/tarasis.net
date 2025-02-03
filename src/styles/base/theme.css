@@ -1,0 +1,17 @@
+body {
+	background-color: var(--bg);
+	color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--header-color);
+}
+
+a {
+	color: var(--link-color);
+}

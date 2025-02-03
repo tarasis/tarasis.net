@@ -1,0 +1,84 @@
+<label for='pet-select'>Choose a theme:</label>
+
+<select id='theme-switcher' class='theme-switcher'>
+	<option value='' disabled>Choose a theme 🎨</option>
+	<option data-theme='Dark' role='option' aria-selected='false'>Dark</option>
+	<option data-theme='Light' role='option' aria-selected='false'>Light</option
+	>
+	<option data-theme='Detective' role='option' aria-selected='false'
+		>Detective</option
+	>
+	<option data-theme='Fantasy' role='option' aria-selected='false'
+		>Fantasy</option
+	>
+	<option data-theme='Tech' role='option' aria-selected='false'>Tech</option>
+	<option data-theme='Silly' role='option' aria-selected='false'>Silly</option
+	>
+	<option data-theme='Music' role='option' aria-selected='false'>Music</option
+	>
+</select>
+
+<script>
+	const pressedButtonSelector = '[data-theme][role][aria-selected="true"]'
+	console.log(pressedButtonSelector)
+	const defaultTheme = 'Dark'
+
+	const applyTheme = (theme: string) => {
+		console.log(`Applying theme ${theme}`)
+		const target = document.querySelector(`[data-theme="${theme}"]`)
+		document.body.setAttribute('data-selected-theme', theme)
+		console.log(
+			'🚀 ~ applyTheme ~ body:',
+			document.body.getAttribute('data-selected-theme')
+		)
+		console.log('🚀 ~ applyTheme ~ target:', target)
+		const selectedElement = document.querySelector(pressedButtonSelector)
+		console.log('🚀 ~ applyTheme ~ selectedElement:', selectedElement)
+		if (selectedElement) {
+			selectedElement.setAttribute('aria-selected', 'false')
+			selectedElement.removeAttribute('selected')
+		}
+		if (target) {
+			target.setAttribute('aria-selected', 'true')
+			target.setAttribute('selected', 'true')
+		}
+	}
+
+	const handleThemeSelection = (event) => {
+		console.log(`Target: `, event.target.value)
+		const target = themeSwitcher.options[themeSwitcher.selectedIndex]
+		console.log('🚀 ~ handleThemeSelection ~ target:', target)
+		const isSelected = target.getAttribute('aria-selected')
+		console.log('🚀 ~ handleThemeSelection ~ isSelected:', isSelected)
+		const theme = target.value
+		console.log('🚀 ~ handleThemeSelection ~ theme:', theme)
+
+		if (isSelected !== 'true') {
+			applyTheme(theme)
+			localStorage.setItem('selected-theme', theme)
+		}
+	}
+
+	const setInitialTheme = () => {
+		const savedTheme = localStorage.getItem('selected-theme')
+		console.log('🚀 ~ setInitialTheme ~ savedTheme:', savedTheme)
+		if (savedTheme && savedTheme !== defaultTheme) {
+			themeSwitcher.style.display = 'none'
+			applyTheme(savedTheme)
+			themeSwitcher.style.display = ''
+		}
+	}
+	const themeSwitcher = document.querySelector(
+		'.theme-switcher'
+	) as HTMLSelectElement
+	const options = themeSwitcher.querySelectorAll('option')
+
+	themeSwitcher?.addEventListener('change', handleThemeSelection)
+
+	setInitialTheme()
+
+	// options.forEach((option) => {
+	// 	option.addEventListener('change', handleThemeSelection)
+	// 	console.log(option)
+	// })
+</script>

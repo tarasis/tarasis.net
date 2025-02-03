@@ -1,0 +1,122 @@
+:root {
+	/* --bg: #f4f0eb;
+	--glare: #fff;
+	--shade: #e6dcd1;
+	--text: #011427;
+	--btn: #accdd7;
+	--radio: #000;
+	--header-color: #accdd7;
+	--link-color: #acbdc2;
+	--btn-border: transparent; */
+}
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #000;
+		--glare: #333;
+		--shade: #222;
+		--text: white;
+		--btn: #5f0f40;
+		--radio: #fff;
+		--btn-border: transparent;
+	}
+}
+
+body:has(#dark:checked) {
+	--bg: #444;
+	--glare: #333;
+	--shade: #222;
+	--text: white;
+	--btn: #5f0f40;
+	--radio: #fff;
+	--btn-border: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+	body:has(#light:checked) {
+		--bg: #f4f0eb;
+		--glare: #fff;
+		--shade: #e6dcd1;
+		--text: #011427;
+		--btn: #accdd7;
+		--radio: #000;
+		--btn-border: transparent;
+	}
+}
+
+body:has(#blue:checked) {
+	--bg: #accbe1;
+	--glare: #cee5f2;
+	--shade: #7c98b3;
+	--btn: #fab3a9;
+	--text: #000;
+	--radio: #000;
+	--btn-border: transparent;
+}
+
+body:has(#red:checked) {
+	--bg: #fdb1b8;
+	--shade: #fd8189;
+	--glare: #f3d2d5;
+	--text: black;
+	--btn: #f3ca40;
+	--radio: #000;
+	--btn-border: transparent;
+}
+
+body:has(#high-contrast:checked) {
+	--bg: #000;
+	--glare: #000;
+	--shade: #000;
+	--text: #fff;
+	--btn: #000;
+	--radio: #0f0;
+	--btn-border: #ff0;
+} */
+
+body[data-selected-theme='Dark'] {
+	--color-background: #031003;
+	--color-text: #9eadaa;
+	--color-accent: #394740;
+	--bg: #031003;
+	--text: #9eadaa;
+}
+
+body[data-selected-theme='Light'] {
+	--color-background: #f3f6f3;
+	--color-text: #0e2c22;
+	--color-accent: #3a5b4b;
+	--bg: #f3f6f3;
+	--text: #0e2c22;
+}
+
+body[data-selected-theme='Fantasy'] {
+	--color-background: #f3f6f3;
+	--color-text: #0e2c22;
+	--color-accent: #3a5b4b;
+	--bg: #f3f6f3;
+	--text: #0e2c22;
+}
+
+/*
+"primary": "#fae8ff",
+"primary-content": "#151316",
+"secondary": "#c084fc",
+"secondary-content": "#160016",
+"accent": "#00ffff",
+"accent-content": "#001616",
+"neutral": "#7e22ce",
+"neutral-content": "#e3d7f9",
+"base-100": "#374151",
+"base-200": "#2e3745",
+"base-300": "#262e3a",
+"base-content": "#d3d6da",
+"info": "#1d4ed8",
+"info-content": "#cfdefb",
+"success": "#a3e635",
+"success-content": "#0a1301",
+"warning": "#fbbf24",
+"warning-content": "#150d00",
+"error": "#be123c",
+"error-content": "#f8d5d6",
+*/

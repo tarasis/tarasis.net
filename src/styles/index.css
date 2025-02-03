@@ -1,0 +1,25 @@
+/* Layer architecture */
+/* Best practice to put @layer at top of the import file for organization */
+
+@layer reset, base, variables,typography, theme, layouts, components, utilities;
+
+/* Base */
+@import '/src/styles/base/reset.css' layer(reset);
+@import '/src/styles/base/base.css' layer(base);
+@import '/src/styles/base/variables.css' layer(variables);
+@import '/src/styles/base/theme.css' layer(theme); /* theme variables */
+@import '/src/styles/base/typography.css' layer(typography); /* theme typography */
+@import '/src/styles/base/utilities.css' layer(utilities);
+
+/* Layouts */
+/* @import '/src/styles/components/post.css' layer(layouts); */
+
+/* Components */
+@import '/src/styles/components/footer.css' layer(components);
+@import '/src/styles/components/header.css' layer(components);
+@import '/src/styles/components/nav.css' layer(components);
+@import '/src/styles/components/socials.css' layer(components);
+/* ! important */
+/* ? Question */
+/* * Note */
+/* TODO todo */

@@ -1,0 +1,595 @@
+<input id='dark' class='color-scheme-button' name='color-scheme' type='radio' />
+<input
+	id='light'
+	class='color-scheme-button'
+	name='color-scheme'
+	type='radio'
+	checked
+/>
+<input id='red' class='color-scheme-button' name='color-scheme' type='radio' />
+<input id='blue' class='color-scheme-button' name='color-scheme' type='radio' />
+<input
+	id='high-contrast'
+	class='color-scheme-button'
+	name='color-scheme'
+	type='radio'
+/>
+
+<div class='color-scheme-wrapper'>
+	<div class='color-scheme-dropdown'>
+		<input id='show-color-schemes' type='checkbox' />
+
+		<label for='show-color-schemes'>
+			<span class='show'>Show</span><span class='hide'>Hide</span
+			>&nbsp;color&nbsp;schemes <svg
+				width='24'
+				height='24'
+				viewBox='0 0 24 24'
+				xmlns='http://www.w3.org/2000/svg'
+				><path
+					fill='currentColor'
+					d='M17 2a3 3 0 0 1 2.995 2.824L20 5a3 3 0 0 1 3 3a6 6 0 0 1-5.775 5.996L17 14h-4l.15.005a2 2 0 0 1 1.844 1.838L15 16v4a2 2 0 0 1-1.85 1.995L13 22h-2a2 2 0 0 1-1.995-1.85L9 20v-4a2 2 0 0 1 1.85-1.995L11 14v-1a1 1 0 0 1 .883-.993L12 12h5a4 4 0 0 0 4-4a1 1 0 0 0-.883-.993L20 7l-.005.176a3 3 0 0 1-2.819 2.819L17 10H7a3 3 0 0 1-2.995-2.824L4 7V5a3 3 0 0 1 2.824-2.995L7 2z'
+				></path></svg
+			>:
+			<span class='icon-btn'>
+				<span class='icon'></span>
+			</span>
+		</label>
+
+		<div class='color-scheme-dropdown-inner'>
+			<label id='dark-label' class='color-scheme-label' for='dark'>
+				Dark Mode
+				<!-- <span class='light-mode-hide'>Light mode</span>
+				<span class='dark-mode-hide'>Dark mode</span> -->
+			</label>
+			<label id='light-label' class='color-scheme-label' for='light'>
+				Light Mode
+				<!-- <span class='dark-mode-hide'>Light mode</span>
+				<span class='light-mode-hide'>Dark mode</span> -->
+			</label>
+			<label id='red-label' class='color-scheme-label' for='red'>
+				Red mode
+			</label>
+			<label id='blue-label' class='color-scheme-label' for='blue'>
+				Blue mode
+			</label>
+			<label
+				id='high-contrast-label'
+				class='color-scheme-label'
+				for='high-contrast'
+			>
+				High contrast mode
+			</label>
+		</div>
+	</div>
+
+	<!-- <svg
+		width='72'
+		height='72'
+		viewBox='0 0 36 36'
+		xmlns='http://www.w3.org/2000/svg'
+		><path
+			fill='#662113'
+			d='M22.088 32.83c0 1.997-1.619 2.712-3.616 2.712s-3.616-.715-3.616-2.712l.904-8.136c0-1.996.715-1.808 2.712-1.808s2.712-.188 2.712 1.808z'
+		></path><path
+			fill='#5C913B'
+			d='M30.59 27.675c-6.294-5.392-8.843-13.112-12.118-13.112s-5.824 7.721-12.118 13.112c-2.645 2.266-1.385 3.577 2.241 3.314c3.232-.233 6.255-.966 9.877-.966s6.646.733 9.876.966c3.627.263 4.886-1.049 2.242-3.314'
+		></path><path
+			fill='#3E721D'
+			d='M28.546 25.538c-4.837-4.435-7.555-10.787-10.074-10.787c-2.517 0-5.236 6.352-10.073 10.787c-3.844 3.524 5.037 4.315 10.073 0c5.034 4.316 13.917 3.524 10.074 0'
+		></path><path
+			fill='#5C913B'
+			d='M28.546 21.945c-4.837-4.143-7.555-10.077-10.074-10.077c-2.517 0-5.236 5.934-10.073 10.077c-3.844 3.292 5.037 4.031 10.073 0c5.034 4.032 13.917 3.292 10.074 0'
+		></path><path
+			fill='#3E721D'
+			d='M26.336 19.003c-3.775-3.235-5.897-7.868-7.864-7.868c-1.965 0-4.088 4.632-7.864 7.868c-3 2.57 3.932 3.147 7.864 0c3.93 3.146 10.865 2.57 7.864 0'
+		></path><path
+			fill='#5C913B'
+			d='M26.336 16.311c-3.775-3.235-5.897-7.867-7.864-7.867c-1.965 0-4.088 4.632-7.864 7.867c-3 2.571 3.932 3.147 7.864 0c3.93 3.147 10.865 2.571 7.864 0'
+		></path><path
+			fill='#3E721D'
+			d='M24.818 13.92c-3.047-2.61-4.76-6.349-6.347-6.349c-1.586 0-3.299 3.739-6.347 6.349c-2.422 2.075 3.174 2.54 6.347 0c3.174 2.54 8.77 2.075 6.347 0'
+		></path><path
+			fill='#5C913B'
+			d='M24.818 11.894c-3.047-2.61-4.76-6.349-6.347-6.349c-1.586 0-3.299 3.739-6.347 6.349c-2.422 2.075 3.174 2.54 6.347 0c3.174 2.54 8.77 2.075 6.347 0'
+		></path><path
+			fill='#3E721D'
+			d='M23.301 8.911C20.983 6.925 19.68 4.08 18.472 4.08s-2.511 2.845-4.83 4.831c-1.843 1.579 2.415 1.933 4.83 0c2.414 1.933 6.673 1.579 4.829 0'
+		></path><path
+			fill='#5C913B'
+			d='M23.301 7.832C20.983 5.845 19.68 3 18.472 3s-2.511 2.845-4.83 4.832c-1.843 1.579 2.415 1.933 4.83 0c2.414 1.932 6.673 1.578 4.829 0'
+		></path><circle cx='16.5' cy='12.042' r='1.5' fill='#FFCC4D'
+		></circle><circle cx='20' cy='25' r='2' fill='#FFCC4D'></circle><circle
+			cx='22.5'
+			cy='15.5'
+			r='2.5'
+			fill='#DD2E44'></circle><circle cx='10' cy='26' r='2' fill='#DD2E44'
+		></circle><circle cx='14' cy='19' r='2' fill='#A6D388'></circle><circle
+			cx='26'
+			cy='23'
+			r='2'
+			fill='#A6D388'></circle><path
+			fill='#FFAC33'
+			d='M19.379 1.679c.143.275.512.549.817.609l1.379.269c.305.06.377.29.159.512l-.983 1.004c-.217.222-.365.657-.326.965l.17 1.394c.038.309-.159.448-.438.31L18.9 6.117c-.279-.138-.738-.144-1.02-.013l-1.274.594c-.282.13-.476-.014-.43-.322l.205-1.39c.045-.307-.091-.745-.302-.973l-.959-1.027c-.212-.227-.135-.457.172-.508l1.385-.234c.307-.051.681-.316.832-.588L18.19.427c.151-.272.394-.269.537.006z'
+		></path></svg
+	> -->
+</div>
+<style>
+	.color-scheme-wrapper {
+		/*     min-height:100vh; */
+		padding: 1rem;
+		/* background: #f4f0eb; */
+		background: var(--bg);
+		color: #000;
+		color: var(--text);
+		display: flex;
+		justify-content: right;
+	}
+
+	.color-scheme-button,
+	.color-scheme-label {
+		display: none;
+	}
+
+	@supports (--css: custom-properties) {
+		.color-scheme-button,
+		.color-scheme-label {
+			display: inline;
+		}
+	}
+
+	@media (-ms-high-contrast: active) {
+		.color-scheme-button,
+		.color-scheme-label {
+			display: none;
+		}
+	}
+
+	/* Hide based on prefers-color-scheme  */
+
+	.light-mode-hide {
+		display: none;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.light-mode-hide {
+			display: block;
+		}
+
+		.dark-mode-hide {
+			display: none;
+		}
+	}
+
+	input[type='radio'],
+	input[type='checkbox'] {
+		/* position: absolute; */
+		opacity: 0.00001;
+	}
+
+	.color-scheme-dropdown {
+		background: #e6dcd1;
+		background: var(--shade);
+		border-radius: 6px;
+		display: inline-flex;
+		flex-direction: column;
+		/*   box-sizing:border-box; */
+		border: 2px solid var(--btn-border);
+		position: absolute;
+		z-index: 2;
+	}
+
+	.color-scheme-dropdown-inner {
+		display: none;
+		padding: 0.8rem;
+		/*   border-top:solid 2px var(--btn-border); */
+	}
+
+	#show-color-schemes:checked ~ .color-scheme-dropdown-inner {
+		/*   display:block; */
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	#show-color-schemes:checked + label .show {
+		display: none;
+	}
+
+	#show-color-schemes:checked + label .hide {
+		display: inline;
+	}
+
+	#show-color-schemes + label {
+		display: inline-flex;
+		padding: 0.8rem 1.2rem;
+		align-items: center;
+		border-radius: 4px;
+		user-select: none;
+	}
+
+	#show-color-schemes + label:hover {
+		background: #f4f0eb;
+		background: var(--bg);
+	}
+
+	#show-color-schemes + label:active {
+		transform: translateY(1px);
+	}
+
+	.icon-btn {
+		background: #accdd7;
+		background: var(--btn);
+		box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+		height: 2rem;
+		width: 2rem;
+		border-radius: 2rem;
+		border: solid 2px var(--btn-border);
+		position: relative;
+		color: #011427;
+		color: var(--text);
+		margin-left: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.icon {
+		position: static;
+		width: 0.5rem;
+		height: 0.5rem;
+		transform: rotate(135deg);
+
+		border-top: 2px solid #011427;
+		border-right: 2px solid #011427;
+
+		border-top: 2px solid var(--text);
+		border-right: 2px solid var(--text);
+		margin-top: -2px;
+	}
+
+	#show-color-schemes:checked + label .icon {
+		transform: rotate(45deg);
+		margin-top: 3px;
+	}
+
+	/* Why is only first child abnormal sized? when going sideways */
+	.color-scheme-label {
+		display: flex;
+		/*   padding:1rem; */
+		padding-inline: 5px;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 6px;
+		background: #f4f0eb;
+		background: var(--bg);
+		/*   box-sizing:border-box; */
+		border: solid 2px transparent;
+		gap: 5px;
+		outline: 5px solid purple;
+	}
+
+	.color-scheme-label + .color-scheme-label {
+		/*   margin-top:.42rem; */
+	}
+
+	.color-scheme-label:hover {
+		background: #fff;
+		background: var(--glare);
+		border: solid 2px var(--btn-border);
+	}
+
+	.color-scheme-label:after {
+		content: '';
+		display: flex;
+		height: 1rem;
+		width: 1rem;
+		border-radius: 2rem;
+
+		border: solid 2px #000;
+		border: solid 2px var(--radio);
+
+		box-shadow:
+			0 2px #e6dcd1,
+			inset 0 2px #e6dcd1;
+		box-shadow:
+			0 2px var(--shade),
+			inset 0 2px var(--shade);
+	}
+
+	#blue:checked ~ .color-scheme-wrapper #blue-label:after,
+	#red:checked ~ .color-scheme-wrapper #red-label:after,
+	#light:checked ~ .color-scheme-wrapper #light-label:after,
+	#dark:checked ~ .color-scheme-wrapper #dark-label:after,
+	#high-contrast:checked ~ .color-scheme-wrapper #high-contrast-label:after {
+		box-shadow:
+			0 2px #e6dcd1,
+			inset 0 2px #e6dcd1,
+			inset 0 0 0 3px #f4f0eb,
+			inset 0 0 0 1rem #000;
+
+		box-shadow:
+			0 2px var(--shade),
+			inset 0 2px var(--shade),
+			inset 0 0 0 3px var(--bg),
+			inset 0 0 0 1rem var(--radio);
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-size: 18px;
+		font-family: monospace;
+	}
+
+	input[type='radio'],
+	input[type='checkbox'] {
+		position: absolute;
+		opacity: 0.00001;
+	}
+
+	/* .color-scheme-dropdown {
+		background: #e6dcd1;
+		background: var(--shade);
+		border-radius: 6px;
+		display: inline-flex;
+		flex-direction: row;
+		/*   box-sizing:border-box; */
+		border: 2px solid var(--btn-border);
+		position: absolute;
+		z-index: 2;
+	}
+
+	.color-scheme-dropdown-inner {
+		display: none;
+		padding: 0.8rem;
+		/*   border-top:solid 2px var(--btn-border); */
+	}
+
+	#show-color-schemes:checked ~ .color-scheme-dropdown-inner {
+		/*   display:block; */
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	} */
+
+	.hide {
+		display: none;
+	}
+
+	#show-color-schemes:checked + label .show {
+		display: none;
+	}
+
+	#show-color-schemes:checked + label .hide {
+		display: inline;
+	}
+
+	#show-color-schemes + label {
+		display: inline-flex;
+		padding: 0.8rem 1.2rem;
+		align-items: center;
+		border-radius: 4px;
+		user-select: none;
+	}
+
+	#show-color-schemes + label:hover {
+		background: #f4f0eb;
+		background: var(--bg);
+	}
+
+	#show-color-schemes + label:active {
+		transform: translateY(1px);
+	}
+
+	.icon-btn {
+		background: #accdd7;
+		background: var(--btn);
+		box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+		height: 2rem;
+		width: 2rem;
+		border-radius: 2rem;
+		border: solid 2px var(--btn-border);
+		position: relative;
+		color: #011427;
+		color: var(--text);
+		margin-left: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.icon {
+		position: static;
+		width: 0.5rem;
+		height: 0.5rem;
+		transform: rotate(135deg);
+
+		border-top: 2px solid #011427;
+		border-right: 2px solid #011427;
+
+		border-top: 2px solid var(--text);
+		border-right: 2px solid var(--text);
+		margin-top: -2px;
+	}
+
+	#show-color-schemes:checked + label .icon {
+		transform: rotate(45deg);
+		margin-top: 3px;
+	}
+
+	/* Why is only first child abnormal sized? when going sideways */
+	.color-scheme-label {
+		display: flex;
+		/*   padding:1rem; */
+		padding-inline: 5px;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 6px;
+		background: #f4f0eb;
+		background: var(--bg);
+		/*   box-sizing:border-box; */
+		border: solid 2px transparent;
+		gap: 5px;
+		outline: 5px solid purple;
+	}
+
+	.color-scheme-label + .color-scheme-label {
+		/*   margin-top:.42rem; */
+	}
+
+	.color-scheme-label:hover {
+		background: #fff;
+		background: var(--glare);
+		border: solid 2px var(--btn-border);
+	}
+
+	.color-scheme-label:after {
+		content: '';
+		display: flex;
+		height: 1rem;
+		width: 1rem;
+		border-radius: 2rem;
+
+		border: solid 2px #000;
+		border: solid 2px var(--radio);
+
+		box-shadow:
+			0 2px #e6dcd1,
+			inset 0 2px #e6dcd1;
+		box-shadow:
+			0 2px var(--shade),
+			inset 0 2px var(--shade);
+	}
+
+	#blue:checked ~ .color-scheme-wrapper #blue-label:after,
+	#red:checked ~ .color-scheme-wrapper #red-label:after,
+	#light:checked ~ .color-scheme-wrapper #light-label:after,
+	#dark:checked ~ .color-scheme-wrapper #dark-label:after,
+	#high-contrast:checked ~ .color-scheme-wrapper #high-contrast-label:after {
+		box-shadow:
+			0 2px #e6dcd1,
+			inset 0 2px #e6dcd1,
+			inset 0 0 0 3px #f4f0eb,
+			inset 0 0 0 1rem #000;
+
+		box-shadow:
+			0 2px var(--shade),
+			inset 0 2px var(--shade),
+			inset 0 0 0 3px var(--bg),
+			inset 0 0 0 1rem var(--radio);
+	}
+
+	h1,
+	p {
+		color: var(--bg);
+		line-height: 2;
+		max-width: 60ch;
+		padding-left: 2rem;
+	}
+
+	a {
+		color: #011427;
+		color: var(--text);
+
+		background: #accdd7;
+		background: var(--btn);
+
+		outline: dotted 1px #011427;
+		outline: dotted 1px var(--text);
+		outline-offset: 0;
+		text-decoration: none;
+	}
+
+	a:hover {
+		outline-style: solid;
+	}
+</style>
+<script>
+	// var themeColors = {
+	//   'light':'#F4F0EB',
+	//   'dark':'#444',
+	//   'blue':'#ACCBE1',
+	//   'red':'#fdb1b8',
+	//   'high-contrast':'#000'
+	// }
+
+	// var lightThemeMetaTag = document.getElementById('light-theme-meta-tag')
+	// var darkThemeMetaTag = document.getElementById('dark-theme-meta-tag')
+	// var body = document.body
+
+	// var selectedTheme = 'light'
+
+	// function updateTheme(theme: string) {
+
+	// 	var color = themeColors[theme]
+
+	// 	lightThemeMetaTag.setAttribute("content", color);
+	// 	darkThemeMetaTag.setAttribute("content", color);
+	// 	body.style.backgroundColor = color;
+
+	// 	selectedTheme = theme
+
+	// 	saveThemeToLocalStorage(theme)
+
+	// }
+
+	// function swapLightAndDark(){
+
+	// 	var light = themeColors.light
+	// 	var dark = themeColors.dark
+	// 	themeColors.dark = light
+	// 	themeColors.light = dark
+
+	// }
+
+	// function saveThemeToLocalStorage(theme: string){
+
+	// 	if(localStorage){
+	// 		localStorage.setItem('color-scheme', theme);
+	// 	}
+
+	// }
+
+	// function getThemeFromLocalStorage(){
+
+	// 	if(localStorage){
+
+	// 		var savedColorScheme = localStorage.getItem('color-scheme');
+
+	// 		if(savedColorScheme){
+	// 			var radioButton = document.getElementById(savedColorScheme);
+	// 			radioButton.checked = true;
+	// 			updateTheme(savedColorScheme)
+	// 		}
+	// 	}
+	// }
+
+	// var preferedColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
+	// var dark = preferedColorScheme.matches
+
+	// if(dark){
+	// 	swapLightAndDark()
+	// }
+
+	// preferedColorScheme.addEventListener('change', () => {
+	// 	swapLightAndDark()
+	// 	setTheme(selectedTheme)
+	// });
+
+	// var radios = document.querySelectorAll('input[type=radio][name="color-scheme"]');
+
+	// radios.forEach(radio => radio.addEventListener('change', (event) => {
+
+	// 	var theme = event.target.id
+	// 	updateTheme(theme)
+
+	// }));
+
+	// // This must be called after the check for dark mode
+	// getThemeFromLocalStorage()
+</script>

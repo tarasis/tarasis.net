@@ -3,10 +3,16 @@ import FestiveLights from './FestiveLights.astro'
 import { SITE_TITLE } from '../consts'
 import Navigation from './Navigation.astro'
 import SocialLinks from './SocialLinks.astro'
+import ThemeSelector from './ThemeSelector.astro'
+import AltThemeSelector from './AltThemeSelector.astro'
 ---
 
 <header>
-	<FestiveLights />
+	<!-- <FestiveLights /> -->
+	<ThemeSelector />
+	<br />
+	<br />
+	<AltThemeSelector />
 	<nav>
 		<h2><a href='/'>{SITE_TITLE}</a></h2>
 		<Navigation />
